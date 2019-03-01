@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 170076734}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -276,15 +276,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d6cd90e98a905d7438ee46a9b0232f3a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 43.59
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d6cd90e98a905d7438ee46a9b0232f3a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d6cd90e98a905d7438ee46a9b0232f3a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -62.66
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: d6cd90e98a905d7438ee46a9b0232f3a, type: 3}
       propertyPath: m_LocalRotation.x
@@ -345,15 +345,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 845cd4c70990cdd4796c3b7936a83ca3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 38.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 845cd4c70990cdd4796c3b7936a83ca3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.1
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 845cd4c70990cdd4796c3b7936a83ca3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400006, guid: 845cd4c70990cdd4796c3b7936a83ca3, type: 3}
       propertyPath: m_LocalRotation.x
@@ -435,7 +435,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -7, z: 0}
 --- !u!1 &1346420645 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100006, guid: d6cd90e98a905d7438ee46a9b0232f3a,
@@ -476,7 +476,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: -7, z: 0}
 --- !u!114 &1346420650
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -540,17 +540,17 @@ PrefabInstance:
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 57.48123
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -6.0609016
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -18.201561
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
@@ -600,7 +600,7 @@ PrefabInstance:
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
       propertyPath: m_LocalScale.y
-      value: 10
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7517170250555018535, guid: 6a310cad42333584c933c465d42e7d0c,
         type: 3}
