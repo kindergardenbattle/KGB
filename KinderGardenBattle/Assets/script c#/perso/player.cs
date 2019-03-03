@@ -23,9 +23,9 @@ public class player : MonoBehaviour
         {
 
 
-            float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-            float vertical = Input.GetAxis("Vertical") * Time.deltaTime;
-            transform.Translate(new Vector3(horizontal * speed, 0f, vertical * speed)); // mouvement
+            float horizontal = Input.GetAxis("camera_up") * Time.deltaTime;
+           // float vertical = Input.GetAxis("camer
+            //transform.Translate(new Vector3(horizontal * speed, 0f, vertical * speed)); // mouvement
 
         }
     }
