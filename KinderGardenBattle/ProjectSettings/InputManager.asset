@@ -150,11 +150,11 @@ InputManager:
     axis: 2
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Horizontal
+    m_Name: Chorizontal
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: l
+    positiveButton: o
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
@@ -166,11 +166,11 @@ InputManager:
     axis: 0
     joyNum: 0
   - serializedVersion: 3
-    m_Name: Vertical
+    m_Name: Cvertical
     descriptiveName: 
     descriptiveNegativeName: 
-    negativeButton: 
-    positiveButton: 
+    negativeButton: k
+    positiveButton: m
     altNegativeButton: 
     altPositiveButton: 
     gravity: 0
