@@ -12,7 +12,16 @@ public class camera_moove : MonoBehaviour
     public  int cas = 0;
     private void Update()
     {
-        cas = (Input.GetKeyDown(KeyCode.Keypad6) ? ++cas : (Input.GetKeyDown(KeyCode.Keypad4) ? --cas : cas))%4;
+        if (Input.GetKeyDown(KeyCode.Keypad6))
+        {
+            set_cas_plus();
+        }
+        
+        if(Input.GetKeyDown(KeyCode.Keypad4))
+        {
+            set_cas_less();
+        }
+        
         if (cas < 0)
             cas += 4;
 
@@ -54,24 +63,44 @@ public class camera_moove : MonoBehaviour
 
         }
         
-        if (offset.y < 45)
-        {
             if (Input.GetKeyDown(KeyCode.Keypad8))
             {
-                offset.y += 5;
-                offset.x += offset.x < 0 ? -5 : 5;
-                offset.z += offset.z < 0 ? -5 : 5;
+                zoom_plus();
             }
-        }
-        if (offset.y > 15)
-        {
+        
             if (Input.GetKeyDown(KeyCode.Keypad2))
             {
-                offset.y -= 5;
-                offset.x += offset.x < 0 ? 5 : -5;
-                offset.z += offset.z < 0 ? 5 : -5;
+                zomm_less();
             }
-            
+    }
+    
+    public void set_cas_plus()
+    {
+        cas = (cas + 1) % 4;
+    }
+        
+    public void set_cas_less()
+    {
+        cas = cas == 0 ? 3 : --cas;
+    }
+    
+    public void zoom_plus()
+    {
+        if (offset.y > 15)
+        {
+            offset.y -= 5;
+            offset.x += offset.x < 0 ? 5 : -5;
+            offset.z += offset.z < 0 ? 5 : -5;
+        }
+    }
+    
+    public void zomm_less()
+    {
+        if (offset.y < 45)
+        {
+            offset.y += 5;
+            offset.x += offset.x < 0 ? -5 : 5;
+            offset.z += offset.z < 0 ? -5 : 5;
         }
     }
 

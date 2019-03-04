@@ -31,9 +31,6 @@
           <e p="camera" t="Include">
             <e p="camera_moove.cs" t="Include" />
           </e>
-          <e p="hud" t="Include">
-            <e p="Camera_button.cs" t="Include" />
-          </e>
           <e p="lumiere" t="Include">
             <e p="lumiere.cs" t="Include" />
           </e>
