@@ -494,7 +494,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2450400592611198789}
-  - component: {fileID: 2450400592611198791}
   m_Layer: 0
   m_Name: button_camera
   m_TagString: Untagged
@@ -520,22 +519,6 @@ Transform:
   m_Father: {fileID: 2450400592743899728}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2450400592611198791
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2450400592611198788}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2f06069504d4b7249bd12a01a2314c7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  vitesse_cam: 0.125
-  offset: {x: 20, y: 20, z: 20}
-  cas: 0
 --- !u!1 &2450400592620980780
 GameObject:
   m_ObjectHideFlags: 0
@@ -1301,7 +1284,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2450400592611198791}
+      - m_Target: {fileID: 0}
         m_MethodName: zoom_plus
         m_Mode: 1
         m_Arguments:
@@ -1591,7 +1574,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2450400592611198791}
+      - m_Target: {fileID: 0}
         m_MethodName: set_cas_less
         m_Mode: 1
         m_Arguments:
@@ -1720,7 +1703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2450400592611198791}
+      - m_Target: {fileID: 0}
         m_MethodName: zoom_plus
         m_Mode: 1
         m_Arguments:
