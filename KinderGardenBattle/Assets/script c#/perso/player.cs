@@ -8,6 +8,7 @@ public class player : MonoBehaviour
     // public ClasseduPerso Perso 
     public float speed;
     public float life = 100;
+    public bool is_target_player;
 
 
 
@@ -19,14 +20,13 @@ public class player : MonoBehaviour
             Destroy(this);
         }
         else
-
         {
-
-
-            float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
-            float vertical = Input.GetAxis("Vertical") * Time.deltaTime;
-            transform.Translate(new Vector3(horizontal * speed, 0f, vertical * speed)); // mouvement
-
+            if (is_target_player)
+            {
+                float horizontal = Input.GetAxis("Horizontal") * Time.deltaTime;
+                float vertical = Input.GetAxis("Vertical") * Time.deltaTime;
+                transform.Translate(new Vector3(horizontal * speed, 0f, vertical * speed)); // mouvement
+            }
         }
     }
 }

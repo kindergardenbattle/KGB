@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\msi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\msi\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_KinderGardenBattle.944321002.00" t="ExcludeRecursive" />
-    <e p="C:\Users\msi\Documents\KGB\KinderGardenBattle" t="IncludeRecursive">
+    <e p="C:\Users\driah\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\driah\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_KinderGardenBattle.654385190.00" t="ExcludeRecursive" />
+    <e p="C:\Users\driah\Desktop\unity\KGB\KinderGardenBattle" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -20,10 +20,6 @@
             <e p="TargetSelector.cs" t="Include" />
           </e>
           <e p="Scripts" t="Include">
-            <e p="Editor" t="Include">
-              <e p="LayoutHelpers.cs" t="Include" />
-              <e p="RTS_CameraEditor.cs" t="Include" />
-            </e>
             <e p="RTS_Camera.cs" t="Include" />
           </e>
         </e>

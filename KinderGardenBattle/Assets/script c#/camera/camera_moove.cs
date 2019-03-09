@@ -6,12 +6,21 @@ using Vector3 = UnityEngine.Vector3;
 
 public class camera_moove : MonoBehaviour
 {
-    public Transform target;
+    public Transform target1;
+    public Transform target2;
+    public Transform target3;
+    public Transform target4;
     public float vitesse_cam = 0.125f;
     public Vector3 offset = new Vector3(20, 20, 20);
     public  int cas = 0;
+    public player Player1;
+    public player Player2;
+    public player Player3;
+    public player Player4;
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Keypad5))
+            switch_target();
         if (Input.GetKeyDown(KeyCode.Keypad6))
         {
             set_cas_plus();
@@ -73,6 +82,14 @@ public class camera_moove : MonoBehaviour
                 zomm_less();
             }
     }
+
+    public void switch_target()
+    {
+        (target1, target2,target3,target4) = (target2,target3,target4,target1);
+        Player2.is_target_player = !Player2.is_target_player;
+        Player1.is_target_player = !Player1.is_target_player;
+        (Player1, Player2, Player3, Player4) = (Player2, Player3,Player4 , Player1);
+    }
     
     public void set_cas_plus()
     {
@@ -107,10 +124,10 @@ public class camera_moove : MonoBehaviour
     private void LateUpdate()
     {
 
-        Vector3 Position_ = target.position + offset;
+        Vector3 Position_ = target1.position + offset;
         Vector3 Nposition = Vector3.Lerp(transform.position, Position_, vitesse_cam);
         transform.position = Nposition;
-        transform.LookAt(target);
+        transform.LookAt(target1);
     }
 }
 
