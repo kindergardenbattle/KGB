@@ -37,6 +37,7 @@ public class Multi_Manager : MonoBehaviourPunCallbacks
 
     void LoadArena()
     {
+        Debug.LogError("iohyiuhuihiohjguipgy bhuioyiunyuioynooo");
         if (!PhotonNetwork.IsMasterClient)
         {
             Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
@@ -56,7 +57,7 @@ public class Multi_Manager : MonoBehaviourPunCallbacks
 
         if (PhotonNetwork.IsMasterClient)
         {
-            Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
+            Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLe
         }
     }
 
@@ -64,6 +65,7 @@ public class Multi_Manager : MonoBehaviourPunCallbacks
     public override void OnPlayerLeftRoom(Player other)//todo faudra l'adapter pour notre lobby
     {
         Debug.LogFormat("OnPlayerLeftRoom() {0}", other.NickName); // seen when other disconnects
+
 
         if (PhotonNetwork.IsMasterClient)
         {
