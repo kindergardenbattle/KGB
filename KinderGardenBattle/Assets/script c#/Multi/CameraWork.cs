@@ -9,21 +9,9 @@ namespace multi
     {
         #region Private Fields
 
-        [Tooltip("The distance in the local x-z plane to the target")]
-        [SerializeField]
-        private float distance = 7.0f;
-
-        [Tooltip("The height we want the camera to be above the target")]
-        [SerializeField]
-        private float height = 3.0f;
-
-        [Tooltip("The Smooth time lag for the height of the camera.")]
-        [SerializeField]
-        private float heightSmoothLag = 0.3f;
-
-        [Tooltip("Allow the camera to be offseted vertically from the target, for example giving more view of the sceneray and less ground.")]
-        [SerializeField]
-        private Vector3 centerOffset = Vector3.zero;
+        public float vitesse_cam = 0.125f;
+        public Vector3 offset = new Vector3(20, 20, 20);
+        public int cas = 0;
 
         [Tooltip("Set this as false if a component of a prefab being instanciated by Photon Network, and manually call OnStartFollowing() when and if needed.")]
         [SerializeField]
@@ -35,11 +23,6 @@ namespace multi
         // maintain a flag internally to reconnect if target is lost or camera is switched
         bool isFollowing;
 
-        // Represents the current velocity, this value is modified by SmoothDamp() every time you call it.
-        private float heightVelocity;
-
-        // Represents the position we are trying to reach using SmoothDamp()
-        private float targetHeight = 100000.0f;
 
         #endregion
 
@@ -56,6 +39,77 @@ namespace multi
                 OnStartFollowing();
             }
 
+        }
+
+        private void Update()
+        {
+            if (cameraTransform == null && isFollowing)
+            {
+                OnStartFollowing();
+            }
+            else
+            {
+                if (Input.GetKeyDown(KeyCode.Keypad6))
+                {
+                    set_cas_plus();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Keypad4))
+                {
+                    set_cas_less();
+                }
+
+                if (cas < 0)
+                    cas += 4;
+
+                if (cas == 0)
+                {
+                    if (offset.x < 0)
+                        offset.x = offset.x * (-1);
+                    if (offset.z < 0)
+                        offset.z = offset.z * (-1);
+
+                }
+
+                if (cas == 1)
+                {
+                    if (offset.x < 0)
+                        offset.x = offset.x * (-1);
+                    if (offset.z > 0)
+                    {
+                        offset.z = offset.z * (-1);
+                    }
+
+                }
+
+                if (cas == 2)
+                {
+                    if (offset.x > 0)
+                        offset.x = offset.x * (-1);
+                    if (offset.z > 0)
+                        offset.z = offset.z * (-1);
+
+                }
+
+                if (cas == 3)
+                {
+                    if (offset.x > 0)
+                        offset.x = offset.x * (-1);
+                    if (offset.z < 0)
+                        offset.z = offset.z * (-1);
+
+                }
+
+                if (Input.GetKeyDown(KeyCode.Keypad8))
+                {
+                    zoom_plus();
+                }
+
+                if (Input.GetKeyDown(KeyCode.Keypad2))
+                {
+                    zomm_less();
+                }
+            }
         }
 
         /// <summary>
@@ -76,7 +130,7 @@ namespace multi
                 Apply();
             }
         }
-
+        
         #endregion
 
         #region Public Methods
@@ -91,7 +145,37 @@ namespace multi
             cameraTransform = Camera.main.transform;
             isFollowing = true;
             // we don't smooth anything, we go straight to the right camera shot
-            Cut();
+            Apply();
+        }
+
+        public void set_cas_plus()
+        {
+            cas = (cas + 1) % 4;
+        }
+
+        public void set_cas_less()
+        {
+            cas = cas == 0 ? 3 : --cas;
+        }
+
+        public void zoom_plus()
+        {
+            if (offset.y > 15)
+            {
+                offset.y -= 5;
+                offset.x += offset.x < 0 ? 5 : -5;
+                offset.z += offset.z < 0 ? 5 : -5;
+            }
+        }
+
+        public void zomm_less()
+        {
+            if (offset.y < 45)
+            {
+                offset.y += 5;
+                offset.x += offset.x < 0 ? -5 : 5;
+                offset.z += offset.z < 0 ? -5 : 5;
+            }
         }
 
         #endregion
@@ -103,69 +187,11 @@ namespace multi
         /// </summary>
         void Apply()
         {
-            Vector3 targetCenter = transform.position + centerOffset;
-
-            // Calculate the current & target rotation angles
-            float originalTargetAngle = transform.eulerAngles.y;
-            float currentAngle = cameraTransform.eulerAngles.y;
-
-            // Adjust real target angle when camera is locked
-            float targetAngle = originalTargetAngle;
-
-            currentAngle = targetAngle;
-
-            targetHeight = targetCenter.y + height;
-
-            // Damp the height
-            float currentHeight = cameraTransform.position.y;
-            currentHeight = Mathf.SmoothDamp(currentHeight, targetHeight, ref heightVelocity, heightSmoothLag);
-
-            // Convert the angle into a rotation, by which we then reposition the camera
-            Quaternion currentRotation = Quaternion.Euler(0, currentAngle, 0);
-
-            // Set the position of the camera on the x-z plane to:
-            // distance meters behind the target
-            cameraTransform.position = targetCenter;
-            cameraTransform.position += currentRotation * Vector3.back * distance;
-
-            // Set the height of the camera
-            cameraTransform.position = new Vector3(cameraTransform.position.x, currentHeight, cameraTransform.position.z);
-
-            // Always look at the target	
-            SetUpRotation(targetCenter);
+            Vector3 Position_ = transform.position + offset;
+            Vector3 Nposition = Vector3.Lerp(cameraTransform.transform.position, Position_, vitesse_cam);
+            cameraTransform.transform.position = Nposition;
+            cameraTransform.transform.LookAt(transform);
         }
-
-
-        /// <summary>
-        /// Directly position the camera to a the specified Target and center.
-        /// </summary>
-        void Cut()
-        {
-            float oldHeightSmooth = heightSmoothLag;
-            heightSmoothLag = 0.001f;
-
-            Apply();
-
-            heightSmoothLag = oldHeightSmooth;
-        }
-
-        /// <summary>
-        /// Sets up the rotation of the camera to always be behind the target
-        /// </summary>
-        /// <param name="centerPos">Center position.</param>
-        void SetUpRotation(Vector3 centerPos)
-        {
-            Vector3 cameraPos = cameraTransform.position;
-            Vector3 offsetToCenter = centerPos - cameraPos;
-
-            // Generate base rotation only around y-axis
-            Quaternion yRotation = Quaternion.LookRotation(new Vector3(offsetToCenter.x, 0, offsetToCenter.z));
-
-            Vector3 relativeOffset = Vector3.forward * distance + Vector3.down * height;
-            cameraTransform.rotation = yRotation * Quaternion.LookRotation(relativeOffset);
-
-        }
-
         #endregion
     }
 }
