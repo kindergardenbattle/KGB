@@ -113,7 +113,7 @@ namespace Photon.Pun
         /// Cached raised triggers that are set to be synchronized in discrete mode. since a Trigger only stay up for less than a frame,
         /// We need to cache it until the next discrete serialization call.
         /// </summary>
-        List<string> m_raisedDiscreteTriggersCache = new List<string>();
+        private List<string> m_raisedDiscreteTriggersCache = new List<string>();
 
         #endregion
 

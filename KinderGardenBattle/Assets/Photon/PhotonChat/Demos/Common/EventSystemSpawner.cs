@@ -19,7 +19,7 @@ namespace Photon.Chat.UtilityScripts
 	/// </summary>
 	public class EventSystemSpawner : MonoBehaviour 
 	{
-		void Start()
+        private void Start()
 		{
 			EventSystem sceneEventSystem = FindObjectOfType<EventSystem>();
 			if (sceneEventSystem == null)

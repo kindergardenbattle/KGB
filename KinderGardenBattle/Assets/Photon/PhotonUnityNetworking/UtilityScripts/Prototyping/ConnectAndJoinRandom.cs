@@ -89,12 +89,13 @@ namespace Photon.Pun.UtilityScripts
 [CustomEditor(typeof(ConnectAndJoinRandom), true)]
 public class ConnectAndJoinRandomInspector : Editor
 {
-	void OnEnable() { EditorApplication.update += Update; }
-	void OnDisable() { EditorApplication.update -= Update; }
+        private void OnEnable() { EditorApplication.update += Update; }
 
-	bool IsConnectedCache = false;
+        private void OnDisable() { EditorApplication.update -= Update; }
 
-	void Update()
+        private bool IsConnectedCache = false;
+
+        private void Update()
 	{
 		if (IsConnectedCache != PhotonNetwork.IsConnected)
 		{

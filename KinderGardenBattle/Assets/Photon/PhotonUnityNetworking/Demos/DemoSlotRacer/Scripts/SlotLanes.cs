@@ -30,7 +30,7 @@ namespace Photon.Pun.Demo.SlotRacer
 		/// </summary>
 		public SplinePosition[] GridPositions;
 
-		void Awake()
+        private void Awake()
 		{
 			Instance = this;
 		}

@@ -31,9 +31,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     /// <summary>
     /// This client's version number. Users are separated from each other by gameVersion (which allows you to make breaking changes).
     /// </summary>
-    string gameVersion = "1";
+    private string gameVersion = "1";
     [SerializeField]
-    bool isConnecting;
+    private bool isConnecting;
 
 
     #endregion
@@ -45,7 +45,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     /// <summary>
     /// MonoBehaviour method called on GameObject by Unity during early initialization phase.
     /// </summary>
-    void Awake()
+    private void Awake()
     {
         // #Critical
         // this makes sure we can use PhotonNetwork.LoadLevel() on the master client and all clients in the same room sync their level automatically
@@ -56,7 +56,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     /// <summary>
     /// MonoBehaviour method called on GameObject by Unity during initialization phase.
     /// </summary>
-    void Start()
+    private void Start()
     {
         progressLabel.SetActive(false);
         menu.SetActive(true);

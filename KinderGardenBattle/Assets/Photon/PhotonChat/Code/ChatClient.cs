@@ -39,7 +39,7 @@ namespace Photon.Chat
     /// </remarks>
     public class ChatClient : IPhotonPeerListener
     {
-        const int FriendRequestListMax = 1024;
+        private const int FriendRequestListMax = 1024;
 
         /// <summary> Default maximum value possible for <see cref="ChatChannel.MaxSubscribers"/> when <see cref="ChatChannel.PublishSubscribers"/> is enabled</summary>
         public const int DefaultMaxSubscribers = 100;

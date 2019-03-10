@@ -18,10 +18,9 @@ namespace Photon.Pun.Demo.Cockpit
     public class CurrentRoomPropertiesListedInLobbyProperty : PropertyListenerBase
     {
         public Text Text;
+        private string[] _cache = null;
 
-        string[] _cache = null;
-
-        void Update()
+        private void Update()
         {
             if (PhotonNetwork.CurrentRoom != null)
             {

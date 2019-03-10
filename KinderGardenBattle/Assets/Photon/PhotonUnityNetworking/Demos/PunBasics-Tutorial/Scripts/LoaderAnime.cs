@@ -31,37 +31,34 @@ namespace Photon.Pun.Demo.PunBasics
 
 		public GameObject particles;
 
-		#endregion
-		
-		#region Private Variables
+        #endregion
 
-		Vector3 _offset;
+        #region Private Variables
 
-		Transform _transform;
+        private Vector3 _offset;
+        private Transform _transform;
+        private Transform _particleTransform;
+        private bool _isAnimating;
 
-		Transform _particleTransform;
+        #endregion
 
-		bool _isAnimating;
+        #region MonoBehaviour CallBacks
 
-		#endregion
-		
-		#region MonoBehaviour CallBacks
-		
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity during early initialization phase.
-		/// </summary>
-		void Awake()
+        /// <summary>
+        /// MonoBehaviour method called on GameObject by Unity during early initialization phase.
+        /// </summary>
+        private void Awake()
 		{
 			// cache for efficiency
 			_particleTransform =particles.GetComponent<Transform>();
 			_transform = GetComponent<Transform>();
 		}
 
-		
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity on every frame.
-		/// </summary>
-		void Update () {
+
+        /// <summary>
+        /// MonoBehaviour method called on GameObject by Unity on every frame.
+        /// </summary>
+        private void Update () {
 
 			// only care about rotating particles if we are animating
 			if (_isAnimating)

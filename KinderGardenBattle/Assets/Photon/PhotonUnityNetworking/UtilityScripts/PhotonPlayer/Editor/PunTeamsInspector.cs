@@ -21,9 +21,7 @@ namespace Photon.Pun.UtilityScripts
 {
 	[CustomEditor(typeof(PunTeams))]
 	public class PunTeamsInspector : Editor {
-
-
-		Dictionary<PunTeams.Team, bool> _Foldouts ;
+        private Dictionary<PunTeams.Team, bool> _Foldouts ;
 
 		public override void OnInspectorGUI()
 		{

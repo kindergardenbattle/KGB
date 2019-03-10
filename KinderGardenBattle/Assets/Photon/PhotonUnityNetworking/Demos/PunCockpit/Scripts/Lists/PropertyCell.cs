@@ -66,7 +66,7 @@ namespace Photon.Pun.Demo.Cockpit
             StartCoroutine("Remove");
         }
 
-        IEnumerator UpdateUIPing()
+        private IEnumerator UpdateUIPing()
         {
             isUpdatedFlag.gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);
@@ -74,7 +74,7 @@ namespace Photon.Pun.Demo.Cockpit
             isUpdatedFlag.gameObject.SetActive(false);
         }
 
-        IEnumerator Add()
+        private IEnumerator Add()
         {
             LayoutElement.minHeight = 0f;
 
@@ -86,7 +86,7 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        IEnumerator Remove()
+        private IEnumerator Remove()
         {
             while (LayoutElement.minHeight != 0f)
             {

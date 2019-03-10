@@ -19,11 +19,10 @@ namespace Photon.Pun.UtilityScripts
 	/// this doesn't do anything if no scrollRect component found in Parent Hierarchy.
 	/// </summary>
 	public class ButtonInsideScrollList : MonoBehaviour, IPointerDownHandler, IPointerUpHandler {
+        private ScrollRect scrollRect;
 
-		ScrollRect scrollRect;
-
-		// Use this for initialization
-		void Start () {
+        // Use this for initialization
+        private void Start () {
 			scrollRect = GetComponentInParent<ScrollRect>();
 		}
 

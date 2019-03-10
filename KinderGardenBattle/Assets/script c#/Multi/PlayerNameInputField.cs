@@ -12,7 +12,7 @@ public class PlayerNameInputField : MonoBehaviour
 
 
     // Store the PlayerPref Key to avoid typos
-    const string playerNamePrefKey = "PlayerName";
+    private const string playerNamePrefKey = "PlayerName";
 
 
     #endregion
@@ -24,7 +24,7 @@ public class PlayerNameInputField : MonoBehaviour
     /// <summary>
     /// MonoBehaviour method called on GameObject by Unity during initialization phase.
     /// </summary>
-    void Start () {
+    private void Start () {
 
 
         string defaultName = string.Empty;

@@ -26,10 +26,9 @@ namespace Photon.Pun.UtilityScripts
         public static PointedAtGameObjectInfo Instance;
 
         public Text text;
+        private Transform focus;
 
-        Transform focus;
-
-        void Start()
+        private void Start()
         {
             if (Instance != null)
             {
@@ -73,7 +72,7 @@ namespace Photon.Pun.UtilityScripts
 
         }
 
-        void LateUpdate()
+        private void LateUpdate()
         {
             if (focus != null)
             {

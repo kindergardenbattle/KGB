@@ -34,10 +34,8 @@ namespace Photon.Pun.Demo.Cockpit
 
 		public InputField LobbyNameInputField;
 		public InputField SqlQueryInputField;
-
-        bool _firstUpdate = true;
-
-        Dictionary<string, RoomListCell> roomCellList = new Dictionary<string, RoomListCell>();
+        private bool _firstUpdate = true;
+        private Dictionary<string, RoomListCell> roomCellList = new Dictionary<string, RoomListCell>();
 
 
         public override void OnEnable()
@@ -100,7 +98,7 @@ namespace Photon.Pun.Demo.Cockpit
             _firstUpdate = false;
         }
 
-        IEnumerator clearStatus()
+        private IEnumerator clearStatus()
         {
             yield return new WaitForSeconds(1f);
 

@@ -22,10 +22,9 @@ namespace Photon.Pun.Demo.Cockpit
         public class OnSubmitEvent : UnityEvent<int> { }
 
         public OnSubmitEvent OnSubmit;
+        private bool registered;
 
-        bool registered;
-
-        void OnEnable()
+        private void OnEnable()
         {
             if (!registered)
             {
@@ -34,7 +33,7 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             registered = false;
             PropertyValueInput.onEndEdit.RemoveListener(EndEditOnEnter);

@@ -34,34 +34,29 @@ namespace Photon.Pun.Demo.PunBasics
 	    [Tooltip("UI Slider to display Player's Health")]
 	    [SerializeField]
 	    private Slider playerHealthSlider;
+        private PlayerManager target;
+        private float characterControllerHeight;
+        private Transform targetTransform;
+        private Renderer targetRenderer;
+        private Vector3 targetPosition;
 
-        PlayerManager target;
+        #endregion
 
-		float characterControllerHeight;
+        #region MonoBehaviour Messages
 
-		Transform targetTransform;
-
-		Renderer targetRenderer;
-
-		Vector3 targetPosition;
-
-		#endregion
-
-		#region MonoBehaviour Messages
-		
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity during early initialization phase
-		/// </summary>
-		void Awake(){
+        /// <summary>
+        /// MonoBehaviour method called on GameObject by Unity during early initialization phase
+        /// </summary>
+        private void Awake(){
 
 			this.transform.SetParent(GameObject.Find("Canvas").GetComponent<Transform>(), false);
 		}
 
-		/// <summary>
-		/// MonoBehaviour method called on GameObject by Unity on every frame.
-		/// update the health slider to reflect the Player's health
-		/// </summary>
-		void Update()
+        /// <summary>
+        /// MonoBehaviour method called on GameObject by Unity on every frame.
+        /// update the health slider to reflect the Player's health
+        /// </summary>
+        private void Update()
 		{
 			// Destroy itself if the target is null, It's a fail safe when Photon is destroying Instances of a Player over the network
 			if (target == null) {
@@ -76,11 +71,11 @@ namespace Photon.Pun.Demo.PunBasics
 			}
 		}
 
-		/// <summary>
-		/// MonoBehaviour method called after all Update functions have been called. This is useful to order script execution.
-		/// In our case since we are following a moving GameObject, we need to proceed after the player was moved during a particular frame.
-		/// </summary>
-		void LateUpdate () {
+        /// <summary>
+        /// MonoBehaviour method called after all Update functions have been called. This is useful to order script execution.
+        /// In our case since we are following a moving GameObject, we need to proceed after the player was moved during a particular frame.
+        /// </summary>
+        private void LateUpdate () {
 
 			// Do not show the UI if we are not visible to the camera, thus avoid potential bugs with seeing the UI, but not the player itself.
 			if (targetRenderer!=null) {

@@ -25,8 +25,7 @@ namespace Photon.Pun.UtilityScripts
         /// The toggle Component.
         /// </summary>
 		public Toggle toggle;
-
-		Text _text;
+        private Text _text;
 
         /// <summary>
         /// The color of the normal on transition state.
@@ -47,8 +46,7 @@ namespace Photon.Pun.UtilityScripts
         /// The color of the hover off transition state.
         /// </summary>
 		public Color HoverOffColor = Color.black;
-
-		bool isHover;
+        private bool isHover;
 
 		public void OnEnable()
 		{

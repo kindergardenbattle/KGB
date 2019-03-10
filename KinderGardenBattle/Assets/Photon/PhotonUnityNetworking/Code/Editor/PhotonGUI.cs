@@ -18,7 +18,7 @@ namespace Photon.Pun
     {
         #region Styles
 
-        static GUIStyle m_DefaultTitleStyle;
+        private static GUIStyle m_DefaultTitleStyle;
 
         public static GUIStyle DefaultTitleStyle
         {
@@ -41,7 +41,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_DefaultContainerStyle;
+        private static GUIStyle m_DefaultContainerStyle;
 
         public static GUIStyle DefaultContainerStyle
         {
@@ -60,7 +60,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_DefaultAddButtonStyle;
+        private static GUIStyle m_DefaultAddButtonStyle;
 
         public static GUIStyle DefaultAddButtonStyle
         {
@@ -79,7 +79,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_DefaultRemoveButtonStyle;
+        private static GUIStyle m_DefaultRemoveButtonStyle;
 
         public static GUIStyle DefaultRemoveButtonStyle
         {
@@ -99,7 +99,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_DefaultContainerRowStyle;
+        private static GUIStyle m_DefaultContainerRowStyle;
 
         public static GUIStyle DefaultContainerRowStyle
         {
@@ -119,7 +119,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_FoldoutBold;
+        private static GUIStyle m_FoldoutBold;
 
         public static GUIStyle FoldoutBold
         {
@@ -135,7 +135,7 @@ namespace Photon.Pun
             }
         }
 
-        static GUIStyle m_RichLabel;
+        private static GUIStyle m_RichLabel;
 
         public static GUIStyle RichLabel
         {
@@ -154,7 +154,7 @@ namespace Photon.Pun
 
         #endregion
 
-        static Texture2D m_HelpIcon;
+        private static Texture2D m_HelpIcon;
 
         public static Texture2D HelpIcon
         {
@@ -249,7 +249,7 @@ namespace Photon.Pun
 
         #region Implementation
 
-        static Rect DoContainerBody(float height)
+        private static Rect DoContainerBody(float height)
         {
             Rect controlRect = EditorGUILayout.GetControlRect(false, height);
             controlRect.yMin -= 3;
@@ -265,7 +265,7 @@ namespace Photon.Pun
             return controlRect;
         }
 
-        static bool DoContainerHeaderToggle(string headline, bool toggle)
+        private static bool DoContainerHeaderToggle(string headline, bool toggle)
         {
             Rect rect = DoContainerHeader(headline, 27, 15);
             Rect toggleRect = new Rect(rect.xMin + 5, rect.yMin + 5, EditorGUIUtility.labelWidth, rect.height);
@@ -273,8 +273,7 @@ namespace Photon.Pun
             return EditorGUI.Toggle(toggleRect, toggle);
         }
 
-
-        static bool DoContainerHeaderFoldout(string headline, bool foldout)
+        private static bool DoContainerHeaderFoldout(string headline, bool foldout)
         {
             Rect rect = DoContainerHeader("", 27, 0f);
             Rect foldoutRect = new Rect(rect.xMin + 15, rect.yMin + 5, rect.width, rect.height);
@@ -282,7 +281,7 @@ namespace Photon.Pun
             return EditorGUI.Foldout(foldoutRect, foldout, headline, FoldoutBold);
         }
 
-        static Rect DoContainerHeader(string headline, float height, float contentOffset)
+        private static Rect DoContainerHeader(string headline, float height, float contentOffset)
         {
             GUILayout.Space(5);
             Rect controlRect = EditorGUILayout.GetControlRect(false, height);

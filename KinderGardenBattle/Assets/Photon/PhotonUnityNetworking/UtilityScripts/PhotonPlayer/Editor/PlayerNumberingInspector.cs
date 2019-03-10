@@ -20,14 +20,13 @@ namespace Photon.Pun.UtilityScripts
 {
 	[CustomEditor(typeof(PlayerNumbering))]
 	public class PlayerNumberingInspector : Editor {
+        private int localPlayerIndex;
 
-	 	int localPlayerIndex;
-
-		void OnEnable () {
+        private void OnEnable () {
 		    PlayerNumbering.OnPlayerNumberingChanged += RefreshData;
 		}
 
-		void OnDisable () {
+        private void OnDisable () {
 		    PlayerNumbering.OnPlayerNumberingChanged -= RefreshData;
 		}
 
@@ -54,11 +53,11 @@ namespace Photon.Pun.UtilityScripts
 			}
 		}
 
-		/// <summary>
-		/// force repaint fo the inspector, else we would not see the new data in the inspector.
-		/// This is better then doing it in OnInspectorGUI too many times per frame for no need
-		/// </summary>
-		void RefreshData()
+        /// <summary>
+        /// force repaint fo the inspector, else we would not see the new data in the inspector.
+        /// This is better then doing it in OnInspectorGUI too many times per frame for no need
+        /// </summary>
+        private void RefreshData()
 		{
 			Repaint();
 		}

@@ -55,10 +55,9 @@ namespace Photon.Pun.UtilityScripts
         public TabChangeEvent OnTabChanged;
 
         protected Tab CurrentTab;
+        private Dictionary<Toggle, Tab> Tab_lut;
 
-        Dictionary<Toggle, Tab> Tab_lut;
-
-        void Start()
+        private void Start()
         {
 
             Tab_lut = new Dictionary<Toggle, Tab>();
@@ -108,7 +107,7 @@ namespace Photon.Pun.UtilityScripts
         /// final method for a tab selection routine
         /// </summary>
         /// <param name="tab">Tab.</param>
-        void OnTabSelected(Tab tab)
+        private void OnTabSelected(Tab tab)
         {
             CurrentTab.View.gameObject.SetActive(false);
 

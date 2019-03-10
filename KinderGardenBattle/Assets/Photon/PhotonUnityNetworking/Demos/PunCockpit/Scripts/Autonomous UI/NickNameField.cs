@@ -16,12 +16,10 @@ namespace Photon.Pun.Demo.Cockpit
     public class NickNameField : MonoBehaviour
     {
         public InputField PropertyValueInput;
+        private string _cache;
+        private bool registered;
 
-        string _cache;
-
-        bool registered;
-
-        void OnEnable()
+        private void OnEnable()
         {
             if (!registered)
             {
@@ -30,13 +28,13 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        void OnDisable()
+        private void OnDisable()
         {
             registered = false;
             PropertyValueInput.onEndEdit.RemoveListener(OnEndEdit);
         }
 
-        void Update()
+        private void Update()
         {
             if (PhotonNetwork.NickName != _cache)
             {

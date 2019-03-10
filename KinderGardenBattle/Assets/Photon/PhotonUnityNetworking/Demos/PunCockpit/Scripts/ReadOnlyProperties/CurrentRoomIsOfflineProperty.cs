@@ -16,10 +16,9 @@ namespace Photon.Pun.Demo.Cockpit
     {
 
         public Text Text;
+        private int _cache = -1;
 
-        int _cache = -1;
-
-        void Update()
+        private void Update()
         {
 
             if (PhotonNetwork.CurrentRoom != null)

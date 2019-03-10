@@ -36,8 +36,7 @@ namespace Photon.Pun.Demo.Cockpit
         public Image isMasterFlag;
 
         public LayoutElement LayoutElement;
-
-        Player _player;
+        private Player _player;
 
         public bool isInactiveCache;
 
@@ -78,7 +77,7 @@ namespace Photon.Pun.Demo.Cockpit
             ListManager.SelectPlayer(_player);
         }
 
-        void UpdateInfo()
+        private void UpdateInfo()
         {
             if (string.IsNullOrEmpty(_player.NickName))
             {
@@ -104,8 +103,7 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-
-        IEnumerator Add()
+        private IEnumerator Add()
         {
             this.isInactiveCache = false;
 
@@ -119,7 +117,7 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        IEnumerator Remove()
+        private IEnumerator Remove()
         {
             while (LayoutElement.minHeight != 0f)
             {
