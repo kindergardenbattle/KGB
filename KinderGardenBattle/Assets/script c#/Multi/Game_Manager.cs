@@ -60,6 +60,7 @@ namespace Multi
 
         void LoadArena()
         {
+            Debug.Log("fhuwhsduiohfuiwesdphfuihweruiofhsduiofhuihfuihwuioerpuioweuia");
             if (!PhotonNetwork.IsMasterClient)
             {
                 Debug.LogError("PhotonNetwork : Trying to Load a level but we are not the master Client");
@@ -83,7 +84,7 @@ namespace Multi
                 Debug.LogFormat("OnPlayerEnteredRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-                LoadArena();
+                //LoadArena();
             }
         }
 
@@ -98,7 +99,7 @@ namespace Multi
                 Debug.LogFormat("OnPlayerLeftRoom IsMasterClient {0}", PhotonNetwork.IsMasterClient); // called before OnPlayerLeftRoom
 
 
-                LoadArena();
+                //LoadArena();
             }
         }
 
