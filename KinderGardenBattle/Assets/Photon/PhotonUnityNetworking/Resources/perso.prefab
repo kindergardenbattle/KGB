@@ -243,7 +243,7 @@ MonoBehaviour:
   vitesse_cam: 0.125
   offset: {x: 20, y: 20, z: 20}
   cas: 0
-  followOnStart: 1
+  followOnStart: 0
 --- !u!1 &2961406171032213291
 GameObject:
   m_ObjectHideFlags: 0

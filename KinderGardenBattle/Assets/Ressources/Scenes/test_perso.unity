@@ -492,55 +492,5 @@ PrefabInstance:
       propertyPath: viewIdField
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3789162535352302634, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162535352302634, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162536997667787, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162536997667787, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162536366253281, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162536366253281, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162537336961944, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162537336961944, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162535947826785, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3789162535947826785, guid: 148a09c3510826043bc37b22ac7b0193,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 148a09c3510826043bc37b22ac7b0193, type: 3}
