@@ -23,11 +23,10 @@ public class Test_camera : MonoBehaviour
         Vector3 pos = transform.position;
         if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
         {
-                target = hit.transform.position;
-                pos.y = target.y + 20;
-                pos.x = target.x + pos.y;
-                pos.z = target.z - pos.y;
-                
+            target = hit.transform.position;
+            pos.x = target.x - 20;
+            pos.z = target.z - 20;
+            pos.y = target.y + 20;
         }
         else
         {
@@ -37,7 +36,7 @@ public class Test_camera : MonoBehaviour
             if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
             {
 
-                pos.x -= panSpeed * Time.deltaTime;
+                pos.x += panSpeed * Time.deltaTime;
                 pos.z += panSpeed * Time.deltaTime;
             }
 
@@ -46,7 +45,7 @@ public class Test_camera : MonoBehaviour
             if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
             {
                 pos.x -= panSpeed * Time.deltaTime;
-                pos.z -= panSpeed * Time.deltaTime;
+                pos.z += panSpeed * Time.deltaTime;
             }
 
             transform.position = pos;
@@ -54,7 +53,7 @@ public class Test_camera : MonoBehaviour
             if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
             {
                 pos.z -= panSpeed * Time.deltaTime;
-                pos.x += panSpeed * Time.deltaTime;
+                pos.x -= panSpeed * Time.deltaTime;
             }
 
             transform.position = pos;
@@ -62,7 +61,7 @@ public class Test_camera : MonoBehaviour
             if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
             {
                 pos.x += panSpeed * Time.deltaTime;
-                pos.z += panSpeed * Time.deltaTime;
+                pos.z -= panSpeed * Time.deltaTime;
             }
 
             pos.x -= scroll * scrollspeed * Time.deltaTime;
