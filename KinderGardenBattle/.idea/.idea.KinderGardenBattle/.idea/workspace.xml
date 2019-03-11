@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e8ab4e-fe72-4b64-9b7d-22343520dd1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/Team.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/Team.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_camera.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_camera.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_perso.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_perso.unity" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +15,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+            <state relative-caret-position="350">
+              <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
               <folding>
                 <marker date="1552317828693" expanded="true" signature="60:2402" ph="{...}" />
                 <marker date="1552317828693" expanded="true" signature="313:334" ph="{...}" />
@@ -179,12 +177,12 @@
       <workItem from="1551728035575" duration="5968000" />
       <workItem from="1552118313232" duration="6113000" />
       <workItem from="1552131023250" duration="14507000" />
-      <workItem from="1552313850234" duration="4297000" />
+      <workItem from="1552313850234" duration="4373000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63573000" />
+    <option name="totallyTimeSpent" value="63649000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -528,8 +526,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+        <state relative-caret-position="350">
+          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
           <folding>
             <marker date="1552317828693" expanded="true" signature="60:2402" ph="{...}" />
             <marker date="1552317828693" expanded="true" signature="313:334" ph="{...}" />

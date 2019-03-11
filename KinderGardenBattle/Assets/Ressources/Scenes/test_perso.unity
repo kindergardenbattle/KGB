@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -289,7 +289,7 @@ PrefabInstance:
     - target: {fileID: 8805031971229496081, guid: 27ecda285fe07f64aad117593c9bf710,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8805031971229496081, guid: 27ecda285fe07f64aad117593c9bf710,
         type: 3}
@@ -336,21 +336,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5426473693139091763, guid: 27ecda285fe07f64aad117593c9bf710,
-        type: 3}
-      propertyPath: viewIdField
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 1157087248470752395, guid: 27ecda285fe07f64aad117593c9bf710,
-        type: 3}
-      propertyPath: viewIdField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 5687515355481059335, guid: 27ecda285fe07f64aad117593c9bf710,
-        type: 3}
-      propertyPath: viewIdField
-      value: 2
-      objectReference: {fileID: 0}
     - target: {fileID: 5154140241043449351, guid: 27ecda285fe07f64aad117593c9bf710,
         type: 3}
       propertyPath: viewIdField
@@ -360,6 +345,21 @@ PrefabInstance:
         type: 3}
       propertyPath: InstantiationId
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5426473693139091763, guid: 27ecda285fe07f64aad117593c9bf710,
+        type: 3}
+      propertyPath: viewIdField
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5687515355481059335, guid: 27ecda285fe07f64aad117593c9bf710,
+        type: 3}
+      propertyPath: viewIdField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1157087248470752395, guid: 27ecda285fe07f64aad117593c9bf710,
+        type: 3}
+      propertyPath: viewIdField
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 161836418778308009, guid: 27ecda285fe07f64aad117593c9bf710,
         type: 3}
