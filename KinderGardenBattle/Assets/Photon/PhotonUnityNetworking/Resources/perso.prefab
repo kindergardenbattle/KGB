@@ -93,6 +93,7 @@ GameObject:
   - component: {fileID: 7453051861894477552}
   - component: {fileID: 5735185055117420026}
   - component: {fileID: 5216248397033997965}
+  - component: {fileID: 5171166535908355224}
   m_Layer: 0
   m_Name: perso
   m_TagString: Player
@@ -164,7 +165,7 @@ BoxCollider:
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: -6, z: 0}
+  m_Center: {x: 0, y: -7, z: 0}
 --- !u!114 &7125741803539966035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -227,6 +228,22 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 1
   isRuntimeInstantiated: 0
+--- !u!114 &5171166535908355224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2961406170312757565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1793e7a395d882348b76742bd2b51ea5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  vitesse_cam: 0.125
+  offset: {x: 20, y: 20, z: 20}
+  cas: 0
+  followOnStart: 1
 --- !u!1 &2961406171032213291
 GameObject:
   m_ObjectHideFlags: 0

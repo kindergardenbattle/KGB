@@ -17,42 +17,63 @@ public class Test_camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RaycastHit ray = new RaycastHit();
-        Vector3 target = ray.transform.position;
-        float scroll = Input.GetAxis("Mouse ScrollWheel");
+        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        Vector3 target = new Vector3();
         Vector3 pos = transform.position;
-        if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+        if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
+        {
+                target = hit.transform.position;
+                pos.y = target.y + 20;
+                pos.x = target.x + pos.y;
+                pos.z = target.z - pos.y;
+                
+        }
+        else
         {
 
-            pos.x -= panSpeed * Time.deltaTime;
-            pos.z += panSpeed * Time.deltaTime;
-        }
-        transform.position = pos;
 
-        if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
-        {
-            pos.x -= panSpeed * Time.deltaTime;
-            pos.z -= panSpeed * Time.deltaTime;
-        }
-        transform.position = pos;
+            float scroll = Input.GetAxis("Mouse ScrollWheel");
+            if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
+            {
 
-        if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
-        {
-            pos.z -= panSpeed * Time.deltaTime;
-            pos.x += panSpeed * Time.deltaTime;
-        }
-        transform.position = pos;
+                pos.x -= panSpeed * Time.deltaTime;
+                pos.z += panSpeed * Time.deltaTime;
+            }
 
-        if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
-        {
-            pos.x += panSpeed * Time.deltaTime;
-            pos.z += panSpeed * Time.deltaTime;
+            transform.position = pos;
+
+            if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
+            {
+                pos.x -= panSpeed * Time.deltaTime;
+                pos.z -= panSpeed * Time.deltaTime;
+            }
+
+            transform.position = pos;
+
+            if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
+            {
+                pos.z -= panSpeed * Time.deltaTime;
+                pos.x += panSpeed * Time.deltaTime;
+            }
+
+            transform.position = pos;
+
+            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
+            {
+                pos.x += panSpeed * Time.deltaTime;
+                pos.z += panSpeed * Time.deltaTime;
+            }
+
+            pos.x -= scroll * scrollspeed * Time.deltaTime;
+            pos.y -= scroll * scrollspeed * Time.deltaTime;
+            pos.z += scroll * scrollspeed * Time.deltaTime;
         }
 
-        pos.y -= scroll * scrollspeed * Time.deltaTime;
-        pos.y = Mathf.Clamp(pos.y, 20, 20+heightlimit);
+        pos.y = Mathf.Clamp(pos.y, 20, heightlimit);
         pos.x = Mathf.Clamp(pos.x, -panlimit.x, panlimit.x);
         pos.z = Mathf.Clamp(pos.z, -panlimit.y, panlimit.y);
+    
 
         transform.position = pos;
     }

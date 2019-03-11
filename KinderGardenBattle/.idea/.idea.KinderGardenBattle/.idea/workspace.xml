@@ -2,69 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79e8ab4e-fe72-4b64-9b7d-22343520dd1b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KinderGardenBattle/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KinderGardenBattle/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.KinderGardenBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.KinderGardenBattle/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/DemoScene.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/DemoScene.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Demo_Scene.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Demo_Scene.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Ground.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Ground.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Guidelines.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Guidelines.txt.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/GridProjector.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/GridProjector.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/LightProjector.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/LightProjector.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/ShadowProjector.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Materials/ShadowProjector.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/BlobLightProjector.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/BlobLightProjector.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/BlobShadowProjector.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/BlobShadowProjector.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/GridProjector.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Prefabs/GridProjector.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Shaders.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Shaders/ProjectorLight.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Shaders/ProjectorLight.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Shaders/ProjectorMultiply.shader" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Shaders/ProjectorMultiply.shader.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Falloff.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Falloff.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Grid.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Grid.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Light.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Light.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Shadow.psd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Projectors/Textures/Shadow.psd.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/TargetSelector.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/TargetSelector.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Targets.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Demo/Targets.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/RTS_Camera.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/RTS_Camera.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/LayoutHelpers.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/LayoutHelpers.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/RTS_CameraEditor.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/RTS_CameraEditor.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/RTS_Camera.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/RTS_Camera/Scripts/RTS_Camera.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Scenes/Lobby.unity" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Scenes/Lobby.unity.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/Scenes/Main_menu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/Scenes/Main_menu.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/prefab/Team.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/prefab/Team.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Ressource/prefab/player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressource/prefab/player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/EditorBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/Team.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/Team.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_camera.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Ressources/Scenes/test_camera.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +13,28 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="193">
+              <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+              <folding>
+                <marker date="1552317828693" expanded="true" signature="60:2402" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="313:334" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="392:2400" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="682:891" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="904:2178" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="1077:1210" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="1332:1464" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="1586:1718" ph="{...}" />
+                <marker date="1552317828693" expanded="true" signature="1855:1987" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
@@ -88,16 +49,16 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/script c#/perso/player.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scripts/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/map/team_apparition.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/Launcher.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Demos/PunBasics-Tutorial/Scripts/PlayerManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/camera/camera_moove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/point&amp;clique/Moove.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/Mainmenu/Mainmenu.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/lumiere/lumiere.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -125,14 +86,15 @@
         <option value="$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs" />
         <option value="$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs" />
         <option value="$PROJECT_DIR$/Assets/script c#/Multi/Launcher.cs" />
+        <option value="$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2763" />
-    <option name="y" value="223" />
-    <option name="width" value="734" />
-    <option name="height" value="714" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1616" />
+    <option name="height" value="876" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -140,8 +102,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="FileSystemExplorer" />
-      <pane id="AssemblyExplorer" />
       <pane id="UnityExplorer">
         <subPane>
           <expand>
@@ -158,6 +118,8 @@
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
+      <pane id="FileSystemExplorer" />
+      <pane id="AssemblyExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -217,11 +179,12 @@
       <workItem from="1551728035575" duration="5968000" />
       <workItem from="1552118313232" duration="6113000" />
       <workItem from="1552131023250" duration="14507000" />
+      <workItem from="1552313850234" duration="4297000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59276000" />
+    <option name="totallyTimeSpent" value="63573000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -233,9 +196,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="1592" y="-8" width="1936" height="1176" extended-state="6" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.123667374" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.12532134" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info id="Image Layers" order="3" />
@@ -297,13 +261,7 @@
     <entry file="file://$PROJECT_DIR$/Assets/script c#/hud/Camera_right_button.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/hud/Camera_button.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/Moove.cs" />
-    <entry file="file://$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/RTS_CameraEditor.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/RTS_Camera/Scripts/Editor/RTS_CameraEditor.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/lumiere/lumiere.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="288">
@@ -552,30 +510,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="66" column="95" selection-start-line="66" selection-start-column="95" selection-end-line="66" selection-end-column="95" />
-          <folding>
-            <marker date="1552150725699" expanded="true" signature="6:154" ph="..." />
-            <marker date="1552150725699" expanded="true" signature="210:1950" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="217:469" ph="Photon Callbacks" />
-            <marker date="1552150725699" expanded="true" signature="247:367" ph="/// Called when the local player left the room. We need to load the launcher scene. ... " />
-            <marker date="1552150725699" expanded="true" signature="405:452" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="476:592" ph="Public Methods" />
-            <marker date="1552150725699" expanded="true" signature="528:575" ph="{...}" />
-            <marker date="1552150725699" expanded="false" signature="602:1013" ph="Private Methods" />
-            <marker date="1552150725699" expanded="false" signature="648:998" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="697:820" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="1023:1948" ph="Photon Callbacks" />
-            <marker date="1552150725699" expanded="true" signature="1148:1500" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="1312:1494" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="1598:1931" ph="{...}" />
-            <marker date="1552150725699" expanded="true" signature="1746:1925" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/script c#/Multi/Multi_Manager.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/perso/player.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="352">
@@ -587,6 +522,24 @@
             <marker date="1552123153736" expanded="true" signature="342:389" ph="{...}" />
             <marker date="1552123153736" expanded="true" signature="402:747" ph="{...}" />
             <marker date="1552123153736" expanded="true" signature="446:737" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="26" column="38" selection-start-line="26" selection-start-column="38" selection-end-line="26" selection-end-column="38" />
+          <folding>
+            <marker date="1552317828693" expanded="true" signature="60:2402" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="313:334" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="392:2400" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="682:891" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="904:2178" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="1077:1210" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="1332:1464" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="1586:1718" ph="{...}" />
+            <marker date="1552317828693" expanded="true" signature="1855:1987" ph="{...}" />
           </folding>
         </state>
       </provider>

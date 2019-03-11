@@ -342,6 +342,7 @@
         <e p="script c#" t="Include">
           <e p="camera" t="Include">
             <e p="camera_moove.cs" t="Include" />
+            <e p="Test_camera.cs" t="Include" />
           </e>
           <e p="lumiere" t="Include">
             <e p="lumiere.cs" t="Include" />
@@ -353,8 +354,11 @@
             <e p="team_apparition.cs" t="Include" />
           </e>
           <e p="Multi" t="Include">
+            <e p="CameraWork.cs" t="Include" />
+            <e p="Game_Manager.cs" t="Include" />
             <e p="Launcher.cs" t="Include" />
-            <e p="Multi_Manager.cs" t="Include" />
+            <e p="PlayerAnimatorManager.cs" t="Include" />
+            <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerNameInputField.cs" t="Include" />
           </e>
           <e p="perso" t="Include">
