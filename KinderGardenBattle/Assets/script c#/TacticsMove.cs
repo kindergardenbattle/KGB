@@ -49,7 +49,7 @@ public class TacticsMove : MonoBehaviour
     {
         RaycastHit hit; // pointeur du clic 
         Tile tile = null;
-
+        
         if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
         {
             tile = hit.collider.GetComponent<Tile>();
@@ -67,6 +67,7 @@ public class TacticsMove : MonoBehaviour
             t.FindNeighbors(jumpHeight, target);
         }
     }
+    
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {

@@ -5,13 +5,11 @@ using UnityEngine;
 public class PlayerMove : TacticsMove 
 {
 
-	// Use this for initialization
 	void Start () 
 	{
         Init();
 	}
 	
-	// Update is called once per frame
 	void Update () 
 	{
         Debug.DrawRay(transform.position, transform.forward);
@@ -23,7 +21,7 @@ public class PlayerMove : TacticsMove
 
         if (!moving)
         {
-            FindSelectableTiles();
+            FindSelectableTiles(); //appelle les fonction si ça bouge pas 
             CheckMouse();
         }
         else
@@ -41,7 +39,7 @@ public class PlayerMove : TacticsMove
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
             {
-                if (hit.collider.tag == "Tile")
+                if (hit.collider.tag == "Tile") // verifie que l'on tape une case 
                 {
                     Tile t = hit.collider.GetComponent<Tile>();
 
