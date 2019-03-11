@@ -7,7 +7,7 @@ public class Test_camera : MonoBehaviour
     private float scrollspeed = 2000f;
     public Vector2 panlimit;
     public float heightlimit;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -17,10 +17,14 @@ public class Test_camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        RaycastHit ray = new RaycastHit();
+        Vector3 target = ray.transform.position;
         float scroll = Input.GetAxis("Mouse ScrollWheel");
         Vector3 pos = transform.position;
         if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - panBorderThickness)
         {
+
+            pos.x -= panSpeed * Time.deltaTime;
             pos.z += panSpeed * Time.deltaTime;
         }
         transform.position = pos;
@@ -28,18 +32,21 @@ public class Test_camera : MonoBehaviour
         if (Input.GetKey("a") || Input.mousePosition.x <= panBorderThickness)
         {
             pos.x -= panSpeed * Time.deltaTime;
+            pos.z -= panSpeed * Time.deltaTime;
         }
         transform.position = pos;
 
         if (Input.GetKey("s") || Input.mousePosition.y <= panBorderThickness)
         {
             pos.z -= panSpeed * Time.deltaTime;
+            pos.x += panSpeed * Time.deltaTime;
         }
         transform.position = pos;
 
         if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - panBorderThickness)
         {
             pos.x += panSpeed * Time.deltaTime;
+            pos.z += panSpeed * Time.deltaTime;
         }
 
         pos.y -= scroll * scrollspeed * Time.deltaTime;
