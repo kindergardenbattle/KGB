@@ -64,7 +64,7 @@ public class Test_camera : MonoBehaviour
                 pos.z -= panSpeed * Time.deltaTime;
             }
 
-            pos.x -= scroll * scrollspeed * Time.deltaTime;
+            pos.x += scroll * scrollspeed * Time.deltaTime;
             pos.y -= scroll * scrollspeed * Time.deltaTime;
             pos.z += scroll * scrollspeed * Time.deltaTime;
         }
