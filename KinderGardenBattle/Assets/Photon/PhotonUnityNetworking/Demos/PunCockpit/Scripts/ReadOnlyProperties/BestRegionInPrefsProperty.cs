@@ -15,9 +15,10 @@ namespace Photon.Pun.Demo.Cockpit
 	public class BestRegionInPrefsProperty : PropertyListenerBase
     {
         public Text Text;
-        private string _cache;
 
-        private void Update()
+        string _cache;
+
+        void Update()
         {
 			if (PhotonNetwork.BestRegionSummaryInPreferences != _cache)
             {

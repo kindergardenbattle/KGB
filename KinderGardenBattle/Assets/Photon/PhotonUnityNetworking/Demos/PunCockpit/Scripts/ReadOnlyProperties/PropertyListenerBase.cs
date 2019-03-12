@@ -20,13 +20,14 @@ namespace Photon.Pun.Demo.Cockpit
         public Graphic UpdateIndicator;
 
         private YieldInstruction fadeInstruction = new YieldInstruction();
-        private float Duration = 1f;
+
+        float Duration = 1f;
         public void OnValueChanged()
         {
             StartCoroutine(FadeOut(UpdateIndicator));
         }
 
-        private IEnumerator FadeOut(Graphic image)
+        IEnumerator FadeOut(Graphic image)
         {
             float elapsedTime = 0.0f;
             Color c = image.color;

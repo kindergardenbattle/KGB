@@ -174,7 +174,7 @@ namespace Photon.Realtime
 
 
         /// <summary>Used in the RoomOptionFlags parameter, this bitmask toggles options in the room.</summary>
-        private enum RoomOptionBit : int
+        enum RoomOptionBit : int
         {
             CheckUserOnJoin = 0x01,  // toggles a check of the UserId when joining (enabling returning to a game)
             DeleteCacheOnLeave = 0x02,  // deletes cache on leave

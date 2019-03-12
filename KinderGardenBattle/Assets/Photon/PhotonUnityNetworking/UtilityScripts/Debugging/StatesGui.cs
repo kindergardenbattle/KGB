@@ -35,7 +35,7 @@ namespace Photon.Pun.UtilityScripts
         private Rect GuiRect = new Rect();
         private static StatesGui Instance;
 
-        private void Awake()
+        void Awake()
         {
             if (Instance != null)
             {
@@ -49,7 +49,7 @@ namespace Photon.Pun.UtilityScripts
             }
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
             if (DontDestroy && Instance == this)
             {
@@ -58,7 +58,7 @@ namespace Photon.Pun.UtilityScripts
 
         }
 
-        private void OnGUI()
+        void OnGUI()
         {
             Rect GuiOffsetRuntime = new Rect(this.GuiOffset);
 

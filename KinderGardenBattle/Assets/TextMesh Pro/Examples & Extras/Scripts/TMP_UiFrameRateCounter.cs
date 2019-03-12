@@ -23,7 +23,7 @@ namespace TMPro.Examples
 
         private FpsCounterAnchorPositions last_AnchorPosition;
 
-        private void Awake()
+        void Awake()
         {
             if (!enabled)
                 return;
@@ -48,13 +48,15 @@ namespace TMPro.Examples
             last_AnchorPosition = AnchorPosition;
         }
 
-        private void Start()
+
+        void Start()
         {
             m_LastInterval = Time.realtimeSinceStartup;
             m_Frames = 0;
         }
 
-        private void Update()
+
+        void Update()
         {
             if (AnchorPosition != last_AnchorPosition)
                 Set_FrameCounter_Position(AnchorPosition);
@@ -84,7 +86,8 @@ namespace TMPro.Examples
             }
         }
 
-        private void Set_FrameCounter_Position(FpsCounterAnchorPositions anchor_position)
+
+        void Set_FrameCounter_Position(FpsCounterAnchorPositions anchor_position)
         {
             switch (anchor_position)
             {

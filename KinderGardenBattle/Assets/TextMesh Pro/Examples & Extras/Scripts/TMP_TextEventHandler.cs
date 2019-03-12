@@ -96,7 +96,7 @@ namespace TMPro
         private int m_lastWordIndex = -1;
         private int m_lastLineIndex = -1;
 
-        private void Awake()
+        void Awake()
         {
             // Get a reference to the text component.
             m_TextComponent = gameObject.GetComponent<TMP_Text>();
@@ -119,7 +119,8 @@ namespace TMPro
             }
         }
 
-        private void LateUpdate()
+
+        void LateUpdate()
         {
             if (TMP_TextUtilities.IsIntersectingRectTransform(m_TextComponent.rectTransform, Input.mousePosition, m_Camera))
             {

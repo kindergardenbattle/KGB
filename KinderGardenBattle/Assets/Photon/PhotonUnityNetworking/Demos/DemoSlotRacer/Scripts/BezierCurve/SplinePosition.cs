@@ -22,7 +22,8 @@ namespace Photon.Pun.Demo.SlotRacer.Utils
 		public float currentDistance = 0f;
 
 		public float currentClampedDistance;
-        private float LastDistance;
+
+		float LastDistance;
 
 		public void SetPositionOnSpline(float position)
 		{
@@ -30,12 +31,12 @@ namespace Photon.Pun.Demo.SlotRacer.Utils
 			ExecutePositioning ();
 		}
 
-        private void Update()
+		void Update()
 		{
 			ExecutePositioning ();
 		}
 
-        private void ExecutePositioning()
+		void ExecutePositioning()
 		{
 			if(this.Spline==null || this.LastDistance == this.currentDistance )
 			{

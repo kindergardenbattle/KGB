@@ -26,8 +26,10 @@ namespace Photon.Pun.Demo.Cockpit
         public Text PingText;
 
 		public LayoutElement LayoutElement;
-        private int _index;
-        private Region info;
+
+		int _index;
+
+		Region info;
 
 		public void RefreshInfo(Region info)
         {
@@ -51,7 +53,7 @@ namespace Photon.Pun.Demo.Cockpit
             StartCoroutine("AnimateRemove");
         }
 
-        private IEnumerator AnimateAddition()
+        IEnumerator AnimateAddition()
         {
 			LayoutElement.minHeight = 0f;
 
@@ -65,7 +67,7 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        private IEnumerator AnimateRemove()
+        IEnumerator AnimateRemove()
         {
             while (LayoutElement.minHeight != 0f)
             {

@@ -32,7 +32,7 @@ namespace Photon.Pun
     {
         #if UNITY_EDITOR
         [ContextMenu("Open PUN Wizard")]
-        private void OpenPunWizard()
+        void OpenPunWizard()
         {
             EditorApplication.ExecuteMenuItem("Window/Photon Unity Networking/PUN Wizard");
         }
@@ -42,7 +42,7 @@ namespace Photon.Pun
         // Suppressing compiler warning "this variable is never used". Only used in the CustomEditor, only in Editor
         #pragma warning disable 0414
         [SerializeField]
-        private bool ObservedComponentsFoldoutOpen = true;
+        bool ObservedComponentsFoldoutOpen = true;
         #pragma warning restore 0414
         #endif
 

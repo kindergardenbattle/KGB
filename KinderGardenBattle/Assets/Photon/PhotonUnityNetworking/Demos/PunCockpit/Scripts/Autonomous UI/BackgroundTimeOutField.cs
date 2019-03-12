@@ -16,10 +16,12 @@ namespace Photon.Pun.Demo.Cockpit
     public class BackgroundTimeOutField : MonoBehaviour
     {
         public InputField PropertyValueInput;
-        private float _cache;
-        private bool registered;
 
-        private void OnEnable()
+        float _cache;
+
+        bool registered;
+
+        void OnEnable()
         {
             if (!registered)
             {
@@ -28,13 +30,13 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
             registered = false;
             PropertyValueInput.onEndEdit.RemoveListener(OnEndEdit);
         }
 
-        private void Update()
+        void Update()
         {
             if (PhotonNetwork.KeepAliveInBackground != _cache)
             {

@@ -20,7 +20,8 @@ namespace Photon.Pun.UtilityScripts
 	[RequireComponent(typeof(Text))]
 	public class TextButtonTransition : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler
     {
-        private Text _text;
+		
+		Text _text;
 
         /// <summary>
         /// The selectable Component.

@@ -16,9 +16,10 @@ namespace Photon.Pun.Demo.Cockpit
     {
 
         public Text Text;
-        private int _cache = -1;
 
-        private void Update()
+        int _cache = -1;
+
+        void Update()
         {
 
 			if ((PhotonNetwork.IsConnectedAndReady && _cache != 1) || (!PhotonNetwork.IsConnectedAndReady && _cache != 0))

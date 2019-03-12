@@ -36,7 +36,7 @@ namespace Photon.Pun.Demo.SlotRacer.Utils
 			ExecutePositioning ();
 		}
 
-        private void Update()
+		void Update()
 		{
 			// update the distance used.
 			currentDistance += Speed * Time.deltaTime;

@@ -23,7 +23,8 @@ namespace Photon.Pun.Demo.Cockpit
     /// </summary>
     public class PunCockpitEmbed : MonoBehaviourPunCallbacks
     {
-        private string PunCockpit_scene = "PunCockpit-Scene";
+
+        string PunCockpit_scene = "PunCockpit-Scene";
 
         public bool EmbeddCockpit = true;
         public string CockpitGameTitle = "";
@@ -31,7 +32,7 @@ namespace Photon.Pun.Demo.Cockpit
         public GameObject LoadingIndicator;
         public ConnectAndJoinRandom AutoConnect;
 
-        private void Awake()
+        void Awake()
         {
             if (LoadingIndicator != null)
             {
@@ -40,7 +41,7 @@ namespace Photon.Pun.Demo.Cockpit
         }
 
         // Use this for initialization
-        private IEnumerator Start()
+        IEnumerator Start()
         {
 
 

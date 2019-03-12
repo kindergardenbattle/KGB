@@ -49,7 +49,8 @@ namespace TMPro.Examples
         private const string event_SmoothingValue = "Slider - Smoothing Value";
         private const string event_FollowDistance = "Slider - Camera Zoom";
 
-        private void Awake()
+
+        void Awake()
         {
             if (QualitySettings.vSyncCount > 0)
                 Application.targetFrameRate = 60;
@@ -65,7 +66,7 @@ namespace TMPro.Examples
 
 
         // Use this for initialization
-        private void Start()
+        void Start()
         {
             if (CameraTarget == null)
             {
@@ -76,7 +77,7 @@ namespace TMPro.Examples
         }
 
         // Update is called once per frame
-        private void LateUpdate()
+        void LateUpdate()
         {
             GetPlayerInput();
 
@@ -120,7 +121,9 @@ namespace TMPro.Examples
 
         }
 
-        private void GetPlayerInput()
+
+
+        void GetPlayerInput()
         {
             moveVector = Vector3.zero;
 

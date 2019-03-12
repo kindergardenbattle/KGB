@@ -19,7 +19,7 @@ namespace Photon.Pun.UtilityScripts
 	/// </summary>
 	public class EventSystemSpawner : MonoBehaviour 
 	{
-        private void OnEnable()
+		void OnEnable()
 		{
 			EventSystem sceneEventSystem = FindObjectOfType<EventSystem>();
 			if (sceneEventSystem == null)

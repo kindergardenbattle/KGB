@@ -18,9 +18,10 @@ namespace Photon.Pun.Demo.Cockpit
         public GameObject Content;
 
         public Toggle Toggle;
-        private bool _init;
 
-        private void OnEnable()
+        bool _init;
+
+        void OnEnable()
         {
             Content.SetActive(Toggle.isOn);
 
@@ -34,7 +35,8 @@ namespace Photon.Pun.Demo.Cockpit
 
         }
 
-        private void HandleToggleOnValudChanged(bool value)
+
+        void HandleToggleOnValudChanged(bool value)
         {
             Content.SetActive(value);
         }

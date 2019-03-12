@@ -24,7 +24,7 @@ namespace TMPro.Examples
 
         private FpsCounterAnchorPositions last_AnchorPosition;
 
-        private void Awake()
+        void Awake()
         {
             if (!enabled)
                 return;
@@ -61,13 +61,13 @@ namespace TMPro.Examples
 
         }
 
-        private void Start()
+        void Start()
         {
             m_LastInterval = Time.realtimeSinceStartup;
             m_Frames = 0;
         }
 
-        private void Update()
+        void Update()
         {
             if (AnchorPosition != last_AnchorPosition)
                 Set_FrameCounter_Position(AnchorPosition);
@@ -99,7 +99,8 @@ namespace TMPro.Examples
             }
         }
 
-        private void Set_FrameCounter_Position(FpsCounterAnchorPositions anchor_position)
+
+        void Set_FrameCounter_Position(FpsCounterAnchorPositions anchor_position)
         {
             //Debug.Log("Changing frame counter anchor position.");
             m_TextMeshPro.margin = new Vector4(1f, 1f, 1f, 1f);

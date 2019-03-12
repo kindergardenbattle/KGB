@@ -17,10 +17,12 @@ namespace Photon.Pun.Demo.Cockpit
     {
 
         public InputField PropertyValueInput;
-        private int _cache;
-        private bool registered;
 
-        private void OnEnable()
+        int _cache;
+
+        bool registered;
+
+        void OnEnable()
         {
             if (!registered)
             {
@@ -29,13 +31,13 @@ namespace Photon.Pun.Demo.Cockpit
             }
         }
 
-        private void OnDisable()
+        void OnDisable()
         {
             registered = false;
             PropertyValueInput.onEndEdit.RemoveListener(OnEndEdit);
         }
 
-        private void Update()
+        void Update()
         {
             if (PhotonNetwork.SendRate != _cache)
             {

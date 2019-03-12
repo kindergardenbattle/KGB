@@ -51,10 +51,13 @@ namespace Photon.Pun.Demo.Cockpit
         public class OnJoinRoomEvent : UnityEvent<string> { }
 
         public OnJoinRoomEvent OnJoinRoom;
-        private Dictionary<string, FriendListCell> FriendCellList = new Dictionary<string, FriendListCell>();
-        private string[] FriendsLUT = new string[0];
 
-        private void Awake()
+        Dictionary<string, FriendListCell> FriendCellList = new Dictionary<string, FriendListCell>();
+
+        string[] FriendsLUT = new string[0];
+
+
+        void Awake()
         {
             CellPrototype.gameObject.SetActive(false);
 		
@@ -133,7 +136,7 @@ namespace Photon.Pun.Demo.Cockpit
             OnJoinRoom.Invoke(RoomName);
         }
 
-        private IEnumerator UpdateUIPing()
+        IEnumerator UpdateUIPing()
         {
             UpdateStatusText.text = "Updated";
 

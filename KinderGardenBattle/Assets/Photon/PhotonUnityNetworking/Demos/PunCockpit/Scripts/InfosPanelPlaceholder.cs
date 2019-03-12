@@ -16,7 +16,7 @@ namespace Photon.Pun.Demo.Cockpit
         public PunCockpit Manager;
 
         // Use this for initialization
-        private void OnEnable()
+        void OnEnable()
         {
             Manager.RequestInfosPanel(this.gameObject);
         }

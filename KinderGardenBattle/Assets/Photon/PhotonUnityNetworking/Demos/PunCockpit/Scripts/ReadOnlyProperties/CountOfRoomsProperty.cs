@@ -16,9 +16,10 @@ namespace Photon.Pun.Demo.Cockpit
     public class CountOfRoomsProperty : PropertyListenerBase
     {
         public Text Text;
-        private int _cache = -1;
 
-        private void Update()
+        int _cache = -1;
+
+        void Update()
         {
             if (PhotonNetwork.NetworkingClient.Server == ServerConnection.MasterServer)
             {

@@ -10,12 +10,13 @@ namespace TMPro.Examples
 
         private TMP_Text m_TextComponent;
 
-        private void Awake()
+        void Awake()
         {
             m_TextComponent = GetComponent<TMP_Text>();
         }
 
-        private void Start()
+
+        void Start()
         {
             StartCoroutine(AnimateVertexColors());
         }
@@ -25,7 +26,7 @@ namespace TMPro.Examples
         /// Method to animate vertex colors of a TMP Text object.
         /// </summary>
         /// <returns></returns>
-        private IEnumerator AnimateVertexColors()
+        IEnumerator AnimateVertexColors()
         {
             TMP_TextInfo textInfo = m_TextComponent.textInfo;
             int currentCharacter = 0;

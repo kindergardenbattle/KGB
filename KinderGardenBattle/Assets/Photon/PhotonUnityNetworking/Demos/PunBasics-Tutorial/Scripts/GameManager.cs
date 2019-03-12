@@ -47,7 +47,7 @@ namespace Photon.Pun.Demo.PunBasics
         /// <summary>
         /// MonoBehaviour method called on GameObject by Unity during initialization phase.
         /// </summary>
-        private void Start()
+        void Start()
 		{
 			Instance = this;
 
@@ -81,10 +81,10 @@ namespace Photon.Pun.Demo.PunBasics
 
 		}
 
-        /// <summary>
-        /// MonoBehaviour method called on GameObject by Unity on every frame.
-        /// </summary>
-        private void Update()
+		/// <summary>
+		/// MonoBehaviour method called on GameObject by Unity on every frame.
+		/// </summary>
+		void Update()
 		{
 			// "back" button of phone equals "Escape". quit app if that's pressed
 			if (Input.GetKeyDown(KeyCode.Escape))
@@ -151,11 +151,11 @@ namespace Photon.Pun.Demo.PunBasics
 			Application.Quit();
 		}
 
-        #endregion
+		#endregion
 
-        #region Private Methods
+		#region Private Methods
 
-        private void LoadArena()
+		void LoadArena()
 		{
 			if ( ! PhotonNetwork.IsMasterClient )
 			{

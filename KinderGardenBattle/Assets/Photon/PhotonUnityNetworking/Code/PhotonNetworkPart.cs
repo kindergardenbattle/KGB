@@ -33,7 +33,7 @@ namespace Photon.Pun
         /// <summary>
         /// The photon view list.
         /// </summary>
-        private static Dictionary<int, PhotonView> photonViewList = new Dictionary<int, PhotonView>();
+        static Dictionary<int, PhotonView> photonViewList = new Dictionary<int, PhotonView>();
 
         /// <summary>
         /// Gets the photon views.
@@ -981,8 +981,8 @@ namespace Photon.Pun
         ///
         /// This is sent as event (code: 200) which will contain a sender (origin of this RPC).
 
-        private static ExitGames.Client.Photon.Hashtable  rpcEvent = new ExitGames.Client.Photon.Hashtable();
-        private static RaiseEventOptions RpcOptionsToAll = new RaiseEventOptions();
+        static ExitGames.Client.Photon.Hashtable  rpcEvent = new ExitGames.Client.Photon.Hashtable();
+        static RaiseEventOptions RpcOptionsToAll = new RaiseEventOptions();
 
 
         internal static void RPC(PhotonView view, string methodName, RpcTarget target, Player player, bool encrypt, params object[] parameters)
@@ -1799,7 +1799,7 @@ namespace Photon.Pun
         /// Returns true if both objects are almost identical.
         /// Used to check whether two objects are similar enough to skip an update.
         /// </summary>
-        private static bool AlmostEquals(object one, object two)
+        static bool AlmostEquals(object one, object two)
         {
             if (one == null || two == null)
             {

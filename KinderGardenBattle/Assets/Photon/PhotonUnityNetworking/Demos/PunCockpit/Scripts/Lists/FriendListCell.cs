@@ -24,7 +24,8 @@ namespace Photon.Pun.Demo.Cockpit
 
         public GameObject inRoomText;
         public GameObject JoinButton;
-        private FriendInfo _info;
+
+        FriendInfo _info;
 
 
         public void RefreshInfo(FriendListView.FriendDetail details)
