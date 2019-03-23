@@ -2,9 +2,9 @@
 
 public class Test_camera : MonoBehaviour
 {
-    private float panSpeed = 20f;
+    private float panSpeed = 5f;
     private float panBorderThickness = 10f;
-    private float scrollspeed = 2000f;
+    private float scrollspeed = 1500f;
     public Vector2 panlimit;
     public float heightlimit;
     
@@ -24,9 +24,9 @@ public class Test_camera : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
         {
             target = hit.transform.position;
-            pos.x = target.x - 20;
-            pos.z = target.z - 20;
-            pos.y = target.y + 20;
+            pos.x = target.x - 2;
+            pos.z = target.z - 2;
+            pos.y = target.y + 2;
         }
         else
         {
@@ -69,7 +69,7 @@ public class Test_camera : MonoBehaviour
             pos.z += scroll * scrollspeed * Time.deltaTime;
         }
 
-        pos.y = Mathf.Clamp(pos.y, 20, heightlimit);
+        pos.y = Mathf.Clamp(pos.y, 2, heightlimit);
         pos.x = Mathf.Clamp(pos.x, -panlimit.x, panlimit.x);
         pos.z = Mathf.Clamp(pos.z, -panlimit.y, panlimit.y);
     
