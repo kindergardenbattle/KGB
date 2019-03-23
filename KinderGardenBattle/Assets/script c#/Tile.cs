@@ -11,7 +11,7 @@ public class Tile : MonoBehaviour
 
     public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
 
-    
+	
     public bool visited = false;
     public Tile parent = null;
     public int distance = 0;
@@ -29,22 +29,31 @@ public class Tile : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-        if (current)
-        {
-            GetComponent<Renderer>().material.color = Color.magenta;
-        }
-        else if (target)
-        {
-            GetComponent<Renderer>().material.color = Color.green;
-        }
-        else if (selectable)
-        {
-            GetComponent<Renderer>().material.color = Color.red;
-        }
-        else
-        {
-            GetComponent<Renderer>().material.color = Color.white;
-        }
+	    if (GameManagerSolo.Turn)
+	    {
+
+
+	        if (current)
+	        {
+	            GetComponent<Renderer>().material.color = Color.magenta;
+	        }
+	        else if (target)
+	        {
+	            GetComponent<Renderer>().material.color = Color.green;
+	        }
+	        else if (selectable)
+	        {
+	            GetComponent<Renderer>().material.color = Color.red;
+	        }
+	        else
+	        {
+	            GetComponent<Renderer>().material.color = Color.white;
+	        }
+	    }
+	    else
+	    {
+		    GetComponent<Renderer>().material.color = Color.white;
+	    }
 	}
 
     public void Reset()

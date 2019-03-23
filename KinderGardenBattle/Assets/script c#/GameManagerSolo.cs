@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManagerSolo : MonoBehaviour
 {
+    public static bool Turn = true;
     public enum Team
     {
         Red,

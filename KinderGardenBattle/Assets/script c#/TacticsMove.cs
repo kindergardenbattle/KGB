@@ -1,16 +1,18 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
 public class TacticsMove : MonoBehaviour 
 { // parcours largeur //
-    public bool turn = true;
+     
 
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 
     Stack<Tile> path = new Stack<Tile>();
     Tile currentTile;
+    
 
     public bool moving = false;
     public int move = 3 ; // a changer pour toute les classes
@@ -30,6 +32,7 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
+   
     protected void Init()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
@@ -67,39 +70,49 @@ public class TacticsMove : MonoBehaviour
             t.FindNeighbors(jumpHeight, target);
         }
     }
-    
+
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-        ComputeAdjacencyLists(jumpHeight, null);
-        GetCurrentTile();
-
-        Queue<Tile> process = new Queue<Tile>();
-
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-         
-
-        while (process.Count > 0)
+        if (GameManagerSolo.Turn)
         {
-            Tile t = process.Dequeue();
 
-            selectableTiles.Add(t);
-            t.selectable = true;
 
-            if (t.distance < move)
+            ComputeAdjacencyLists(jumpHeight, null);
+            GetCurrentTile();
+
+            Queue<Tile> process = new Queue<Tile>();
+
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
+
+
+            while (process.Count > 0)
             {
-                foreach (Tile tile in t.adjacencyList)
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+                if (t.distance < move)
                 {
-                    if (!tile.visited)
+                    foreach (Tile tile in t.adjacencyList)
                     {
-                        tile.parent = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
-                        process.Enqueue(tile);
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
                     }
                 }
             }
+        }
+        else
+        {
+           return;
+            
         }
     }
 
@@ -157,7 +170,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            TurnManager.EndTurn();
+            
         }
     }
 
@@ -383,15 +396,5 @@ public class TacticsMove : MonoBehaviour
 
         
         Debug.Log("Path not found");
-    }
-
-    public void BeginTurn()
-    {
-        turn = true;
-    }
-
-    public void EndTurn()
-    {
-        turn = false;
     }
 }

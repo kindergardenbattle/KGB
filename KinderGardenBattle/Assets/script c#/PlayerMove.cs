@@ -5,37 +5,47 @@ using UnityEngine.SceneManagement;
 
 public class PlayerMove : TacticsMove
 {
-    public GameManagerSolo.Team Team;
-	public GameObject TeamTurn;
-	void Start () 
-	{	
-		
+    
+	public bool DebutTour;
+	
+	void Start ()
+	{
+		DebutTour = true;
         Init();
 		
 	}
 	
+	
 	void Update () 
 	{
-	    
 
 
-	        Debug.DrawRay(transform.position, transform.forward);
+		if(GameManagerSolo.Turn)
+		{
 
-	        if (!turn)
-	        {
-	            return;
-	        }
+			Debug.DrawRay(transform.position, transform.forward);
 
-	        if (!moving)
-	        {
-	            FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-	            CheckMouse();
-	        }
-	        else
-	        {
-	            Move();
-	        }
-	    
+
+
+			if (!moving)
+			{
+				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+				CheckMouse();
+			}
+			else
+			{
+				Move();
+				DebutTour = false;
+
+			}
+		}
+
+		if (!moving && DebutTour==false)
+		{
+			GameManagerSolo.Turn = false;
+		}
+		
+
 	}
 
     void CheckMouse()
