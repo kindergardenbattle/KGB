@@ -36,7 +36,7 @@ public class TacticsMove : MonoBehaviour
 
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
-        TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
+      //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
     }
 
     public void GetCurrentTile() 
@@ -333,7 +333,7 @@ public class TacticsMove : MonoBehaviour
         List<Tile> closedList = new List<Tile>();
 
         openList.Add(currentTile);
-        //currentTile.parent = ??
+        
         currentTile.h = Vector3.Distance(currentTile.transform.position, target.transform.position);
         currentTile.f = currentTile.h;
 
@@ -354,7 +354,7 @@ public class TacticsMove : MonoBehaviour
             {
                 if (closedList.Contains(tile))
                 {
-                    //Do nothing, already processed
+                    
                 }
                 else if (openList.Contains(tile))
                 {
@@ -381,7 +381,7 @@ public class TacticsMove : MonoBehaviour
             }
         }
 
-        //todo - what do you do if there is no path to the target tile?
+        
         Debug.Log("Path not found");
     }
 
