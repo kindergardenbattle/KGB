@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class GameManagerSolo : MonoBehaviour
 {
-    public static bool Turn = true;
+    
     public enum Team
     {
-        Red,
-        Blue
+        Blue,Red
+        
     }
 
-    public Team TeamTurn;
+    public static Team TeamTurn;
 
-    public void SetTeamTurn(Team Color)
+    public static void SetTeamTurn (Team Color)
     {
         TeamTurn = Color;
+       
     }
 
-    public void FinDeTours()
+    public  static void FinDeTours()
     {
-        TeamTurn = (TeamTurn == Team.Red) ? Team.Blue : Team.Red;
+        TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
     }
 
 

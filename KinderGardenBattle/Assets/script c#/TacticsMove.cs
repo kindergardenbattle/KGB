@@ -74,7 +74,7 @@ public class TacticsMove : MonoBehaviour
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-        if (GameManagerSolo.Turn)
+        if (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
 
 
