@@ -522,7 +522,7 @@ RectTransform:
   m_Children:
   - {fileID: 1106436840}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -553,6 +553,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Game_Manager
       objectReference: {fileID: 0}
+    - target: {fileID: 5783980142777308145, guid: 9902f0cb1378e994f801df883501f167,
+        type: 3}
+      propertyPath: playerPrefab
+      value: 
+      objectReference: {fileID: 2108439562, guid: 1bb279a3fbc395c4d81c5b0313e8285b,
+        type: 3}
     - target: {fileID: 5783980142777308146, guid: 9902f0cb1378e994f801df883501f167,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -591,7 +597,7 @@ PrefabInstance:
     - target: {fileID: 5783980142777308146, guid: 9902f0cb1378e994f801df883501f167,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 5783980142777308146, guid: 9902f0cb1378e994f801df883501f167,
         type: 3}
