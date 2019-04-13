@@ -357,6 +357,7 @@
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerNameInputField.cs" t="Include" />
           </e>
+          <e p="Perso_Generique.cs" t="Include" />
           <e p="PlayerCaracteristique.cs" t="Include" />
           <e p="PlayerMove.cs" t="Include" />
           <e p="TacticsCamera.cs" t="Include" />

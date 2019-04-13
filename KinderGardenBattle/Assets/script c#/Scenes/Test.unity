@@ -14325,6 +14325,33 @@ MonoBehaviour:
   f: 0
   g: 0
   h: 0
+--- !u!1 &1612319622 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2046867614611601789, guid: e1e340c1aefe7844c9adb177ccf1b60a,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046867615563656435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1612319635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612319622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0285707b10c958640be0a2473abbb9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classe_precedente: 0
+  Hp: 0
+  Atk: 0
+  Def: 0
+  Pm: 0
+  Mana: 0
+  Distance: 0
+  ATK_distance: 0
+  classe: 7
 --- !u!1 &1618375757
 GameObject:
   m_ObjectHideFlags: 0
