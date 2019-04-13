@@ -46,12 +46,14 @@ public class TacticsMove : MonoBehaviourPunCallbacks
 
     public void GetCurrentTile() 
     {
+        
         if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
-        {
+        {            
             return;
-        }
+        }        
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
+
     }
 
     public Tile GetTargetTile(GameObject target)
@@ -81,10 +83,8 @@ public class TacticsMove : MonoBehaviourPunCallbacks
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-        if (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (true)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
-
-
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
 
@@ -118,7 +118,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
         }
         else
         {
-           return;
+            return;
             
         }
     }

@@ -21,14 +21,9 @@ public class PlayerMove : TacticsMove
 	
 	void Update () 
 	{
-
-        if(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
-		{
-
+        if(true)//(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        {
 			Debug.DrawRay(transform.position, transform.forward);
-
-
-
 			if (!moving)
 			{
 				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
