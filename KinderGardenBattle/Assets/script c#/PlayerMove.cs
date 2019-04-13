@@ -22,8 +22,8 @@ public class PlayerMove : TacticsMove
 	void Update () 
 	{
 
-
-		if(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (true)
+		//if(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
 		{
 
 			Debug.DrawRay(transform.position, transform.forward);

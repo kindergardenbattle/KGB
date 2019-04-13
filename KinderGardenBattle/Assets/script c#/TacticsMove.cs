@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
+using Photon.Pun;
 
-public class TacticsMove : MonoBehaviour 
+
+public class TacticsMove : MonoBehaviourPunCallbacks
 { // parcours largeur //
      
 
@@ -44,12 +46,17 @@ public class TacticsMove : MonoBehaviour
 
     public void GetCurrentTile() 
     {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
     }
 
     public Tile GetTargetTile(GameObject target)
     {
+        
         RaycastHit hit; // pointeur du clic 
         Tile tile = null;
         
