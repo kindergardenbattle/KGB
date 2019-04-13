@@ -45,7 +45,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     }
 
     public void GetCurrentTile() 
-    {      
+    {
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
 
@@ -87,6 +87,8 @@ public class TacticsMove : MonoBehaviourPunCallbacks
             Queue<Tile> process = new Queue<Tile>();
 
             process.Enqueue(currentTile);
+            if (currentTile == null)
+                Debug.Log("maximilien le big gay");
             currentTile.visited = true;
 
 

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
+using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
@@ -21,7 +22,14 @@ public class PlayerMove : TacticsMove
 	
 	void Update () 
 	{
-        if(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+
+
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+
+        if (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
 			Debug.DrawRay(transform.position, transform.forward);
 			if (!moving)
