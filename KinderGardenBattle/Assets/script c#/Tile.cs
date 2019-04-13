@@ -29,7 +29,7 @@ public class Tile : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	    if (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+	    if (true)//(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
 	    {
 
             if (current)

@@ -79,7 +79,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
         
-        if ( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (true)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
@@ -87,8 +87,6 @@ public class TacticsMove : MonoBehaviourPunCallbacks
             Queue<Tile> process = new Queue<Tile>();
 
             process.Enqueue(currentTile);
-            if (currentTile == null)
-                Debug.Log("maximilien le big gay");
             currentTile.visited = true;
 
 
