@@ -83,7 +83,8 @@ public class TacticsMove : MonoBehaviourPunCallbacks
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-        if (true)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        
+        if ( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
