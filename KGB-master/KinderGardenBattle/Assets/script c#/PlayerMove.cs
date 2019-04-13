@@ -29,7 +29,7 @@ public class PlayerMove : TacticsMove
 			Debug.DrawRay(transform.position, transform.forward);
 
 
-
+				
 			if (!moving)
 			{
 				FindSelectableTiles(); //appelle les fonction si ça bouge pas 

@@ -1,18 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Experimental.UIElements.GraphView;
 using UnityEngine;
 
 public class TacticsMove : MonoBehaviour 
 { // parcours largeur //
-     
+    public bool turn = true;
 
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 
     Stack<Tile> path = new Stack<Tile>();
     Tile currentTile;
-    
 
     public bool moving = false;
     public int move = 3 ; // a changer pour toute les classes
@@ -32,14 +30,13 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
-   
     protected void Init()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
 
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
-      //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
+       // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
     }
 
     public void GetCurrentTile() 
@@ -52,7 +49,7 @@ public class TacticsMove : MonoBehaviour
     {
         RaycastHit hit; // pointeur du clic 
         Tile tile = null;
-        
+
         if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
         {
             tile = hit.collider.GetComponent<Tile>();
@@ -71,48 +68,37 @@ public class TacticsMove : MonoBehaviour
         }
     }
 
-
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-        if (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        ComputeAdjacencyLists(jumpHeight, null);
+        GetCurrentTile();
+
+        Queue<Tile> process = new Queue<Tile>();
+
+        process.Enqueue(currentTile);
+        currentTile.visited = true;
+         
+
+        while (process.Count > 0)
         {
+            Tile t = process.Dequeue();
 
+            selectableTiles.Add(t);
+            t.selectable = true;
 
-            ComputeAdjacencyLists(jumpHeight, null);
-            GetCurrentTile();
-
-            Queue<Tile> process = new Queue<Tile>();
-
-            process.Enqueue(currentTile);
-            currentTile.visited = true;
-
-
-            while (process.Count > 0)
+            if (t.distance < move)
             {
-                Tile t = process.Dequeue();
-
-                selectableTiles.Add(t);
-                t.selectable = true;
-
-                if (t.distance < move)
+                foreach (Tile tile in t.adjacencyList)
                 {
-                    foreach (Tile tile in t.adjacencyList)
+                    if (!tile.visited)
                     {
-                        if (!tile.visited)
-                        {
-                            tile.parent = t;
-                            tile.visited = true;
-                            tile.distance = 1 + t.distance;
-                            process.Enqueue(tile);
-                        }
+                        tile.parent = t;
+                        tile.visited = true;
+                        tile.distance = 1 + t.distance;
+                        process.Enqueue(tile);
                     }
                 }
             }
-        }
-        else
-        {
-           return;
-            
         }
     }
 
@@ -170,7 +156,7 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
 
-            
+            //TurnManager.EndTurn();
         }
     }
 
@@ -367,7 +353,7 @@ public class TacticsMove : MonoBehaviour
             {
                 if (closedList.Contains(tile))
                 {
-                    
+                    //Do nothing, already processed
                 }
                 else if (openList.Contains(tile))
                 {
@@ -394,7 +380,17 @@ public class TacticsMove : MonoBehaviour
             }
         }
 
-        
+        //todo - what do you do if there is no path to the target tile?
         Debug.Log("Path not found");
+    }
+
+    public void BeginTurn()
+    {
+        turn = true;
+    }
+
+    public void EndTurn()
+    {
+        turn = false;
     }
 }

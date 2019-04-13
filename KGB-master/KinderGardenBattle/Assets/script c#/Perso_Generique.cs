@@ -17,22 +17,22 @@ public class Perso_Generique : MonoBehaviour
 
    }
 
-   public Classe classe_precedente = Classe.GOD;
-   public  double Hp;
-   public  double Atk;
-   public  double Def;
-   public  double Pm;
-   public  double Mana;
-   public  double Distance = 1;
-   public  double ATK_distance = 0;
-   public Classe classe = Classe.GOD;
+   public static Classe classe_precedente = Classe.GOD;
+   public  static double Hp;
+   public static  double Atk;
+   public  static double Def;
+   public  static double Pm;
+   public  static double Mana;
+   public  static double Distance = 1;
+   public  static double ATK_distance = 0;
+   public  static  Classe classe = Classe.GOD;
 
-   public void SetClasse(Classe classe)
+   public static void  SetClasse(Classe Klasse)
    {
       switch (classe)
       {
          case Classe.GUERRIER:
-            this.Atk = 100;
+            Atk = 100;
             Def = 0.7;
             Hp = 50;
             Pm = 5;
@@ -93,20 +93,37 @@ public class Perso_Generique : MonoBehaviour
             Mana = 100;
             break;
       }
+      return;
 
    }
-
-   public void change()
+   public  void  FindTarget()
    {
-      this.classe = classe;
-      SetClasse(this.classe);
+      RaycastHit hit;
+        
+      Debug.DrawRay(transform.position,transform.up*10, Color.red);
+      if (Physics.Raycast(transform.position, transform.up*10, out hit, 10))
+      {
+         Debug.Log("penis" + hit);
+      }
+
    }
 
+   public static void change(Classe Klasse)
+   {
+      classe = Klasse;
+      SetClasse(classe);
+   }
+
+   public void ATK(NPC npc)
+   {
+      
+   }
    private void Update()
    {
+
       if (classe_precedente != classe)
       {
-         change();
+         change( classe);
       }
    }
 }

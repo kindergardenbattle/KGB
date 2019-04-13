@@ -112,6 +112,64 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &190729795 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 762994771140219546, guid: ac1faeaf72d807647bf0fdf4f263bca3,
+    type: 3}
+  m_PrefabInstance: {fileID: 8077221316633866707}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &190729808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190729795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e6d8b1f1857854b4f92b2937ad8f678a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classe: {fileID: 0}
+--- !u!1 &280858022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1612319622, guid: 8fbe3334a28e43848b1971eeb1b477e8,
+    type: 3}
+  m_PrefabInstance: {fileID: 2046867615563656435}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &280858036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280858022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c64c0a384651f243b9047cec30468cc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classe_precedente: 7
+  Hp: 0
+  Atk: 0
+  Def: 0
+  Pm: 0
+  Mana: 0
+  Distance: 1
+  ATK_distance: 0
+  classe: 7
+--- !u!114 &280858037
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 280858022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3eca195dd6d224c953d98969b343c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &670659760
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -289,7 +347,7 @@ PrefabInstance:
     - target: {fileID: 2324481836431869088, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -5.73
+      value: -4.82
       objectReference: {fileID: 0}
     - target: {fileID: 2324481836431869088, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
@@ -335,6 +393,10 @@ PrefabInstance:
         type: 3}
       propertyPath: viewIdField
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612319635, guid: 8fbe3334a28e43848b1971eeb1b477e8, type: 3}
+      propertyPath: classe
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fbe3334a28e43848b1971eeb1b477e8, type: 3}
@@ -570,7 +632,7 @@ PrefabInstance:
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.07
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}

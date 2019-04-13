@@ -11,7 +11,7 @@ public class EnemiMoove : MonoBehaviour
     {
        
             GameManagerSolo.FinDeTours();
-             Debug.Log("fin de tours fdp");
+             
             
         
       

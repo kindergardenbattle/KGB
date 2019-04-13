@@ -19,13 +19,17 @@ public class Tile : MonoBehaviour
     public float f = 0;
     public float g = 0;
     public float h = 0;
-
+	public  bool utilise = true;
 	
 	void Start () 
 	{
 
 	}
+
+	public void used()
+	{
 	
+	}
 	// Update is called once per frame
 	void Update () 
 	{
@@ -44,6 +48,10 @@ public class Tile : MonoBehaviour
 	        else if (selectable)
 	        {
 	            GetComponent<Renderer>().material.color = Color.red;
+	        }
+	        else if(!utilise)
+	        {
+		        GetComponent<Renderer>().material.color = Color.blue;
 	        }
 	        else
 	        {

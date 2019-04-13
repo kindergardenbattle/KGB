@@ -1,23 +1,27 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCMove : TacticsMove 
+public class NPCMove : TacticsMove
 {
     GameObject target;
 
-	// Use this for initialization
-	void Start () 
-	{
+    // Use this for initialization
+    void Start()
+    {
         Init();
-	}
-	
-	// Update is called once per frame
-	void Update () 
-	{
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
         Debug.DrawRay(transform.position, transform.forward);
 
-        
+        if (EnemieCaracteristique.TeamEnemie != GameManagerSolo.TeamTurn)
+        {
+            return;
+        }
 
         if (!moving)
         {
@@ -29,8 +33,9 @@ public class NPCMove : TacticsMove
         else
         {
             Move();
+            GameManagerSolo.FinDeTours();
         }
-	}
+    }
 
     void CalculatePath()
     {
@@ -40,7 +45,7 @@ public class NPCMove : TacticsMove
 
     void FindNearestTarget()
     {
-        GameObject[] targets = GameObject.FindGameObjectsWithTag("bite");
+        GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
 
         GameObject nearest = null;
         float distance = Mathf.Infinity;
