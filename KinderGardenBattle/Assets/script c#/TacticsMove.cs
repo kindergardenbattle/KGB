@@ -46,7 +46,10 @@ public class TacticsMove : MonoBehaviourPunCallbacks
 
     public void GetCurrentTile() 
     {
-        
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
     }
