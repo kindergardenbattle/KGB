@@ -33,5 +33,6 @@ MonoBehaviour:
   - Fire
   - RespawnSpaceship
   - Set_turn
+  - Lel
   DisableAutoOpenWizard: 1
   ShowSettings: 0

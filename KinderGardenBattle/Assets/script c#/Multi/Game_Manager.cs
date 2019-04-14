@@ -44,7 +44,7 @@ namespace Multi
 
 
         [PunRPC]
-        void Set_turn() { photonView.RPC("Lel", RpcTarget.All); }
+        void Set_turn() {            photonView.RPC("Lel", RpcTarget.All); }
 
         [PunRPC]
         void Lel() { turn = !turn; }
