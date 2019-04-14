@@ -10,8 +10,9 @@ public class GameManagerSolo : MonoBehaviour
         Blue,Red
         
     }
-
+    
     public static Team TeamTurn;
+    public static bool booleen = false;
 
     public static void SetTeamTurn (Team Color)
     {
@@ -19,6 +20,7 @@ public class GameManagerSolo : MonoBehaviour
        
     }
 
+    
     public  static void FinDeTours()
     {
         TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
