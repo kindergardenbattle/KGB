@@ -37,7 +37,8 @@ namespace Multi
             }
         }
 
-        public void Set_turn() { turn = !turn;}
+        [PunRPC]
+        void Set_turn() { turn = !turn;}
         
         void Update()
         {
