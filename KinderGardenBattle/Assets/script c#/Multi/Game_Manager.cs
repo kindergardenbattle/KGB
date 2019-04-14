@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-
+using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +14,19 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
+        public enum Team
+        {
+            Blue, Red
+
+        }
+        public static Team TeamTurn = Team.Blue;
+
+        public static void FinDeTours()
+        {
+            Debug.Log((TeamTurn == Team.Blue) ? "Blue" : "Red");
+
+            TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
+        }
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
 

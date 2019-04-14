@@ -40,13 +40,13 @@ public class PlayerMove : TacticsMove
 			else
 			{
 				Move();
-				//DebutTour = false;
+				DebutTour = false;
 
 			}
-			/*if (!moving && DebutTour==false)
+			if (!moving && DebutTour==false)
 			{
-				//GameManagerSolo.FinDeTours();
-			}*/
+				GameManagerSolo.FinDeTours();
+			}
 		}
 
 		

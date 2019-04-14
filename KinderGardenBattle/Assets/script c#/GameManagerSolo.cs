@@ -21,6 +21,8 @@ public class GameManagerSolo : MonoBehaviour
 
     public  static void FinDeTours()
     {
+        Debug.Log((TeamTurn == Team.Blue) ?"Blue":"Red");
+        
         TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
     }
 
