@@ -14,19 +14,8 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
-        public enum Team
-        {
-            Blue, Red
+        public static bool turn =true;
 
-        }
-        public static Team TeamTurn = Team.Blue;
-
-        public static void FinDeTours()
-        {
-            Debug.Log((TeamTurn == Team.Blue) ? "Blue" : "Red");
-
-            TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
-        }
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
 
@@ -56,6 +45,9 @@ namespace Multi
 
         public void EndTurn()
         {
+            GameObject[] end_turn_button = GameObject.FindGameObjectsWithTag("Button");
+
+            end_turn_button[0].SetActive(PhotonNetwork.IsMasterClient?turn:!turn);
             Debug.Log("fin de tours");
         }
         #endregion
@@ -67,6 +59,7 @@ namespace Multi
         public void LeaveRoom()
         {
             PhotonNetwork.LeaveRoom();
+            
         }
 
 

@@ -15,7 +15,6 @@ public class PlayerMove : TacticsMove
 	{
 		//GameManagerSolo.SetTeamTurn(GameManagerSolo.Team.Blue);
 		DebutTour = true;
-        Debug.Log("hsdjkahdasjklhdlas");
         Init();
 		
 	}
@@ -40,13 +39,13 @@ public class PlayerMove : TacticsMove
 			else
 			{
 				Move();
-				DebutTour = false;
+				//DebutTour = false;
 
 			}
-			if (!moving && DebutTour==false)
+			/*if (!moving && DebutTour==false)
 			{
 				GameManagerSolo.FinDeTours();
-			}
+			}*/
 		}
 
 		
