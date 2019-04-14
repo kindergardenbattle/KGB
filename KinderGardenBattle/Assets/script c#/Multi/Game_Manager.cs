@@ -14,8 +14,8 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
-        public static bool turn =false;
-        PlayerMove oui;
+        public  static bool turn =true;//synchronise the turn with the master client
+        private static bool ancien_turn = turn;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -36,6 +36,18 @@ namespace Multi
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,1f,a), Quaternion.identity, 0);
             }
         }
+
+        public void Set_turn() { turn = !turn;}
+        
+        void Update()
+        {
+            if (turn != ancien_turn)
+            {
+                EndTurn();
+                ancien_turn = turn;
+            }
+        }
+
         /// <summary>
         /// Called when the local player left the room. We need to load the launcher scene.
         /// </summary>
@@ -46,10 +58,18 @@ namespace Multi
 
         public void EndTurn()
         {
-            GameObject[] end_turn_button = GameObject.FindGameObjectsWithTag("Button");
-            oui = playerPrefab.GetComponent<PlayerMove>();
-            oui.is_turn = !oui.is_turn;
-            end_turn_button[0].SetActive(PhotonNetwork.IsMasterClient?turn:!turn);
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
+            }
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerMove[] oui = player.GetComponents<PlayerMove>();
+            foreach (PlayerMove p in oui)
+            {
+                p.is_turn = !p.is_turn;
+                p.Resetalltiles();
+            }
             Debug.Log("fin de tours"+turn);
         }
         #endregion

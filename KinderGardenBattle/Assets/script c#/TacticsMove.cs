@@ -74,6 +74,11 @@ public class TacticsMove : MonoBehaviourPunCallbacks
             t.FindNeighbors(jumpHeight, target);
         }
     }
+    public void Resetalltiles()
+    {
+        foreach (Tile t in selectableTiles)
+            t.Reset();
+    }
 
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
@@ -401,3 +406,4 @@ public class TacticsMove : MonoBehaviourPunCallbacks
         Debug.Log("Path not found");
     }
 }
+

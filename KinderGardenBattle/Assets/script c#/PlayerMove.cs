@@ -26,7 +26,6 @@ public class PlayerMove : TacticsMove
         {
             return;
         }
-
         if (is_turn)// (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
 			Debug.DrawRay(transform.position, transform.forward);

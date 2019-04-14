@@ -24,9 +24,9 @@ public class Test_camera : MonoBehaviour
         if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
         {
             target = hit.transform.position;
-            pos.x = target.x - 2;
-            pos.z = target.z - 2;
-            pos.y = target.y + 2;
+            pos.x = target.x - 4;
+            pos.z = target.z - 4;
+            pos.y = target.y + 4;
         }
         else
         {

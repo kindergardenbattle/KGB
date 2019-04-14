@@ -17931,7 +17931,7 @@ PrefabInstance:
     - target: {fileID: 8341316574324595889, guid: 5debf56f2fa469a48a62960ec468a25f,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: EndTurn
+      value: Set_turn
       objectReference: {fileID: 0}
     - target: {fileID: 8341316574324595889, guid: 5debf56f2fa469a48a62960ec468a25f,
         type: 3}
