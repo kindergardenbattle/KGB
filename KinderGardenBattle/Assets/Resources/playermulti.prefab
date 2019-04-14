@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1612319622, guid: 8fbe3334a28e43848b1971eeb1b477e8, type: 3}
       propertyPath: m_Name
-      value: multi
+      value: playermulti
       objectReference: {fileID: 0}
     - target: {fileID: 2324481836431869088, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
@@ -66,51 +66,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8886675908003685465, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 9054853104090358531, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: speed
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 9054853104090358531, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 101598001327683179, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: ObservedComponents.Array.size
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 101598001327683179, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
       propertyPath: ObservedComponents.Array.data[0]
       value: 
       objectReference: {fileID: 2937858736398426860}
-    - target: {fileID: 101598001327683179, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: viewIdField
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 101598001327683179, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: InstantiationId
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 101598001327683179, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: ObservedComponents.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4359297298570332028, guid: 8fbe3334a28e43848b1971eeb1b477e8,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3313876320241065254, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
       propertyPath: m_Bones.Array.data[0]

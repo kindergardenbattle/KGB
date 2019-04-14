@@ -8,7 +8,7 @@ using Photon.Pun;
 public class TacticsMove : MonoBehaviourPunCallbacks
 { // parcours largeur //
 
-    public static bool is_turn=true;
+    public bool is_turn=true;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 

@@ -14,7 +14,8 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
-        public static bool turn =true;
+        public static bool turn =false;
+        PlayerMove oui;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -46,9 +47,10 @@ namespace Multi
         public void EndTurn()
         {
             GameObject[] end_turn_button = GameObject.FindGameObjectsWithTag("Button");
-
+            oui = playerPrefab.GetComponent<PlayerMove>();
+            oui.is_turn = !oui.is_turn;
             end_turn_button[0].SetActive(PhotonNetwork.IsMasterClient?turn:!turn);
-            Debug.Log("fin de tours");
+            Debug.Log("fin de tours"+turn);
         }
         #endregion
 
