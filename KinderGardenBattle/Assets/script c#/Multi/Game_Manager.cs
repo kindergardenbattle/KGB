@@ -35,6 +35,11 @@ namespace Multi
                 float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -5f;
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,1f,a), Quaternion.identity, 0);
             }
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
+            }
         }
 
         [PunRPC]
