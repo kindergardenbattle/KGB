@@ -17788,6 +17788,11 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Button
       objectReference: {fileID: 0}
+    - target: {fileID: 7019013908049856266, guid: 5debf56f2fa469a48a62960ec468a25f,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5428007541873878116, guid: 5debf56f2fa469a48a62960ec468a25f,
         type: 3}
       propertyPath: m_LocalPosition.x

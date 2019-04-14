@@ -42,9 +42,13 @@ namespace Multi
             }
         }
 
+
         [PunRPC]
-        void Set_turn() { turn = !turn;}
-        
+        void Set_turn() { photonView.RPC("Lel", RpcTarget.All); }
+
+        [PunRPC]
+        void Lel() { turn = !turn; }
+
         void Update()
         {
             if (turn != ancien_turn)
