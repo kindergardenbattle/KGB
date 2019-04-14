@@ -15,6 +15,7 @@ public class PlayerMove : TacticsMove
 	{
 		//GameManagerSolo.SetTeamTurn(GameManagerSolo.Team.Blue);
 		DebutTour = true;
+        Debug.Log("hsdjkahdasjklhdlas");
         Init();
 		
 	}

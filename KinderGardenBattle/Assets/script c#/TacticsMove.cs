@@ -38,7 +38,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     protected void Init()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
-        is_turn = PhotonNetwork.CurrentRoom.PlayerCount == 1;
+        is_turn = PhotonNetwork.IsMasterClient;
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
       //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
