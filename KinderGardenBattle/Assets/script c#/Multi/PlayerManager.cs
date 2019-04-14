@@ -7,6 +7,7 @@ namespace multi
 {
     public class PlayerManager : MonoBehaviourPunCallbacks
     {
+
         // Start is called before the first frame update
         void Start()
         {
@@ -15,6 +16,7 @@ namespace multi
         // Update is called once per frame
         void Update()
         {
+
 
         }
     }

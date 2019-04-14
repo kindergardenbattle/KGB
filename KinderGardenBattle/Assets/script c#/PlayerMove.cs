@@ -13,8 +13,8 @@ public class PlayerMove : TacticsMove
 	
 	void Start ()
 	{
-		GameManagerSolo.SetTeamTurn(GameManagerSolo.Team.Blue);
-		 DebutTour = true;
+		//GameManagerSolo.SetTeamTurn(GameManagerSolo.Team.Blue);
+		DebutTour = true;
         Init();
 		
 	}
@@ -27,7 +27,7 @@ public class PlayerMove : TacticsMove
             return;
         }
 
-        if (true)// (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (is_turn)// (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
 			Debug.DrawRay(transform.position, transform.forward);
 			if (!moving)
@@ -39,13 +39,13 @@ public class PlayerMove : TacticsMove
 			else
 			{
 				Move();
-				DebutTour = false;
+				//DebutTour = false;
 
 			}
-			if (!moving && DebutTour==false)
+			/*if (!moving && DebutTour==false)
 			{
-				GameManagerSolo.FinDeTours();
-			}
+				//GameManagerSolo.FinDeTours();
+			}*/
 		}
 
 		

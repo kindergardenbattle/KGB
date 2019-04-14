@@ -7,8 +7,8 @@ using Photon.Pun;
 
 public class TacticsMove : MonoBehaviourPunCallbacks
 { // parcours largeur //
-     
 
+    public static bool is_turn=true;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 
@@ -38,7 +38,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     protected void Init()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
-
+        is_turn = PhotonNetwork.CurrentRoom.PlayerCount == 1;
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
       //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
@@ -79,7 +79,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
         
-        if (true)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (is_turn)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
