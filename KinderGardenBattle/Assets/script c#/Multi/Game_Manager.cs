@@ -41,7 +41,10 @@ namespace Multi
             SceneManager.LoadScene(0);
         }
 
-
+        public void EndTurn()
+        {
+            Debug.Log("fin de tours");
+        }
         #endregion
 
 
