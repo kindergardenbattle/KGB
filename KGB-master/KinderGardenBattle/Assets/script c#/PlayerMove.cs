@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography.X509Certificates;
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
@@ -15,37 +16,45 @@ public class PlayerMove : TacticsMove
     {
         Init();
     }
-
-
     void Update()
-    {
+	{
 
 
-        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
-        {
+		if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
+		{
 
-            Debug.DrawRay(transform.position, transform.forward);
+			Debug.DrawRay(transform.position, transform.forward);
 
 
 
-            if (!moving)
-            {
-                FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-                CheckMouse();
-            }
+			if (!moving)
+			{
+				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+				CheckMouse();
+			}
 
-            else
-            {
-                Move();
-                DebutTour = false;
+			else
+			{
+				Move();
+				DebutTour = false;
 
-            }
-            if (!moving && DebutTour == false)
-            {
-                GameManagerSolo.FinDeTours();
-            }
-        }
-    }
+			}
+
+			if (!moving && DebutTour == false)
+			{
+				GameManagerSolo.FinDeTours();
+			}
+		}
+	}
+
+
+
+
+
+	
+
+	
+>>>>>>> CHIBREDESINGE
 
     void CheckMouse()
     {

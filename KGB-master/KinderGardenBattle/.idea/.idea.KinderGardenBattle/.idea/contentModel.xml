@@ -340,6 +340,7 @@
           </e>
         </e>
         <e p="script c#" t="Include">
+          <e p="Atk_distance.cs" t="Include" />
           <e p="camera" t="Include">
             <e p="Test_camera.cs" t="Include" />
           </e>
@@ -358,7 +359,6 @@
             <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerNameInputField.cs" t="Include" />
           </e>
-          <e p="NPC.cs" t="Include" />
           <e p="NPCMove.cs" t="Include" />
           <e p="Perso_Generique.cs" t="Include" />
           <e p="PlayerCaracteristique.cs" t="Include" />

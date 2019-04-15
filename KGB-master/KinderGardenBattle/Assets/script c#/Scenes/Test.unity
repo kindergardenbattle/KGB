@@ -130,13 +130,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6d8b1f1857854b4f92b2937ad8f678a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+=======
+--- !u!114 &190729810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190729795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0285707b10c958640be0a2473abbb9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classe_precedente: 2
+  Hp: 12
+  Max_hp: 0
+  Atk: 0
+  Def: 0
+  Pm: 0
+  Mana: 0
+  Distance: 1
+  vivant: 1
+  selection: 0
+  ATK_distance: 0
+  classe: 2
+>>>>>>> CHIBREDESINGE
 --- !u!1 &280858022 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1612319622, guid: 8fbe3334a28e43848b1971eeb1b477e8,
     type: 3}
   m_PrefabInstance: {fileID: 2046867615563656435}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &280858036
+--- !u!114 &280858035
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -148,6 +175,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c0a384651f243b9047cec30468cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager_cible: {fileID: 0}
+  manager_joueur: {fileID: 0}
+  cara_joueur:
+  - {fileID: 0}
+  distance: 0
+  bascule: 0
+  bascule2: 1
+  boolene: 1
 --- !u!114 &280858037
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -196,17 +231,17 @@ PrefabInstance:
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50
+      value: 11.6
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -6.3
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
@@ -262,6 +297,11 @@ PrefabInstance:
         type: 3}
       propertyPath: heightlimit
       value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037788958972078575, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b64a8136a1183b4a8aeb116d9cd45f1, type: 3}
@@ -344,6 +384,10 @@ PrefabInstance:
     - target: {fileID: 1612319622, guid: 8fbe3334a28e43848b1971eeb1b477e8, type: 3}
       propertyPath: m_Name
       value: "Le perso anim\xE9"
+      objectReference: {fileID: 0}
+    - target: {fileID: 1612319622, guid: 8fbe3334a28e43848b1971eeb1b477e8, type: 3}
+      propertyPath: m_TagString
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 2324481836431869088, guid: 8fbe3334a28e43848b1971eeb1b477e8,
         type: 3}
@@ -649,6 +693,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: enemie
+      objectReference: {fileID: 0}
+    - target: {fileID: 762994771140219546, guid: ac1faeaf72d807647bf0fdf4f263bca3,
+        type: 3}
+      propertyPath: m_TagString
+      value: NPC
       objectReference: {fileID: 0}
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
