@@ -15,40 +15,6 @@ public class PlayerMove_multi : TacticsMove_multi
 	{
         Init();
 	}
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/PlayerMove_multi.cs
-=======
-	
-	
-	void Update () 
-	{
-
-
-		if(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
-		{
-
-			Debug.DrawRay(transform.position, transform.forward);
-
-
-				
-			if (!moving)
-			{
-				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-				CheckMouse();
-			}
-			
-			else
-			{
-				Move();
-				DebutTour = false;
-
-			}
-			if (!moving && DebutTour==false)
-			{
-				GameManagerSolo.FinDeTours();
-			}
-		}
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/PlayerMove.cs
-
 
     void Update()
     {

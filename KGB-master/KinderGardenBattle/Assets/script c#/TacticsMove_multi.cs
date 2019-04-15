@@ -6,11 +6,6 @@ using Photon.Pun;
 
 public class TacticsMove_multi : MonoBehaviourPunCallbacks
 { // parcours largeur //
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-=======
-    public bool turn = true;
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
-
     public bool Want_to_move = false;
     public bool is_turn;
     public bool ancient_turn;
@@ -88,52 +83,41 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-        
+
         if (is_turn && Want_to_move)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
-=======
-        ComputeAdjacencyLists(jumpHeight, null);
-        GetCurrentTile();
 
-        Queue<Tile> process = new Queue<Tile>();
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
 
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-         
+            Queue<Tile> process = new Queue<Tile>();
 
-        while (process.Count > 0)
-        {
-            Tile t = process.Dequeue();
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
 
-            selectableTiles.Add(t);
-            t.selectable = true;
 
-            if (t.distance < move)
+            while (process.Count > 0)
             {
-                foreach (Tile tile in t.adjacencyList)
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+                if (t.distance < move)
                 {
-                    if (!tile.visited)
+                    foreach (Tile tile in t.adjacencyList)
                     {
-                        tile.parent = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
-                        process.Enqueue(tile);
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
                     }
                 }
             }
         }
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-        else
-        {
-            return;
-            
-        }
-=======
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
     }
 
     public void MoveToTile(Tile tile)
@@ -417,16 +401,6 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
         //todo - what do you do if there is no path to the target tile?
         Debug.Log("Path not found");
-    }
-
-    public void BeginTurn()
-    {
-        turn = true;
-    }
-
-    public void EndTurn()
-    {
-        turn = false;
     }
 }
 

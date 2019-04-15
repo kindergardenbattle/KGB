@@ -4,16 +4,10 @@ using UnityEngine;
 using Photon.Pun;
 
 
-public class TacticsMove_multi : MonoBehaviourPunCallbacks
-{ // parcours largeur //
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-=======
-    public bool turn = true;
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
-
-    public bool Want_to_move = false;
-    public bool is_turn;
-    public bool ancient_turn;
+public class TacticsMove : MonoBehaviour
+{ 
+    public bool DebutTour;
+    public bool turn;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 
@@ -42,9 +36,8 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
     protected void Init()
     {
         move = max_move;
+        DebutTour = true;
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
-        is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
-        ancient_turn=is_turn;
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
        // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
@@ -88,52 +81,40 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-        
-        if (is_turn && Want_to_move)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+
+        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
-=======
-        ComputeAdjacencyLists(jumpHeight, null);
-        GetCurrentTile();
 
-        Queue<Tile> process = new Queue<Tile>();
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
+            Queue<Tile> process = new Queue<Tile>();
 
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-         
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
 
-        while (process.Count > 0)
-        {
-            Tile t = process.Dequeue();
 
-            selectableTiles.Add(t);
-            t.selectable = true;
-
-            if (t.distance < move)
+            while (process.Count > 0)
             {
-                foreach (Tile tile in t.adjacencyList)
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+                if (t.distance < move)
                 {
-                    if (!tile.visited)
+                    foreach (Tile tile in t.adjacencyList)
                     {
-                        tile.parent = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
-                        process.Enqueue(tile);
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
                     }
                 }
             }
         }
-<<<<<<< HEAD:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove_multi.cs
-        else
-        {
-            return;
-            
-        }
-=======
->>>>>>> origin/CHIBREDESINGE:KGB-master/KinderGardenBattle/Assets/script c#/TacticsMove.cs
     }
 
     public void MoveToTile(Tile tile)
@@ -421,6 +402,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
     public void BeginTurn()
     {
+        move = max_move;
         turn = true;
     }
 
