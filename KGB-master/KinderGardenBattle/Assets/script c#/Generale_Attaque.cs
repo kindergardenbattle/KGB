@@ -6,30 +6,15 @@ using UnityEditor;
 using UnityEngine;
 
 public class Generale_Attaque : MonoBehaviour
-<<<<<<< HEAD
-{
-    public GameManagerSolo manager_cible;
 
-=======
 {   public GameManagerSolo manager_cible;
     
->>>>>>> CHIBREDESINGE
     public GameManagerSolo manager_joueur;
     public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
     public bool distance = false;
     public bool bascule = false;
     public bool bascule2 = true;
-<<<<<<< HEAD
 
-
-
-
-    public Perso_Generique GetTarget(int atk)
-    {
-
-        bool boolen = true;
-        if (Input.GetMouseButtonUp(0))
-=======
     
    
     
@@ -39,7 +24,6 @@ public class Generale_Attaque : MonoBehaviour
         
         bool boolen = true;
         if (Input.GetMouseButtonUp(0) )
->>>>>>> CHIBREDESINGE
         {
             Debug.Log("5");
             Debug.Log("bite");
@@ -50,19 +34,11 @@ public class Generale_Attaque : MonoBehaviour
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC"))
                 {
                     GameObject npc = hit.transform.gameObject;
-<<<<<<< HEAD
-                    manager_cible = npc.GetComponent<GameManagerSolo>();
-                    Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
-                    cara_cible.SetClasse(cara_cible.classe());
-                    Debug.Log(cara_cible.ClasseToString());
-                    Debug.Log("cible acquise :" + cara_cible.ClasseToString());
-=======
                     manager_cible= npc.GetComponent<GameManagerSolo>();
-                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
+                    Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
                     cara_cible.SetClasse(cara_cible.classe);
                     Debug.Log(cara_cible.ClasseToString());
                     Debug.Log("cible acquise :" +cara_cible.ClasseToString());
->>>>>>> CHIBREDESINGE
                     Debug.Log(cara_cible.Hp);
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
@@ -82,17 +58,8 @@ public class Generale_Attaque : MonoBehaviour
 
 
     }
-<<<<<<< HEAD
     public Perso_Generique SelectionPerso(bool boolen)
     {
-
-
-=======
-    public Perso_Generique SelectionPerso( bool boolen)
-    {
-        
-        
->>>>>>> CHIBREDESINGE
 
         if (Input.GetMouseButtonUp(0) && boolen == true)
         {
@@ -108,20 +75,12 @@ public class Generale_Attaque : MonoBehaviour
                 {
                     Debug.Log("bite de cheval ");
                     GameObject joueur = hit.transform.gameObject;
-<<<<<<< HEAD
-                    if (joueur.GetComponent<Perso_Generique>() == null)
-=======
                     if (joueur.GetComponent<Perso_Generique>()==null)
->>>>>>> CHIBREDESINGE
                     {
                         return joueur.GetComponent<Perso_Generique>();
                     }
                     Perso_Generique cara_joueur = joueur.GetComponent<Perso_Generique>();
-<<<<<<< HEAD
-                    if (cara_joueur != null && cara_joueur.vivant)
-=======
                     if (cara_joueur!=null && cara_joueur.vivant)
->>>>>>> CHIBREDESINGE
                     {
                         penis += 1;
                         Debug.Log(penis);
@@ -130,46 +89,16 @@ public class Generale_Attaque : MonoBehaviour
                         cara_joueur.selection = true;
                         return cara_joueur;
                     }
-<<<<<<< HEAD
-
-
-
-
-
-=======
-                    
-                       
-                            
-                        
-                       
->>>>>>> CHIBREDESINGE
                 }
                 Debug.Log("vagin");
             }
         }
 
         return null;
-    }
-
-
-
-
-
-
-<<<<<<< HEAD
-
+    }    
     public bool boolene = true;
     private void Update()
     {
-        //  GetTarget(10);
-=======
-    
-    public bool boolene = true;
-    private void Update()
-    {
-      //  GetTarget(10);
->>>>>>> CHIBREDESINGE
-
-
+        GetTarget(10);
     }
 }

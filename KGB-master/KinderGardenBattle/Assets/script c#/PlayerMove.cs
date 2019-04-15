@@ -47,15 +47,6 @@ public class PlayerMove : TacticsMove
 		}
 	}
 
-
-
-
-
-	
-
-	
->>>>>>> CHIBREDESINGE
-
     void CheckMouse()
     {
         if (Input.GetMouseButtonUp(0))
