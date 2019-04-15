@@ -29,7 +29,7 @@ public class Tile : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	    if (true)//(GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+	    if (true)
 	    {
 
             if (current)
@@ -49,10 +49,10 @@ public class Tile : MonoBehaviour
 	            GetComponent<Renderer>().material.color = Color.white;
 	        }
 	    }
-	    else
+	    /*else
 	    {
 		    GetComponent<Renderer>().material.color = Color.white;
-	    }
+	    }*/
 	}
 
     public void Reset()

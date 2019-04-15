@@ -44,7 +44,7 @@ namespace Multi
 
 
         [PunRPC]
-        void Set_turn() {            photonView.RPC("Lel", RpcTarget.All); }
+        void Set_turn() {photonView.RPC("Lel", RpcTarget.All); }
 
         [PunRPC]
         void Lel() { turn = !turn; }
@@ -64,6 +64,17 @@ namespace Multi
         public override void OnLeftRoom()
         {
             SceneManager.LoadScene(0);
+        }
+
+        public void Move()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            PlayerMove[] oui = player.GetComponents<PlayerMove>();
+            foreach (PlayerMove p in oui)
+            {
+                p.Want_to_move = !p.Want_to_move;
+                p.Resetalltiles();
+            }
         }
 
         public void EndTurn()

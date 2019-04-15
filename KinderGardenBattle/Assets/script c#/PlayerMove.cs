@@ -8,54 +8,35 @@ using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
-
-	public bool DebutTour;
+    
+	
 	
 	void Start ()
 	{
-		//GameManagerSolo.SetTeamTurn(GameManagerSolo.Team.Blue);
-		DebutTour = true;
         Init();
-		
 	}
-	
-	
-	void Update () 
-	{        
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+
+
+    void Update()
+    {
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true || !is_turn)
         {
             return;
         }
-        if (is_turn)// (GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (Want_to_move||moving)
         {
-			Debug.DrawRay(transform.position, transform.forward);
-			if (!moving)
-			{
-				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-				CheckMouse();
-			}
-			
-			else
-			{
-				Move();
-				//DebutTour = false;
-
-			}
-			/*if (!moving && DebutTour==false)
-			{
-				GameManagerSolo.FinDeTours();
-			}*/
-		}
-
-		
-		
-		
-		
-	
-		
-
-	}
-
+            Debug.DrawRay(transform.position, transform.forward);
+            if (!moving)
+            {
+                FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+                CheckMouse();
+            }
+            else
+            {
+                Move();
+            }
+        }
+    }
     void CheckMouse()
     {
         if (Input.GetMouseButtonUp(0))

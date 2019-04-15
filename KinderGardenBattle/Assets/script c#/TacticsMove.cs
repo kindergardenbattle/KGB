@@ -8,6 +8,7 @@ using Photon.Pun;
 public class TacticsMove : MonoBehaviourPunCallbacks
 { // parcours largeur //
 
+    public bool Want_to_move = false;
     public bool is_turn=true;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
@@ -17,7 +18,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     
 
     public bool moving = false;
-    public int move = 3 ; // a changer pour toute les classes
+    public int move = 3; // a changer pour toute les classes
     public float jumpHeight = 2;
     public float moveSpeed = 2;
     public float jumpVelocity = 4.5f;
@@ -38,7 +39,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     protected void Init()
     {
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
-        is_turn = PhotonNetwork.IsMasterClient;
+        is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
       //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
@@ -84,7 +85,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
     {
         
-        if (is_turn)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
+        if (is_turn && Want_to_move)//( GameManagerSolo.TeamTurn==PlayerCaracteristique.TeamJoueur)
         {
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
@@ -177,6 +178,7 @@ public class TacticsMove : MonoBehaviourPunCallbacks
         {
             RemoveSelectableTiles();
             moving = false;
+            move = 0;
 
             
         }
