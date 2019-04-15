@@ -69,8 +69,8 @@ namespace Multi
         public void Move()
         {
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            PlayerMove[] oui = player.GetComponents<PlayerMove>();
-            foreach (PlayerMove p in oui)
+            PlayerMove_multi[] oui = player.GetComponents<PlayerMove_multi>();
+            foreach (PlayerMove_multi p in oui)
             {
                 p.Want_to_move = !p.Want_to_move;
                 p.Resetalltiles();
@@ -85,8 +85,8 @@ namespace Multi
                     go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
             }
             GameObject player = GameObject.FindGameObjectWithTag("Player");
-            PlayerMove[] oui = player.GetComponents<PlayerMove>();
-            foreach (PlayerMove p in oui)
+            PlayerMove_multi[] oui = player.GetComponents<PlayerMove_multi>();
+            foreach (PlayerMove_multi p in oui)
             {
                 p.is_turn = !p.is_turn;
                 p.Resetalltiles();

@@ -5,11 +5,12 @@ using UnityEngine;
 using Photon.Pun;
 
 
-public class TacticsMove : MonoBehaviourPunCallbacks
+public class TacticsMove_multi : MonoBehaviourPunCallbacks
 { // parcours largeur //
 
     public bool Want_to_move = false;
-    public bool is_turn=true;
+    public bool is_turn;
+    public bool ancient_turn;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
 
@@ -18,7 +19,8 @@ public class TacticsMove : MonoBehaviourPunCallbacks
     
 
     public bool moving = false;
-    public int move = 3; // a changer pour toute les classes
+    public int max_move = 3; // a changer pour toute les classes
+    public int move;
     public float jumpHeight = 2;
     public float moveSpeed = 2;
     public float jumpVelocity = 4.5f;
@@ -38,8 +40,10 @@ public class TacticsMove : MonoBehaviourPunCallbacks
    
     protected void Init()
     {
+        move = max_move;
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
         is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
+        ancient_turn=is_turn;
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
 
       //  TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )

@@ -6,7 +6,7 @@ using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
 using Photon.Pun;
 
-public class PlayerMove : TacticsMove
+public class PlayerMove_multi : TacticsMove_multi
 {
     
 	
@@ -19,23 +19,26 @@ public class PlayerMove : TacticsMove
 
     void Update()
     {
-        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true || !is_turn)
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
             return;
         }
-        if (Want_to_move||moving)
+        if (is_turn!= ancient_turn)
         {
+            move = max_move;
+            ancient_turn = is_turn;
+        }
+        if (is_turn && Want_to_move)
+        {            
             Debug.DrawRay(transform.position, transform.forward);
             if (!moving)
             {
                 FindSelectableTiles(); //appelle les fonction si ça bouge pas 
                 CheckMouse();
             }
-            else
-            {
-                Move();
-            }
         }
+        if(moving)
+            Move();
     }
     void CheckMouse()
     {
