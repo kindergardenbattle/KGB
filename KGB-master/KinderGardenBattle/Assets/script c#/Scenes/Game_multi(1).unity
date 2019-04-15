@@ -11942,6 +11942,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: end turn
       objectReference: {fileID: 0}
+    - target: {fileID: 7019013908049856266, guid: d1def9a2dd26e32468e7066c965867c1,
+        type: 3}
+      propertyPath: m_TagString
+      value: Button
+      objectReference: {fileID: 0}
     - target: {fileID: 5428007541873878116, guid: d1def9a2dd26e32468e7066c965867c1,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -68,10 +68,12 @@ namespace Multi
 
         public void Move()
         {
+            Debug.Log("er");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerMove_multi[] oui = player.GetComponents<PlayerMove_multi>();
             foreach (PlayerMove_multi p in oui)
             {
+                Debug.Log("er");
                 p.Want_to_move = !p.Want_to_move;
                 p.Resetalltiles();
             }
