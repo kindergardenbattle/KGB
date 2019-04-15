@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class GameManagerSolo : MonoBehaviour
 {
+    private bool bascule = false;
     
     public enum Team
     {
@@ -20,7 +21,12 @@ public class GameManagerSolo : MonoBehaviour
        
     }
 
+ 
+   
+
     
+
+
     public  static void FinDeTours()
     {
         TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;

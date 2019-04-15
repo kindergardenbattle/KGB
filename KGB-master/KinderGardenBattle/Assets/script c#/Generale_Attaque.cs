@@ -7,87 +7,112 @@ using UnityEngine;
 
 public class Generale_Attaque : MonoBehaviour
 {   public GameManagerSolo manager_cible;
-    public Perso_Generique cara_cible;
+    
     public GameManagerSolo manager_joueur;
-    public Perso_Generique cara_joueur;
+    public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
     public bool distance = false;
-    public void GetTarget()
+    public bool bascule = false;
+    public bool bascule2 = true;
+    
+   
+    
+    
+    public Perso_Generique GetTarget(int atk)
     {
         
-        if (Input.GetMouseButtonDown(0))
+        bool boolen = true;
+        if (Input.GetMouseButtonUp(0) )
         {
-
-
+            Debug.Log("5");
+            Debug.Log("bite");
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-            if (Physics.Raycast(ray, out hit, 100.0f))
+            if (Physics.Raycast(ray, out hit, 25.0f))
             {
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC"))
                 {
                     GameObject npc = hit.transform.gameObject;
                     manager_cible= npc.GetComponent<GameManagerSolo>();
-                    cara_cible = npc.GetComponent<Perso_Generique>();
-                    Debug.Log("cible acquise :" +npc.name);
+                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
+                    cara_cible.SetClasse(cara_cible.classe);
+                    Debug.Log(cara_cible.ClasseToString());
+                    Debug.Log("cible acquise :" +cara_cible.ClasseToString());
+                    Debug.Log(cara_cible.Hp);
+                    cara_cible.NewPV(atk);
+                    Debug.Log(cara_cible.Hp);
+                    return cara_cible;
                 }
 
             }
-            
+
+            return null;
+
+
         }
+
+        return null;
+
+
+
+
     }
-
-    public void SelectionPerso()
+    public Perso_Generique SelectionPerso( bool boolen)
     {
-        bool boolen = false;
-       
+        
+        
 
-            if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonUp(0) && boolen == true)
+        {
+            int penis = 1;
+            Debug.Log("bruh");
+            bascule = true;
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 100.0f))
+                Debug.Log("hit or miss");
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
                 {
-                    if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
+                    Debug.Log("bite de cheval ");
+                    GameObject joueur = hit.transform.gameObject;
+                    if (joueur.GetComponent<Perso_Generique>()==null)
                     {
-                        GameObject joueur = hit.transform.gameObject;
-                        manager_joueur = joueur.GetComponent<GameManagerSolo>();
-                        cara_joueur = joueur.GetComponent<Perso_Generique>();
-                        if (cara_joueur!=null)
-                        {
-                            
-                            Debug.Log("joueur hit :" + cara_joueur.ClasseToString());
-                            boolen = true;
-                            cara_joueur.selection = true;
-                        }
-                        else
-                        {
-                            Debug.Log("penis");
-                        }
+                        return joueur.GetComponent<Perso_Generique>();
+                    }
+                    Perso_Generique cara_joueur = joueur.GetComponent<Perso_Generique>();
+                    if (cara_joueur!=null && cara_joueur.vivant)
+                    {
+                        penis += 1;
+                        Debug.Log(penis);
+                        Debug.Log("joueur hit :" + cara_joueur.ClasseToString());
+                        boolen = true;
+                        cara_joueur.selection = true;
+                        return cara_joueur;
+                    }
+                    
+                       
                             
                         
                        
-                    }
-                    Debug.Log("vagin");
                 }
+                Debug.Log("vagin");
             }
-        
-    }
-
-    
-
-    public void ATK_joueur_cqc()
-    {
-        if (cara_cible != null && cara_joueur != null)
-        { 
-            double degat =  cara_cible.Hp - cara_cible.Def * cara_joueur.Atk;
-            // declencher l'animation
-            cara_cible.Hp -= degat;
-            cara_cible.Verification();
-            Debug.Log("hp :"+ cara_cible.Hp);
-            
-            // if dead => animation puis destroy object
         }
-        
+
+        return null;
     }
 
+
+
+
+
+
     
+    public bool boolene = true;
+    private void Update()
+    {
+      //  GetTarget(10);
+
+
+    }
 }

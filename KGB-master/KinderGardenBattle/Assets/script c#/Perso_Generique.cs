@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -44,6 +45,7 @@ public class Perso_Generique : MonoBehaviour
 
    public  Classe classe_precedente = Classe.GOD;
    public   double Hp;
+   public double Max_hp;
    public   double Atk;
    public   double Def;
    public   double Pm;
@@ -53,29 +55,30 @@ public class Perso_Generique : MonoBehaviour
    public bool selection = false;
    public   double ATK_distance = 0;
    public    Classe classe = Classe.GOD;
+  
 
    public  void  SetClasse(Classe Klasse)
    {
-      switch (classe)
+      switch (Klasse)
       {
          case Classe.GUERRIER:
             Atk = 100;
             Def = 0.7;
-            Hp = 50;
+            Max_hp = 50;
             Pm = 5;
             Mana = 0;
             break;
          case Classe.GOD:
             Atk = 1000;
             Def = 0.01;
-            Hp = 1000;
+            Max_hp = 1000;
             Pm = 100;
             Mana = 1000;
             break;
          case Classe.TANK:
             Atk = 15;
             Def = 0.5;
-            Hp = 100;
+            Max_hp = 100;
             Pm = 2;
             Mana = 0;
             break;
@@ -84,14 +87,14 @@ public class Perso_Generique : MonoBehaviour
             Atk = 10;
             ATK_distance = 30;
             Def = 0.80;
-            Hp = 75;
+            Max_hp = 75;
             Pm = 5;
             Mana = 0;
             break;
          case Classe.HEALER:
             Atk = 10;
             Def = 0.80;
-            Hp = 75;
+            Max_hp = 75;
             Pm = 7;
             Mana = 0;
             break;
@@ -100,13 +103,13 @@ public class Perso_Generique : MonoBehaviour
             ATK_distance = 20;
             Atk = 20;
             Def = 0.90;
-            Hp = 75;
+            Max_hp = 75;
             Pm = 5;
             Mana = 0;
             break;
          case Classe.NINJA:
             Atk = 50;
-            Hp = 60;
+            Max_hp = 60;
             Def = 1;
             Pm = 5;
             Mana = 0;
@@ -115,12 +118,32 @@ public class Perso_Generique : MonoBehaviour
             Atk = 10;
             ATK_distance = 30; // + alteration de la cible ( genre psn ou brulé 
             Def = 1;
-            Hp = 60;
+            Max_hp = 60;
             Pm = 5;
             Mana = 100;
             break;
       }
+
+      Hp = Max_hp < Hp ? Max_hp : Hp;
+      {
+         
+      }
       return;
+
+   }
+
+   public  double NewPV (int atk )
+   {
+
+       int penis = Convert.ToInt32(this.Hp - this.Def * atk);
+      
+         Debug.Log("HP avant :"+ Hp);
+         Hp =  penis;
+         Debug.Log("HP aprés :"+Hp);
+         return Hp; 
+      
+    
+    
 
    }
    public  void  FindTarget()

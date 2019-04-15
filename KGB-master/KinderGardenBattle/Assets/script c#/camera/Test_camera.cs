@@ -21,15 +21,15 @@ public class Test_camera : MonoBehaviour
         RaycastHit hit;
         Vector3 target = new Vector3();
         Vector3 pos = transform.position;
-        if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
+        /*if (Input.GetMouseButtonUp(0) && Physics.Raycast(ray, out hit) && hit.collider.CompareTag("Player"))
         {
             target = hit.transform.position;
             pos.x = target.x - 2;
             pos.z = target.z - 2;
             pos.y = target.y + 2;
-        }
-        else
-        {
+        }*/
+       // else
+       // {
 
 
             float scroll = Input.GetAxis("Mouse ScrollWheel");
@@ -67,7 +67,7 @@ public class Test_camera : MonoBehaviour
             pos.x += scroll * scrollspeed * Time.deltaTime;
             pos.y -= scroll * scrollspeed * Time.deltaTime;
             pos.z += scroll * scrollspeed * Time.deltaTime;
-        }
+      //  }
 
         pos.y = Mathf.Clamp(pos.y, 2, heightlimit);
         pos.x = Mathf.Clamp(pos.x, -panlimit.x, panlimit.x);
