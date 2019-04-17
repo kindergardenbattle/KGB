@@ -404,9 +404,8 @@ GameObject:
   - component: {fileID: 6471483198931827728}
   - component: {fileID: 4267134658324510393}
   - component: {fileID: 3261106349436428982}
-  - component: {fileID: 8252712473768023832}
   - component: {fileID: 6914128061875090936}
-  - component: {fileID: 7539394183016579696}
+  - component: {fileID: 7991173488308540787}
   m_Layer: 0
   m_Name: Playermulti
   m_TagString: Player
@@ -543,28 +542,6 @@ MonoBehaviour:
   viewIdField: 0
   InstantiationId: 1
   isRuntimeInstantiated: 0
---- !u!114 &8252712473768023832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4465666355052271903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c2b900780b7d65245acb01c636f3402f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Want_to_move: 0
-  is_turn: 0
-  ancient_turn: 0
-  moving: 0
-  max_move: 3
-  move: 0
-  jumpHeight: 2
-  moveSpeed: 2
-  jumpVelocity: 4.5
-  actualTargetTile: {fileID: 0}
 --- !u!114 &6914128061875090936
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -589,7 +566,7 @@ MonoBehaviour:
   selection: 0
   ATK_distance: 0
   classe: 7
---- !u!114 &7539394183016579696
+--- !u!114 &7991173488308540787
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -598,14 +575,23 @@ MonoBehaviour:
   m_GameObject: {fileID: 4465666355052271903}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3cc67b75dfacf5245bd40828ee741170, type: 3}
+  m_Script: {fileID: 11500000, guid: ace87699783c5854b8efa887d8eb364d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moving: 0
+  max_move: 3
+  move: 0
+  jumpHeight: 2
+  moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
   distance: 0
   bascule: 0
   bascule2: 1
   Want_to_fight: 0
-  boolene: 1
+  Want_to_move: 0
+  is_turn: 0
+  ancient_turn: 0
 --- !u!1 &4674123637496557536
 GameObject:
   m_ObjectHideFlags: 0
