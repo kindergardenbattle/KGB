@@ -68,14 +68,22 @@ namespace Multi
 
         public void Move()
         {
-            Debug.Log("er");
             GameObject player = GameObject.FindGameObjectWithTag("Player");
             PlayerMove_multi[] oui = player.GetComponents<PlayerMove_multi>();
             foreach (PlayerMove_multi p in oui)
             {
-                Debug.Log("er");
                 p.Want_to_move = !p.Want_to_move;
                 p.Resetalltiles();
+            }
+        }
+
+        public void Attack()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Generale_Attaque_multi[] oui = player.GetComponents<Generale_Attaque_multi>();
+            foreach (Generale_Attaque_multi p in oui)
+            {
+                p.Want_to_fight = !p.Want_to_fight;
             }
         }
 

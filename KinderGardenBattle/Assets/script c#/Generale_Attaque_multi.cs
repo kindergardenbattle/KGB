@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Generale_Attaque_multii : MonoBehaviour
+public class Generale_Attaque_multi : MonoBehaviour
 {
     public bool distance = false;
     public bool bascule = false;
     public bool bascule2 = true;
+    public bool Want_to_fight = false;
 
     public void GetTarget(int atk)
     {
@@ -83,6 +84,7 @@ public class Generale_Attaque_multii : MonoBehaviour
     public bool boolene = true;
     private void Update()
     {
-        GetTarget(10);
+        if (Want_to_fight)
+            GetTarget(10);
     }
 }

@@ -176,7 +176,7 @@
     <Compile Include="Assets\script c#\EnemiMoove.cs" />
     <Compile Include="Assets\script c#\GameManagerSolo.cs" />
     <Compile Include="Assets\script c#\Generale_Attaque.cs" />
-    <Compile Include="Assets\script c#\Generale_Attaque_multii.cs" />
+    <Compile Include="Assets\script c#\Generale_Attaque_multi.cs" />
     <Compile Include="Assets\script c#\map\team_apparition.cs" />
     <Compile Include="Assets\script c#\Multi\CameraWork.cs" />
     <Compile Include="Assets\script c#\Multi\Game_Manager.cs" />
