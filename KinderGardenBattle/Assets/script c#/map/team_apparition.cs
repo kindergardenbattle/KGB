@@ -12,8 +12,8 @@ public class team_apparition : MonoBehaviour
 
     private void Spawn()
     {
-        int coordonné_spawnX = Random.Range(0, 10);
-        int coordonné_spawnY = Random.Range(0, 10);
+        //int coordonné_spawnX = Random.Range(0, 10);
+        //int coordonné_spawnY = Random.Range(0, 10);
         
     }
 

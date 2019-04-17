@@ -5,84 +5,82 @@ using UnityEngine;
 
 public class Perso_Generique : MonoBehaviour
 {
-   public enum Classe 
-   {
-      GUERRIER,
-      NINJA,
-      FRONDEUR,
-      TANK,
-      HEALER,
-      PIRATE,
-      MAGE,
-      GOD
+    public enum Classe 
+    {
+        GUERRIER,
+        NINJA,
+        FRONDEUR,
+        TANK,
+        HEALER,
+        PIRATE,
+        MAGE,
+        GOD
+    }
 
-   }
-
-   public string ClasseToString()
-   {
-      switch (classe)
-      {
+    public string ClasseToString()
+    {
+        switch (classe)
+        {
             case Classe.GUERRIER:
-               return "GUERRIER";
+                return "GUERRIER";
             case Classe.GOD:
-               return "GOD";
+                return "GOD";
             case Classe.MAGE:
-               return "MAGE";
+                return "MAGE";
             case Classe.TANK:
-               return "TANK";
+                return "TANK";
             case Classe.NINJA:
-               return "NINJA";
+                return "NINJA";
             case Classe.HEALER :
-               return "HEALER";
+                return "HEALER";
             case Classe.PIRATE:
-               return "PIRATE";
+                return "PIRATE";
             case Classe.FRONDEUR:
-               return "Frondeur";
+                return "Frondeur";
             default:
-               return "wtf";
-      }
-   }
+                return "wtf";
+        }
+    }
 
-   public  Classe classe_precedente = Classe.GOD;
-   public   double Hp;
-   public double Max_hp;
-   public   double Atk;
-   public   double Def;
-   public   double Pm;
-   public   double Mana;
-   public   double Distance = 1;
-   public bool vivant = true;
-   public bool selection = false;
-   public   double ATK_distance = 0;
-   public    Classe classe = Classe.GOD;
-  
+    public  Classe classe_precedente = Classe.GOD;
+    public   double Hp;
+    public double Max_hp;
+    public   double Atk;
+    public   double Def;
+    public   double Pm;
+    public   double Mana;
+    public   double Distance = 1;
+    public bool vivant = true;
+    public bool selection = false;
+    public   double ATK_distance = 0;
+    public    Classe classe = Classe.GOD;  
 
-   public  void  SetClasse(Classe Klasse)
-   {
-      switch (Klasse)
-      {
-         case Classe.GUERRIER:
+    public  void  SetClasse(Classe Klasse)
+    {
+        switch (Klasse)
+        {
+            case Classe.GUERRIER:
             Atk = 100;
             Def = 0.7;
             Max_hp = 50;
             Pm = 5;
             Mana = 0;
             break;
-         case Classe.GOD:
+            case Classe.GOD:
             Atk = 1000;
             Def = 0.01;
             Max_hp = 1000;
             Pm = 100;
             Mana = 1000;
             break;
-         case Classe.TANK:
+            case Classe.TANK:
             Atk = 15;
             Def = 0.5;
             Max_hp = 100;
             Pm = 2;
             Mana = 0;
             break;
-         case Classe.FRONDEUR:
+            case Classe.FRONDEUR:
             Distance = 3;
             Atk = 10;
             ATK_distance = 30;
@@ -91,14 +89,14 @@ public class Perso_Generique : MonoBehaviour
             Pm = 5;
             Mana = 0;
             break;
-         case Classe.HEALER:
+            case Classe.HEALER:
             Atk = 10;
             Def = 0.80;
             Max_hp = 75;
             Pm = 7;
             Mana = 0;
             break;
-         case Classe.PIRATE:
+            case Classe.PIRATE:
             Distance = 2;
             ATK_distance = 20;
             Atk = 20;
@@ -107,14 +105,14 @@ public class Perso_Generique : MonoBehaviour
             Pm = 5;
             Mana = 0;
             break;
-         case Classe.NINJA:
+            case Classe.NINJA:
             Atk = 50;
             Max_hp = 60;
             Def = 1;
             Pm = 5;
             Mana = 0;
             break;
-         case Classe.MAGE:
+            case Classe.MAGE:
             Atk = 10;
             ATK_distance = 30; // + alteration de la cible ( genre psn ou brulé 
             Def = 1;
@@ -122,92 +120,90 @@ public class Perso_Generique : MonoBehaviour
             Pm = 5;
             Mana = 100;
             break;
-      }
+        }
+        Hp = Max_hp < Hp ? Max_hp : Hp;
+    }
 
-      Hp = Max_hp < Hp ? Max_hp : Hp;
-      {
-         
-      }
-      return;
+    public  double NewPV (int atk )
+    {
 
-   }
-
-   public  double NewPV (int atk )
-   {
-
-       int penis = Convert.ToInt32(this.Hp - this.Def * atk);
+        int penis = Convert.ToInt32(this.Hp - this.Def * atk);
       
-         Debug.Log("HP avant :"+ Hp);
-         Hp =  penis;
-         Debug.Log("HP aprés :"+Hp);
-         return Hp; 
+            Debug.Log("HP avant :"+ Hp);
+            Hp =  penis;
+            Debug.Log("HP aprés :"+Hp);
+            return Hp; 
       
     
     
 
-   }
-   public  void  FindTarget()
-   {
-      RaycastHit hit;
+    }
+
+    public  void  FindTarget()
+    {
+        RaycastHit hit;
         
-      Debug.DrawRay(transform.position,transform.up*10, Color.red);
-      if (Physics.Raycast(transform.position, transform.up*10, out hit, 10))
-      {
-         Debug.Log("penis" + hit);
-      }
+        Debug.DrawRay(transform.position,transform.up*10, Color.red);
+        if (Physics.Raycast(transform.position, transform.up*10, out hit, 10))
+        {
+            Debug.Log("penis" + hit);
+        }
 
-   }
+    }
 
-   public  void change(Classe Klasse)
-   {
-      classe = Klasse;
-      SetClasse(classe);
-   }
+    public  void change(Classe Klasse)
+    {
+        classe = Klasse;
+        SetClasse(classe);
+    }
 
-   public double GetCara(Perso_Generique persoGenerique,string demande) // demande en majuscule "HP" par exemple
-   {
-      switch (demande)
-      {
-           case "HP":
-              return persoGenerique.Hp;
+    public double GetCara(Perso_Generique persoGenerique,string demande) // demande en majuscule "HP" par exemple
+    {
+        switch (demande)
+        {
+            case "HP":
+                return persoGenerique.Hp;
            
-           case "ATK":
-              return persoGenerique.Atk;
+            case "ATK":
+                return persoGenerique.Atk;
            
-           case "DEF":
-              return persoGenerique.Def;
+            case "DEF":
+                return persoGenerique.Def;
            
-           case "PM":
-              return persoGenerique.Pm;
+            case "PM":
+                return persoGenerique.Pm;
            
-           case "MANA":
-              return persoGenerique.Mana;
+            case "MANA":
+                return persoGenerique.Mana;
            
-           case "DISTANCE":
-              return persoGenerique.Distance;
+            case "DISTANCE":
+                return persoGenerique.Distance;
            
-           case "ATKDISTANCE":
-              return persoGenerique.ATK_distance;
+            case "ATKDISTANCE":
+                return persoGenerique.ATK_distance;
            
-           default:
-              return -1;
-           
-      }
-   }
-public void Verification()
-{
-   vivant = !(Hp < 0);
-}
+            default:
+                return -1;           
+        }
+    }
 
-   
-   private void Update()
-   {
+    public void Verification()
+    {
+        vivant = !(Hp < 0);
+    }
 
+    private void Start()
+    {
+        SetClasse(classe);
+    }
+
+    private void Update()
+    {
       if (classe_precedente != classe)
       {
          change( classe);
       }
-   }
+    }
 }
 
 

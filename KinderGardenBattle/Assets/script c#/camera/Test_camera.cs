@@ -17,9 +17,6 @@ public class Test_camera : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit hit;
-        Vector3 target = new Vector3();
         Vector3 pos = transform.position;
         
 

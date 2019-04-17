@@ -6,11 +6,10 @@ using UnityEditor;
 using UnityEngine;
 
 public class Generale_Attaque : MonoBehaviour
-
-{   public GameManagerSolo manager_cible;
-    
-    public GameManagerSolo manager_joueur;
-    public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
+{
+    //public GameManagerSolo manager_cible;    
+    //public GameManagerSolo manager_joueur;
+    //public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
     public bool distance = false;
     public bool bascule = false;
     public bool bascule2 = true;
@@ -19,14 +18,12 @@ public class Generale_Attaque : MonoBehaviour
    
     
     
-    public Perso_Generique GetTarget(int atk)
+    public void GetTarget(int atk)
     {
         
-        bool boolen = true;
         if (Input.GetMouseButtonUp(0) )
         {
-            Debug.Log("5");
-            Debug.Log("bite");
+            Debug.Log("debut get target");
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
@@ -34,25 +31,20 @@ public class Generale_Attaque : MonoBehaviour
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC"))
                 {
                     GameObject npc = hit.transform.gameObject;
-                    manager_cible= npc.GetComponent<GameManagerSolo>();
+                    //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
-                    cara_cible.SetClasse(cara_cible.classe);
+                    //cara_cible.SetClasse(cara_cible.classe);
                     Debug.Log(cara_cible.ClasseToString());
-                    Debug.Log("cible acquise :" +cara_cible.ClasseToString());
+                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
-                    return cara_cible;
+                    //return cara_cible;
                 }
-
             }
-
-            return null;
-
-
+            //return null;
         }
-
-        return null;
+        //return null;
 
 
 
