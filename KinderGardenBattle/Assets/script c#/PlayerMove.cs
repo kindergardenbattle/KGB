@@ -9,6 +9,7 @@ using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
+	
 
 
 
@@ -27,6 +28,7 @@ public class PlayerMove : TacticsMove
 
 
 
+			anim.SetBool("Déplacement", moving);
 			if (!moving)
 			{
 				FindSelectableTiles(); //appelle les fonction si ça bouge pas 

@@ -33,14 +33,17 @@ public class TacticsMove : MonoBehaviour
 
     public Tile actualTargetTile;
 
+    public Animator anim;
+
     protected void Init()
     {
         move = max_move;
         DebutTour = true;
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
+        anim = GetComponent<Animator>();
 
-       // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
+        // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
     }
 
     public void GetCurrentTile() 
