@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 2200486551226914908}
   - component: {fileID: 1675537454}
   - component: {fileID: 1675537453}
-  - component: {fileID: 1675537452}
+  - component: {fileID: 7704158888673985027}
   m_Layer: 0
   m_Name: Playersolo
   m_TagString: Player
@@ -123,6 +123,7 @@ MonoBehaviour:
   moveSpeed: 2
   jumpVelocity: 4.5
   actualTargetTile: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!114 &1675537453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -135,14 +136,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c0a384651f243b9047cec30468cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager_cible: {fileID: 0}
-  manager_joueur: {fileID: 0}
-  cara_joueur: []
   distance: 0
   bascule: 0
   bascule2: 1
   boolene: 1
---- !u!114 &1675537452
+--- !u!114 &7704158888673985027
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -151,10 +149,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1675537451}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0285707b10c958640be0a2473abbb9c6, type: 3}
+  m_Script: {fileID: 11500000, guid: fee6ded971bc42d47af83f249d2f3da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  classe_precedente: 7
+  classe_precedente: 0
   Hp: 0
   Max_hp: 0
   Atk: 0
@@ -165,7 +163,7 @@ MonoBehaviour:
   vivant: 1
   selection: 0
   ATK_distance: 0
-  classe: 7
+  classe: 0
 --- !u!1 &23707723160871987
 GameObject:
   m_ObjectHideFlags: 0
