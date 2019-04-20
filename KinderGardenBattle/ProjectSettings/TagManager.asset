@@ -8,6 +8,7 @@ TagManager:
   - NPC
   - Bullet
   - Button
+  - Menupause
   layers:
   - Default
   - TransparentFX

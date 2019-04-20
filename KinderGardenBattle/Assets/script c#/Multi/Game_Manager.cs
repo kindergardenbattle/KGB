@@ -16,6 +16,7 @@ namespace Multi
     {
         public  static bool turn =true;//synchronise the turn with the master client
         private static bool ancien_turn = turn;
+        public static bool is_in_menu = false;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -51,6 +52,11 @@ namespace Multi
 
         void Update()
         {
+            if (Input.GetButtonDown("Cancel"))
+            {
+                menu();
+            }
+
             if (turn != ancien_turn)
             {
                 EndTurn();
@@ -58,6 +64,17 @@ namespace Multi
             }
         }
 
+        public void menu()
+        {
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(is_in_menu && ((turn && PhotonNetwork.IsMasterClient) || (!turn && !PhotonNetwork.IsMasterClient)));//go.activeSelf
+                if (go.CompareTag("Menupause"))
+                    go.SetActive(!is_in_menu);
+            }
+            is_in_menu = !is_in_menu;
+        }
         /// <summary>
         /// Called when the local player left the room. We need to load the launcher scene.
         /// </summary>
