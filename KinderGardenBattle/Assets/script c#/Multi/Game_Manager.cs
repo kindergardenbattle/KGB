@@ -84,7 +84,8 @@ namespace Multi
             Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
             foreach (Player_manager_multi p in oui)
             {
-                p.Want_to_fight = !p.Want_to_fight;
+                if (!p.has_attack)
+                    p.Want_to_fight = !p.Want_to_fight;
                 p.Want_to_move = false;
                 p.Resetalltiles();
             }

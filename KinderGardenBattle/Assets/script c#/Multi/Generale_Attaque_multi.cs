@@ -4,9 +4,6 @@ using UnityEngine;
 
 public class Generale_Attaque_multi : TacticsMove_multi
 {
-    public bool distance = false;
-    public bool bascule = false;
-    public bool bascule2 = true;
     public bool Want_to_fight = false;
 
     public Perso_Generique SelectionPerso(bool boolen)
@@ -16,7 +13,6 @@ public class Generale_Attaque_multi : TacticsMove_multi
         {
             int penis = 1;
             Debug.Log("bruh");
-            bascule = true;
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))

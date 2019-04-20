@@ -5,17 +5,23 @@ using Photon.Pun;
 
 public class Player_manager_multi : Generale_Attaque_multi
 {
-    public bool Want_to_move = false;
+    public bool Want_to_move;
     public bool is_turn;
     public bool ancient_turn;
+    public bool has_attack;
 
 
     // Start is called before the first frame update
     void Start()
     {
         Init();//init de tactics move
-        is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
+        if (photonView.IsMine)
+            is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
+        else
+            is_turn = !PhotonNetwork.IsMasterClient;
         ancient_turn = is_turn;
+        has_attack = false;
+        Want_to_move = false;
     }
 
     // Update is called once per frame
@@ -29,6 +35,7 @@ public class Player_manager_multi : Generale_Attaque_multi
         {
             move = max_move;
             ancient_turn = is_turn;
+            has_attack = false;
         }
         if (is_turn)
         {
@@ -61,12 +68,14 @@ public class Player_manager_multi : Generale_Attaque_multi
                     GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();
                     if (ennemi.is_turn!=is_turn)
-                    { 
+                    {
                         Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();                    //cara_cible.SetClasse(cara_cible.classe);
                         Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                         Debug.Log(cara_cible.Hp);
                         cara_cible.NewPV(atk);
                         Debug.Log(cara_cible.Hp);                    //return cara_cible;
+                        has_attack = true;
+                        Want_to_fight = false;
                     }
                 }
             }            //return null;
