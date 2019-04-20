@@ -176,6 +176,7 @@
     <Compile Include="Assets\script c#\Multi\Game_Manager.cs" />
     <Compile Include="Assets\script c#\Multi\Generale_Attaque_multi.cs" />
     <Compile Include="Assets\script c#\Multi\Launcher.cs" />
+    <Compile Include="Assets\script c#\Multi\Perso_Generique_multi.cs" />
     <Compile Include="Assets\script c#\Multi\Player_manager_multi.cs" />
     <Compile Include="Assets\script c#\Multi\PlayerAnimatorManager.cs" />
     <Compile Include="Assets\script c#\Multi\PlayerNameInputField.cs" />
