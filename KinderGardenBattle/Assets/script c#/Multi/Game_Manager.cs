@@ -18,6 +18,7 @@ namespace Multi
         private static bool ancien_turn = turn;
         public static bool is_in_menu = false;
         public GameObject Stat;
+        public Perso_Generique_multi vis;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -68,6 +69,11 @@ namespace Multi
             {
                 show_stat();
             }
+            if(Stat.active)
+            {
+                Player_Stats_multi s = Stat.GetComponent<Player_Stats_multi>();
+                s.set_player_stats(vis);
+            }
 
         }
 
@@ -82,9 +88,9 @@ namespace Multi
                     if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
                     {
                         GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
-                        Perso_Generique_multi ennemi = npc.GetComponent<Perso_Generique_multi>();
+                        vis = npc.GetComponent<Perso_Generique_multi>();
                         Player_Stats_multi s = Stat.GetComponent<Player_Stats_multi>();
-                        s.set_player_stats(ennemi);
+                        s.set_player_stats(vis);
                         Stat.SetActive(true);
                     }
                 }

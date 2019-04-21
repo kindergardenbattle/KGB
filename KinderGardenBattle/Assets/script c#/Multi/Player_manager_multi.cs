@@ -18,7 +18,7 @@ public class Player_manager_multi : Generale_Attaque_multi
         if (photonView.IsMine)
             is_turn = PhotonNetwork.IsMasterClient;//a modifier si on veut plus que deux joueurs
         else
-            is_turn = !PhotonNetwork.IsMasterClient;
+            is_turn = false;
         ancient_turn = is_turn;
         has_attack = false;
         Want_to_move = false;
@@ -76,8 +76,11 @@ public class Player_manager_multi : Generale_Attaque_multi
                 {
                     GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();
+                    Debug.Log(is_turn);
+                    Debug.Log(ennemi.is_turn);                    
                     if (ennemi.is_turn!=is_turn)
                     {
+                        Debug.Log("cacasdfsjfosdjklfjkld;jsdfklsdfj");
                         Perso_Generique_multi cara_cible = npc.GetComponent<Perso_Generique_multi>();                    //cara_cible.SetClasse(cara_cible.classe);
                         Debug.Log(cara_cible);
                         Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
