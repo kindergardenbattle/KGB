@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Tile
   - NPC
+  - Bullet
+  - Button
+  - MAP
   layers:
   - Default
   - TransparentFX

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections;
-
+using System.Collections.Generic;
 
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -14,6 +14,9 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
+        public  static bool turn =true;//synchronise the turn with the master client
+        private static bool ancien_turn = turn;
+
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
 
@@ -29,9 +32,32 @@ namespace Multi
             {
                 Debug.LogFormat("We are Instantiating LocalPlayer from");
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(0f, 30f, 0f), Quaternion.identity, 0);
+                float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -5f;
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,1f,a), Quaternion.identity, 0);
+            }
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
             }
         }
+
+
+        [PunRPC]
+        public void Set_turn() {photonView.RPC("Lel", RpcTarget.All); }
+
+        [PunRPC]
+        void Lel() { turn = !turn; }
+
+        void Update()
+        {
+            if (turn != ancien_turn)
+            {
+                EndTurn();
+                ancien_turn = turn;
+            }
+        }
+
         /// <summary>
         /// Called when the local player left the room. We need to load the launcher scene.
         /// </summary>
@@ -40,7 +66,47 @@ namespace Multi
             SceneManager.LoadScene(0);
         }
 
+        public void Move()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
+            foreach (Player_manager_multi p in oui)
+            {
+                p.Want_to_move = !p.Want_to_move;
+                p.Resetalltiles();
+                p.Want_to_fight = false;
+            }
+        }
 
+        public void Attack()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
+            foreach (Player_manager_multi p in oui)
+            {
+                if (!p.has_attack)
+                    p.Want_to_fight = !p.Want_to_fight;
+                p.Want_to_move = false;
+                p.Resetalltiles();
+            }
+        }
+
+        public void EndTurn()
+        {
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
+            }
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
+            foreach (Player_manager_multi p in oui)
+            {
+                p.is_turn = !p.is_turn;
+                p.Resetalltiles();
+            }
+            Debug.Log("fin de tours"+turn);
+        }
         #endregion
 
 
@@ -50,6 +116,7 @@ namespace Multi
         public void LeaveRoom()
         {
             PhotonNetwork.LeaveRoom();
+            
         }
 
 

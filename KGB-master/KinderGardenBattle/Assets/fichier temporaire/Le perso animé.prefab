@@ -15,11 +15,12 @@ GameObject:
   - component: {fileID: 4878035398939006345}
   - component: {fileID: 4468879312173065776}
   - component: {fileID: 8886675908003685465}
-  - component: {fileID: 124717412751603890}
   - component: {fileID: 1832482872307859502}
-  - component: {fileID: 9054853104090358531}
   - component: {fileID: 101598001327683179}
   - component: {fileID: 1612319635}
+  - component: {fileID: 9054853104090358531}
+  - component: {fileID: 4359297298570332028}
+  - component: {fileID: 124717412751603890}
   m_Layer: 0
   m_Name: "Le perso anim\xE9"
   m_TagString: Player
@@ -113,12 +114,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1612319622}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 14d73c2be166b594d95ba00839ccdcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  is_turn: 1
+=======
   turn: 1
+>>>>>>> CHIBREDESINGE
   moving: 0
   move: 3
   jumpHeight: 2
@@ -137,7 +142,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad065545539f1468f84cbd030120dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  is_turn: 1
+=======
   turn: 1
+>>>>>>> CHIBREDESINGE
   moving: 0
   move: 5
   jumpHeight: 2
@@ -145,18 +154,6 @@ MonoBehaviour:
   jumpVelocity: 4.5
   actualTargetTile: {fileID: 0}
   DebutTour: 0
---- !u!114 &124717412751603890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612319622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9c3eca195dd6d224c953d98969b343c8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1832482872307859502
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,19 +169,6 @@ MonoBehaviour:
   m_SynchronizePosition: 1
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
---- !u!114 &9054853104090358531
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1612319622}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b3f1f21a749e047438534ae28bd37c45, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 20
 --- !u!114 &101598001327683179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -205,7 +189,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 1832482872307859502}
   viewIdField: 0
-  InstantiationId: 2
+  InstantiationId: 3
   isRuntimeInstantiated: 0
 --- !u!114 &1612319635
 MonoBehaviour:
@@ -217,6 +201,66 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0285707b10c958640be0a2473abbb9c6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  classe_precedente: 0
+  Hp: 0
+  Atk: 0
+  Def: 0
+  Pm: 0
+  Mana: 0
+  Distance: 0
+  ATK_distance: 0
+  classe: 7
+--- !u!114 &9054853104090358531
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612319622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3f1f21a749e047438534ae28bd37c45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+<<<<<<< HEAD
+  speed: 2
+--- !u!114 &4359297298570332028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612319622}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 731a7a4e21de5054a95f5f9e3fc7c07e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &124717412751603890
+=======
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  ObservedComponents:
+  - {fileID: 1832482872307859502}
+  viewIdField: 0
+  InstantiationId: 2
+  isRuntimeInstantiated: 0
+--- !u!114 &1612319635
+>>>>>>> CHIBREDESINGE
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1612319622}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c3eca195dd6d224c953d98969b343c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &836147148048963234

@@ -32,5 +32,8 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+  - Set_turn
+  - Lel
+  - NewPV
   DisableAutoOpenWizard: 1
   ShowSettings: 0

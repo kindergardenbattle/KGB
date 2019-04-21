@@ -340,33 +340,40 @@
           </e>
         </e>
         <e p="script c#" t="Include">
-          <e p="Atk_distance.cs" t="Include" />
           <e p="camera" t="Include">
             <e p="Test_camera.cs" t="Include" />
           </e>
-          <e p="EnemieCaracteristique.cs" t="Include" />
-          <e p="EnemiMoove.cs" t="Include" />
-          <e p="GameManagerSolo.cs" t="Include" />
-          <e p="Generale_Attaque.cs" t="Include" />
           <e p="map" t="Include">
+            <e p="Reperage_enemie.cs" t="Include" />
             <e p="team_apparition.cs" t="Include" />
           </e>
           <e p="Multi" t="Include">
             <e p="CameraWork.cs" t="Include" />
             <e p="Game_Manager.cs" t="Include" />
+            <e p="Generale_Attaque_multi.cs" t="Include" />
             <e p="Launcher.cs" t="Include" />
+            <e p="Perso_Generique_multi.cs" t="Include" />
+            <e p="Player_manager_multi.cs" t="Include" />
             <e p="PlayerAnimatorManager.cs" t="Include" />
-            <e p="PlayerManager.cs" t="Include" />
             <e p="PlayerNameInputField.cs" t="Include" />
+            <e p="TacticsMove_multi.cs" t="Include" />
           </e>
-          <e p="NPCMove.cs" t="Include" />
-          <e p="Perso_Generique.cs" t="Include" />
-          <e p="PlayerCaracteristique.cs" t="Include" />
-          <e p="PlayerMove.cs" t="Include" />
-          <e p="raycast.cs" t="Include" />
-          <e p="TacticsCamera.cs" t="Include" />
-          <e p="TacticsMove.cs" t="Include" />
-          <e p="Tile.cs" t="Include" />
+          <e p="solo" t="Include">
+            <e p="Atk_distance.cs" t="Include" />
+            <e p="EnemieCaracteristique.cs" t="Include" />
+            <e p="EnemiMoove.cs" t="Include" />
+            <e p="GameManagerSolo.cs" t="Include" />
+            <e p="Generale_Attaque.cs" t="Include" />
+            <e p="NPC.cs" t="Include" />
+            <e p="NPCMove.cs" t="Include" />
+            <e p="Perso_Generique.cs" t="Include" />
+            <e p="PlayerCaracteristique.cs" t="Include" />
+            <e p="PlayerMove.cs" t="Include" />
+            <e p="raycast.cs" t="Include" />
+            <e p="TacticsCamera.cs" t="Include" />
+            <e p="TacticsMove.cs" t="Include" />
+            <e p="Tile.cs" t="Include" />
+          </e>
         </e>
         <e p="TextMesh Pro" t="Include">
           <e p="Examples &amp; Extras" t="Include">
