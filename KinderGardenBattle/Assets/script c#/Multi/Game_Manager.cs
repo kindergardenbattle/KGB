@@ -17,6 +17,7 @@ namespace Multi
         public  static bool turn =true;//synchronise the turn with the master client
         private static bool ancien_turn = turn;
         public static bool is_in_menu = false;
+        public GameObject Stat;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -62,8 +63,33 @@ namespace Multi
                 EndTurn();
                 ancien_turn = turn;
             }
+            Player_manager_multi p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_manager_multi>();
+            if (!p.is_turn || (!p.Want_to_fight && !p.Want_to_move))
+            {
+                show_stat();
+            }
+
         }
 
+        public void show_stat()
+        {
+            if (Input.GetMouseButtonUp(0))
+            {
+                RaycastHit hit;
+                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+                if (Physics.Raycast(ray, out hit, 25.0f))
+                {
+                    if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
+                    {
+                        GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
+                        Perso_Generique_multi ennemi = npc.GetComponent<Perso_Generique_multi>();
+                        Player_Stats_multi s = Stat.GetComponent<Player_Stats_multi>();
+                        s.set_player_stats(ennemi);
+                        Stat.SetActive(true);
+                    }
+                }
+            }
+        }
         public void menu()
         {
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
@@ -72,6 +98,7 @@ namespace Multi
                     go.SetActive(is_in_menu && ((turn && PhotonNetwork.IsMasterClient) || (!turn && !PhotonNetwork.IsMasterClient)));//go.activeSelf
                 if (go.CompareTag("Menupause"))
                     go.SetActive(!is_in_menu);
+                Stat.SetActive(false);
             }
             is_in_menu = !is_in_menu;
         }
@@ -89,9 +116,11 @@ namespace Multi
             Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
             foreach (Player_manager_multi p in oui)
             {
-                p.Want_to_move = !p.Want_to_move;
+                if (p.move!=0)
+                    p.Want_to_move = !p.Want_to_move;
                 p.Resetalltiles();
                 p.Want_to_fight = false;
+                Stat.SetActive(false);
             }
         }
 
@@ -105,6 +134,7 @@ namespace Multi
                     p.Want_to_fight = !p.Want_to_fight;
                 p.Want_to_move = false;
                 p.Resetalltiles();
+                Stat.SetActive(false);
             }
         }
 

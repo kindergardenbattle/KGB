@@ -192,6 +192,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     private void Start()
     {
         SetClasse(classe);
+        Hp = Max_hp;
     }
 
     private void Update()

@@ -51,6 +51,15 @@ public class Player_manager_multi : Generale_Attaque_multi
         }
         if (moving)
             Move();
+        else
+        {
+            if (move == 0)
+            {
+                Want_to_move = false;
+                Resetalltiles();
+            }            
+        }
+
     }
 
     public void GetTarget(int atk)
