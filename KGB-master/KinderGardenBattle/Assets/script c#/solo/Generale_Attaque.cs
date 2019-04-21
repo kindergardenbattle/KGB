@@ -13,7 +13,8 @@ public class Generale_Attaque : MonoBehaviour
     public bool distance = false;
     public bool bascule = false;
     public bool bascule2 = true;
-
+    
+    
     
    
     
@@ -28,14 +29,15 @@ public class Generale_Attaque : MonoBehaviour
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC"))
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && hit.transform.GetComponent<NPCMove>().ChrisBool )
                 {
+                   
                     GameObject npc = hit.transform.gameObject;
                     //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
                     //cara_cible.SetClasse(cara_cible.classe);
                     Debug.Log(cara_cible.ClasseToString());
-                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
+                    Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
@@ -53,7 +55,7 @@ public class Generale_Attaque : MonoBehaviour
     public Perso_Generique SelectionPerso(bool boolen)
     {
 
-        if (Input.GetMouseButtonUp(0) && boolen == true)
+        if (Input.GetMouseButtonUp(0) && boolen )
         {
             int penis = 1;
             Debug.Log("bruh");
@@ -91,6 +93,9 @@ public class Generale_Attaque : MonoBehaviour
     public bool boolene = true;
     private void Update()
     {
+        
+        
         GetTarget(10);
+
     }
 }

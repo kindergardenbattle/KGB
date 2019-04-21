@@ -2,7 +2,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Security.Cryptography.X509Certificates;
-
 using UnityEngine;
 using UnityEngine.Experimental.UIElements;
 using UnityEngine.SceneManagement;
@@ -10,10 +9,11 @@ using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
-	
-	
-	
 
+
+	public bool cible;
+
+	
 
     void Start()
     {

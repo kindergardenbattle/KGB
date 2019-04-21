@@ -344,7 +344,6 @@
             <e p="Test_camera.cs" t="Include" />
           </e>
           <e p="map" t="Include">
-            <e p="Reperage_enemie.cs" t="Include" />
             <e p="team_apparition.cs" t="Include" />
           </e>
           <e p="Multi" t="Include">

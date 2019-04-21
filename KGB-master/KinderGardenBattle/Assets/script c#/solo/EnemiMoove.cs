@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class EnemiMoove : MonoBehaviour
@@ -23,8 +22,6 @@ public class EnemiMoove : MonoBehaviour
         {
             TurnNpc();
         }
-
-      
     }
 }
 // /!\  en progrés bande de pute /!\

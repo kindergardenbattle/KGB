@@ -42,6 +42,7 @@ public class Perso_Generique : MonoBehaviour
         }
     }
 
+    
     public  Classe classe_precedente = Classe.GOD;
     public   double Hp;
     public double Max_hp;

@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class Tile : MonoBehaviour 
@@ -9,6 +8,7 @@ public class Tile : MonoBehaviour
     public bool current = false;
     public bool target = false;
     public bool selectable = false;
+	public bool triplepute = false;
 
     public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
 
@@ -21,54 +21,55 @@ public class Tile : MonoBehaviour
     public float g = 0;
     public float h = 0;
 	public  bool utilise = false;
-	
+	public bool dans_la_porte=false;
+
+	public bool checkporté()
+	{
+		foreach (Tile VARIABLE in adjacencyList)
+		{
+			if (VARIABLE.current)
+			{
+				dans_la_porte = true;
+			}
+		}
+
+		return dans_la_porte;
+	}
 	
 	void Start () 
 	{
 
 	}
+
+	public void used()
+	{
 	
-	
-
-
-//Update is called once per frame
-
+	}
+	// Update is called once per frame
 	void Update () 
 	{
-		if (utilise)
-		{
-			Debug.Log("true");
-		}
-		
-
-			if (current)
-			{
-				GetComponent<Renderer>().material.color = Color.magenta;
-			}
-			else
-			{
-				if (target)
-				{
-					GetComponent<Renderer>().material.color = Color.green;
-				}
-				else
-				{
-					if (selectable)
-					{
-						GetComponent<Renderer>().material.color = Color.red;
-					}
-					else
-					{
-
-							GetComponent<Renderer>().material.color = Color.white;
-						
-					}
-				}
-				
-			}
-		
-
-		
+			
+		    if (triplepute)
+		    {
+			    GetComponent<Renderer>().material.color = Color.yellow;
+		    }
+            if (current)
+	        {
+	            GetComponent<Renderer>().material.color = Color.magenta;
+	        }
+	        else if (target)
+	        {
+	            GetComponent<Renderer>().material.color = Color.green;
+	        }
+	        else if (selectable)
+	        {
+                GetComponent<Renderer>().material.color = Color.red;
+	        }
+	        
+	        else
+	        {
+	            GetComponent<Renderer>().material.color = Color.white;
+	        }
 	    
 	    /*else
 	    {
@@ -79,11 +80,11 @@ public class Tile : MonoBehaviour
     public void Reset()
     {
         adjacencyList.Clear();
-
+	    triplepute = false;
         current = false;
         target = false;
         selectable = false;
-	    utilise = true;
+
         visited = false;
         parent = null;
         distance = 0;
@@ -100,6 +101,7 @@ public class Tile : MonoBehaviour
         CheckTile(Vector3.right, jumpHeight, target);// right
         CheckTile(-Vector3.right, jumpHeight, target);//left
     }
+	
 
     public void CheckTile(Vector3 direction, float jumpHeight, Tile target)
     {

@@ -2,97 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class NPC : MonoBehaviour
 {
-    
-    public bool walkable = true;
-    public bool current = false;
-    public bool target = false;
-    public bool selectable = false;
-
-    public bool atk = false; // bool qui gere la porté de l'attaque 
-    
-    public bool visited = false;
-    public Tile parent = null;
-    public int distance = 0;
-
-    public float f = 0;
-    public float g = 0;
-    public float h = 0;
-    public  bool utilise = false;
-
-    public GameObject Npc;
-    public  Tile tile;
-    public List<GameObject> liste_Collision;
-    public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
-
-    private void Awake()
+    // Update is called once per frame
+    void Update()
     {
-      Npc= GameObject.FindWithTag("NPC");
-      liste_Collision= new  List<GameObject>();
-      
+       
     }
 
-    private void OnCollisionEnter(Collision other)
+    private void PrintName(GameObject go)
     {
-        tile=other.transform.GetComponent<Tile>();
-        if (tile==null)
-        {
-            Debug.Log("null");
-        }
-        else
-        {
-            
-        }
-        
-    }
-    public void Reset()
-    {
-        adjacencyList.Clear();
-
-        current = false;
-        target = false;
-        selectable = false;
-
-        visited = false;
-        parent = null;
-        distance = 0;
-        utilise = false;
-        f = g = h = 0;
-    }
-
-    public void FindNeighbors(float jumpHeight, Tile target)
-    {
-        Reset();
-
-        CheckTile(Vector3.forward, jumpHeight, target); // up
-        CheckTile(-Vector3.forward, jumpHeight, target);// down
-        CheckTile(Vector3.right, jumpHeight, target);// right
-        CheckTile(-Vector3.right, jumpHeight, target);//left
-    }
-
-    public void CheckTile(Vector3 direction, float jumpHeight, Tile target)
-    {
-        Vector3 halfExtents = new Vector3(0.25f, (1 + jumpHeight) / 2.0f, 0.25f);
-        Collider[] colliders = Physics.OverlapBox(transform.position + direction, halfExtents); // cherhce les collisions et les ranges
-
-        foreach (Collider item in colliders)
-        {
-            Tile tile = item.GetComponent<Tile>();
-            if (tile != null && tile.walkable)
-            {
-                RaycastHit hit;
-
-                if (!Physics.Raycast(tile.transform.position, Vector3.up, out hit, 1) || (tile == target))
-                {
-                    adjacencyList.Add(tile);
-                }
-            }
-        }
-    }
-
-    private void Update()
-    {
-        Reset();
+        print(go.tag);
     }
 }
