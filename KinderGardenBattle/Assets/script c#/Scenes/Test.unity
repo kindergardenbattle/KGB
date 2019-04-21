@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -118,6 +118,31 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 8077221316633866707}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &190729796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190729795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a87ee3a0a19415247a63dfeed380c7bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DebutTour: 0
+  turn: 0
+  moving: 0
+  max_move: 3
+  move: 0
+  jumpHeight: 2
+  moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
+  anim: {fileID: 0}
+  targetTile: {fileID: 0}
+  current: {fileID: 0}
+  ChrisBool: 0
 --- !u!114 &190729810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -245,7 +270,7 @@ PrefabInstance:
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.367
+      value: 1.3
       objectReference: {fileID: 0}
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
@@ -255,7 +280,7 @@ PrefabInstance:
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.37
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
@@ -675,12 +700,18 @@ PrefabInstance:
     - target: {fileID: 4062243343280895647, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5803166971869030515, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 8275221099376905054, guid: ac1faeaf72d807647bf0fdf4f263bca3,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 784110536943174334, guid: ac1faeaf72d807647bf0fdf4f263bca3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ac1faeaf72d807647bf0fdf4f263bca3, type: 3}

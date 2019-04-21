@@ -13,6 +13,7 @@ public class TacticsMove : MonoBehaviour
 
     Stack<Tile> path = new Stack<Tile>();
     Tile currentTile;
+     Tile npc;
 
     public bool moving = false;
     public int max_move = 3; // a changer pour toute les classes
@@ -30,6 +31,7 @@ public class TacticsMove : MonoBehaviour
     bool jumpingUp = false;
     bool movingEdge = false;
     Vector3 jumpTarget;
+    
 
     public Tile actualTargetTile;
 
@@ -51,6 +53,25 @@ public class TacticsMove : MonoBehaviour
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
 
+    }
+
+    public void GetNPCtile()
+    {
+        npc = Getnpc(gameObject);
+        npc.triplepute = true;
+    }
+
+    public Tile Getnpc(GameObject target)
+    {
+        RaycastHit hit; // pointeur du clic 
+        Tile tile = null;
+
+        if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
+        {
+            tile = hit.collider.GetComponent<Tile>();
+        }
+
+        return tile; 
     }
 
     public Tile GetTargetTile(GameObject target)

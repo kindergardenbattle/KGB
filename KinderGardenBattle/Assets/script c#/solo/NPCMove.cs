@@ -6,18 +6,29 @@ using UnityEngine;
 public class NPCMove : TacticsMove
 {
     GameObject target;
+    public Tile targetTile;
+    public Tile current;
+    public bool ChrisBool = false;
+    private GameObject npc;
+    
 
     // Use this for initialization
     void Start()
     {
         Init();
+        npc= GameObject.FindGameObjectWithTag("NPC");
+          
     }
 
     // Update is called once per frame
     void Update()
-    {
+    {    
+        GetCurrentTile();
+        current = GetTargetTile(npc);
+        ChrisBool = current.checkporté();
+        
         Debug.DrawRay(transform.position, transform.forward);
-
+        
         if (EnemieCaracteristique.TeamEnemie != GameManagerSolo.TeamTurn)
         {
             return;
@@ -28,18 +39,20 @@ public class NPCMove : TacticsMove
             FindNearestTarget();
             CalculatePath();
             FindSelectableTiles();
-            actualTargetTile.target = true;
+            Debug.Log("tours ia");
+            
+
         }
         else
         {
-            Move();
+            //Move();
             GameManagerSolo.FinDeTours();
         }
     }
 
     void CalculatePath()
     {
-        Tile targetTile = GetTargetTile(target);
+         targetTile = GetTargetTile(target);
         FindPath(targetTile);
     }
 

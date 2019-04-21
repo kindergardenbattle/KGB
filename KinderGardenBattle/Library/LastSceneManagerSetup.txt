@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/script c#/Scenes/Main_menu.unity
+- path: Assets/script c#/Scenes/Test.unity
   isLoaded: 1
   isActive: 1

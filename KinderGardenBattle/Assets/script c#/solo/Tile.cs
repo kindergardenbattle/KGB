@@ -8,6 +8,7 @@ public class Tile : MonoBehaviour
     public bool current = false;
     public bool target = false;
     public bool selectable = false;
+	public bool triplepute = false;
 
     public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
 
@@ -19,7 +20,21 @@ public class Tile : MonoBehaviour
     public float f = 0;
     public float g = 0;
     public float h = 0;
-	public  bool utilise = true;
+	public  bool utilise = false;
+	public bool dans_la_porte=false;
+
+	public bool checkporté()
+	{
+		foreach (Tile VARIABLE in adjacencyList)
+		{
+			if (VARIABLE.current)
+			{
+				dans_la_porte = true;
+			}
+		}
+
+		return dans_la_porte;
+	}
 	
 	void Start () 
 	{
@@ -33,9 +48,11 @@ public class Tile : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-	    if (true)
-	    {
-
+			
+		    if (triplepute)
+		    {
+			    GetComponent<Renderer>().material.color = Color.yellow;
+		    }
             if (current)
 	        {
 	            GetComponent<Renderer>().material.color = Color.magenta;
@@ -48,15 +65,12 @@ public class Tile : MonoBehaviour
 	        {
                 GetComponent<Renderer>().material.color = Color.red;
 	        }
-	        else if(!utilise)
-	        {
-		        GetComponent<Renderer>().material.color = Color.blue;
-	        }
+	        
 	        else
 	        {
 	            GetComponent<Renderer>().material.color = Color.white;
 	        }
-	    }
+	    
 	    /*else
 	    {
 		    GetComponent<Renderer>().material.color = Color.white;
@@ -66,7 +80,7 @@ public class Tile : MonoBehaviour
     public void Reset()
     {
         adjacencyList.Clear();
-
+	    triplepute = false;
         current = false;
         target = false;
         selectable = false;
@@ -87,6 +101,7 @@ public class Tile : MonoBehaviour
         CheckTile(Vector3.right, jumpHeight, target);// right
         CheckTile(-Vector3.right, jumpHeight, target);//left
     }
+	
 
     public void CheckTile(Vector3 direction, float jumpHeight, Tile target)
     {

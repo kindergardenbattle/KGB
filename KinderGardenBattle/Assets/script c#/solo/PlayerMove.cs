@@ -9,9 +9,11 @@ using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
+
+
+	public bool cible;
+
 	
-
-
 
     void Start()
     {
