@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using Photon.Realtime;
+using UnityEngine.SceneManagement;
 
 public class Launcher : MonoBehaviourPunCallbacks
 {
@@ -66,6 +67,11 @@ public class Launcher : MonoBehaviourPunCallbacks
 
 
     #region Public Methods
+
+    public void PlaySolo()
+    {
+        SceneManager.LoadScene(1);
+    }
 
     /// <summary>
     /// Start the connection process.
