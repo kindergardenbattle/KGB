@@ -61,6 +61,8 @@ public class TacticsMove : MonoBehaviour
         npc.triplepute = true;
     }
 
+    
+
     public Tile Getnpc(GameObject target)
     {
         RaycastHit hit; // pointeur du clic 

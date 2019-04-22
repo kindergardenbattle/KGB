@@ -10,22 +10,19 @@ public class Generale_Attaque : TacticsMove
     //public GameManagerSolo manager_cible;    
     //public GameManagerSolo manager_joueur;
     //public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
-    public bool distance;
+    public bool atkable;
     public bool bascule = false;
     public bool bascule2 = true;
     public Tile current;
     public GameObject joueur;
     public bool boolquichamboule;
+    public Perso_Generique classe;
 
 
 
     void Start()
     {
         Init();
-        joueur = GameObject.FindGameObjectWithTag("Player");
-        current = GetTargetTile(joueur);
-        distance = current.checkporté();
-        boolquichamboule = false;
         
 
     }
@@ -41,7 +38,7 @@ public class Generale_Attaque : TacticsMove
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (distance))
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (atkable))
                 {
 
                     GameObject npc = hit.transform.gameObject;
@@ -110,6 +107,7 @@ public class Generale_Attaque : TacticsMove
     public bool boolene = true;
     private void Update()
     {
+        
         //if (!boolquichamboule)
         // {
         //     return;
@@ -118,11 +116,18 @@ public class Generale_Attaque : TacticsMove
         {
             return;
         }
+        joueur = GameObject.FindGameObjectWithTag("Player");
+        classe = joueur.GetComponent<Perso_Generique>();
+       
+        boolquichamboule = false;
         GetCurrentTile();
         current = GetTargetTile(joueur);
-        distance = current.checkporté();
-
+        current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
+        
+        atkable = current.checkporté(current,classe.Distance,false);
         GetTarget(10);
+        current.triplepute = false;
 
     }
+
 }

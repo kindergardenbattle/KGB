@@ -2,45 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tile : MonoBehaviour 
+public class Tile : MonoBehaviour
 {
-    public bool walkable = true;
-    public bool current = false;
-    public bool target = false;
-    public bool selectable = false;
+	public bool walkable = true;
+	public bool current = false;
+	public bool target = false;
+	public bool selectable = false;
 	public bool triplepute = false;
 
-    public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
+	public List<Tile> adjacencyList = new List<Tile>(); // utile pour le parcours largeur 
 
-	
-    public bool visited = false;
-    public Tile parent = null;
-    public int distance = 0;
 
-    public float f = 0;
-    public float g = 0;
-    public float h = 0;
-	public  bool utilise = false;
-	public bool dans_la_porte=false;
+	public bool visited = false;
+	public Tile parent = null;
+	public int distance = 0;
 
-	public bool checkporté()
+	public float f = 0;
+	public float g = 0;
+	public float h = 0;
+	public bool utilise = false;
+	public bool dans_la_porte = false;
+
+	public bool checkporté(Tile tile, double porte, bool repoonse)
 	{
-        dans_la_porte = false;
-		foreach (Tile VARIABLE in adjacencyList)
+		if (repoonse || porte < 0)
 		{
-			if (VARIABLE.current)
-			{
-				dans_la_porte = true;
-			}
+			return repoonse;
+		}
+			
+		if (tile.current && tile.triplepute ==false)
+		{
+			repoonse = true;
 		}
 
-		return dans_la_porte;
-	}
-	
-	void Start () 
-	{
+		
+		foreach (Tile VARIABLE in tile.adjacencyList)
+		{
+			repoonse= repoonse || checkporté(VARIABLE, porte-1, repoonse);
+			
+		}
+
+		return repoonse;
 
 	}
+
+
+
+
+void Start ()
+{
+	triplepute = false;
+}
 
     public void used()
 	{

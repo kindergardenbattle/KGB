@@ -16,6 +16,7 @@ public class NPCMove : TacticsMove
     void Start()
     {
         Init();
+        
         npc = GameObject.FindGameObjectWithTag("NPC");
 
     }
@@ -25,7 +26,7 @@ public class NPCMove : TacticsMove
     {
         GetCurrentTile();
         current = GetTargetTile(npc);
-        ChrisBool = current.checkporté();
+       
 
         Debug.DrawRay(transform.position, transform.forward);
 
