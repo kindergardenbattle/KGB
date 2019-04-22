@@ -38,27 +38,36 @@ public class Player_manager_multi : Generale_Attaque_multi
             ancient_turn = is_turn;
             has_attack = false;
         }
-        if (is_turn)
+        if (is_turn && !moving)
         {
             if (Want_to_fight)
             {
                 Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
-                GetCurrentTile();
                 Tile current = GetTargetTile(gameObject);
-                current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
+                current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current
+                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+                foreach(GameObject p in players)
+                {
+                    p.GetComponent<Player_manager_multi>().GetCurrentTile();
+                    Debug.Log("oui");
+                }
+                Debug.Log(classe.Distance);
                 atkable = current.checkporté(current, classe.Distance, false);
+                Debug.Log(atkable);
                 GetTarget((int) classe.Atk);
                 current.triplepute = false;
-            }
-            
-            if (!moving && Want_to_move)
+            }            
+            if (Want_to_move)
             {
                 FindSelectableTiles(); //appelle les fonction si ça bouge pas 
                 CheckMouse();
             }
         }
         if (moving)
+        {
+            Resetalltiles();
             Move();
+        }           
         else
         {
             if (move == 0)
@@ -67,7 +76,6 @@ public class Player_manager_multi : Generale_Attaque_multi
                 Resetalltiles();
             }            
         }
-
     }
 
     public void GetTarget(int atk)

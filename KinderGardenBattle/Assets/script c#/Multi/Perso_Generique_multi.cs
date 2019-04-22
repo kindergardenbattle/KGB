@@ -62,21 +62,27 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
         switch (Klasse)
         {
             case Classe.GUERRIER:
+                Distance = 1;
                 Atk = 100;
+                ATK_distance = 0;
                 Def = 0.7;
                 Max_hp = 50;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.GOD:
+                Distance = 1;
                 Atk = 1000;
+                ATK_distance = 0;
                 Def = 0.01;
                 Max_hp = 1000;
                 Pm = 100;
-                Mana = 1000;
+                Mana = 1000;                
                 break;
             case Classe.TANK:
+                Distance = 1;
                 Atk = 15;
+                ATK_distance = 0;
                 Def = 0.5;
                 Max_hp = 100;
                 Pm = 2;
@@ -92,7 +98,9 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
                 Mana = 0;
                 break;
             case Classe.HEALER:
+                Distance = 3;
                 Atk = 10;
+                ATK_distance = 10;
                 Def = 0.80;
                 Max_hp = 75;
                 Pm = 7;
@@ -100,21 +108,24 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
                 break;
             case Classe.PIRATE:
                 Distance = 2;
-                ATK_distance = 20;
                 Atk = 20;
+                ATK_distance = 20;
                 Def = 0.90;
                 Max_hp = 75;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.NINJA:
+                Distance = 1;
                 Atk = 50;
+                ATK_distance = 0;
                 Max_hp = 60;
                 Def = 1;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.MAGE:
+                Distance = 5;
                 Atk = 10;
                 ATK_distance = 30; // + alteration de la cible ( genre psn ou brulé 
                 Def = 1;
@@ -124,6 +135,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
                 break;
         }
         Hp = Max_hp < Hp ? Max_hp : Hp;
+
     }
     [PunRPC]
     public void NewPV(int atk){photonView.RPC("Lel", RpcTarget.All, atk);}
@@ -196,6 +208,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
         Hp = Max_hp;
         PlayerMove = gameObject.GetComponent<Player_manager_multi>();
         PlayerMove.move = (int)Pm;
+        PlayerMove.max_move = (int)Pm;
     }
 
     private void Update()
