@@ -41,7 +41,7 @@ public class Player_manager_multi : Generale_Attaque_multi
             has_attack = false;
             has_move = false;
         }
-        if (is_turn)//&& !moving
+        if (is_turn && !moving)
         {
             if (Want_to_move)
             {
@@ -50,37 +50,35 @@ public class Player_manager_multi : Generale_Attaque_multi
             }
             if (Want_to_fight)
             {
+                //Debug.Log(is_turn);
                 Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
                 Tile current = GetTargetTile(gameObject);
+                //Debug.Log(current);
                 current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current
                 GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
                 foreach (GameObject p in players)
                 {
                     p.GetComponent<Player_manager_multi>().GetCurrentTile();
-                    Debug.Log("oui");
                 }
-                Debug.Log(classe.Distance);
                 atkable = current.checkporté(current, classe.Distance, false);
-                Debug.Log(atkable);
                 GetTarget((int)classe.Atk);
                 current.triplepute = false;
             }
-            if (moving)
-            {
-                Resetalltiles();
-                Move();
-            }
-            else
-            {
-                if (move == 0 && !has_move)
-                {
-                    Want_to_move = false;
-                    Resetalltiles();
-                    has_move = true;
-                }
-            }
         }
-
+        if (moving)
+        {
+            Resetalltiles();
+            Move();
+        }
+        else
+        {
+            if (move == 0 && !has_move)
+            {
+                Want_to_move = false;
+                Resetalltiles();
+                has_move = true;
+            }
+        }        
     }
 
     public void GetTarget(int atk)

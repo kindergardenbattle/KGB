@@ -29,14 +29,14 @@ public class Tile : MonoBehaviour
 		{
 			return repoonse;
 		}
-			
-		if (tile.current && tile.triplepute ==false)
+        if (tile.current && tile.triplepute ==false)
 		{
-			repoonse = true;
-		}
 
-		
-		foreach (Tile VARIABLE in tile.adjacencyList)
+            
+            repoonse = true;
+		}
+        //Debug.Log(tile.adjacencyList.Count);
+        foreach (Tile VARIABLE in tile.adjacencyList)
 		{
 			repoonse= repoonse || checkporté(VARIABLE, porte-1, repoonse);
 			
