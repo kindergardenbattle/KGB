@@ -69,6 +69,7 @@ void Start ()
             if (current)
 	        {
 	            GetComponent<Renderer>().material.color = Color.magenta;
+		        walkable = false;
 	        }
 	        else if (target)
 	        {
