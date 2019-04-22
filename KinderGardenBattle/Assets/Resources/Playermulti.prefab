@@ -566,6 +566,7 @@ MonoBehaviour:
   is_turn: 0
   ancient_turn: 0
   has_attack: 0
+  atkable: 0
 --- !u!114 &2087480450140337915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -590,6 +591,7 @@ MonoBehaviour:
   selection: 0
   ATK_distance: 0
   classe: 0
+  PlayerMove: {fileID: 0}
 --- !u!1 &4674123637496557536
 GameObject:
   m_ObjectHideFlags: 0
