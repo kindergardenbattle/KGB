@@ -44,7 +44,6 @@ public class Perso_Generique : MonoBehaviour
 
     
     public  Classe classe_precedente = Classe.GOD;
-    public PlayerMove PlayerMove;
     public   double Hp;
     public double Max_hp;
     public   double Atk;
@@ -197,8 +196,6 @@ public class Perso_Generique : MonoBehaviour
     private void Start()
     {
         SetClasse(classe);
-         PlayerMove=gameObject.GetComponent<PlayerMove>();
-        PlayerMove.move =  (int) Pm;
     }
 
     private void Update()
