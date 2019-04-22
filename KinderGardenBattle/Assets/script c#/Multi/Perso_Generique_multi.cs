@@ -55,6 +55,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     public bool selection = false;
     public double ATK_distance = 0;
     public Classe classe = Classe.GOD;
+    public Player_manager_multi PlayerMove;
 
     public void SetClasse(Classe Klasse)
     {
@@ -193,6 +194,8 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     {
         SetClasse(classe);
         Hp = Max_hp;
+        PlayerMove = gameObject.GetComponent<Player_manager_multi>();
+        PlayerMove.move = (int)Pm;
     }
 
     private void Update()

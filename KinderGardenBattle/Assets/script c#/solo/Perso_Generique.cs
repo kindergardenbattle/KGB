@@ -54,7 +54,8 @@ public class Perso_Generique : MonoBehaviour
     public bool vivant = true;
     public bool selection = false;
     public   double ATK_distance = 0;
-    public    Classe classe = Classe.GOD;  
+    public    Classe classe = Classe.GOD;
+    public PlayerMove PlayerMove;
 
     public  void  SetClasse(Classe Klasse)
     {
@@ -196,6 +197,11 @@ public class Perso_Generique : MonoBehaviour
     private void Start()
     {
         SetClasse(classe);
+        if (gameObject.tag=="Player")
+        {
+            PlayerMove = gameObject.GetComponent<PlayerMove>();
+            PlayerMove.move = (int)Pm;
+        }
     }
 
     private void Update()
