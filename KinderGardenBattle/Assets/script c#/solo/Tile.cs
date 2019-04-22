@@ -33,7 +33,6 @@ public class Tile : MonoBehaviour
 				dans_la_porte = true;
 			}
 		}
-
 		return dans_la_porte;
 	}
 	

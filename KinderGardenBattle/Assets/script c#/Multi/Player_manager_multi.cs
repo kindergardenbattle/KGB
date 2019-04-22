@@ -9,6 +9,9 @@ public class Player_manager_multi : Generale_Attaque_multi
     public bool is_turn;
     public bool ancient_turn;
     public bool has_attack;
+    public bool distance;
+    public Tile current;
+    public GameObject joueur;
 
 
     // Start is called before the first frame update
@@ -22,11 +25,13 @@ public class Player_manager_multi : Generale_Attaque_multi
         ancient_turn = is_turn;
         has_attack = false;
         Want_to_move = false;
+        joueur = GameObject.FindGameObjectWithTag("Player");//todo faudra revoir quand on aura plus de perso
     }
 
     // Update is called once per frame
     void Update()
     {
+        anim.SetBool("Déplacement", moving);
         if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
         {
             return;
@@ -40,7 +45,12 @@ public class Player_manager_multi : Generale_Attaque_multi
         if (is_turn)
         {
             if (Want_to_fight)
+            {
+                GetCurrentTile();
+                current = GetTargetTile(joueur);
+                distance = current.checkporté();
                 GetTarget(10);
+            }
             Debug.DrawRay(transform.position, transform.forward);
             
             if (!moving && Want_to_move)
@@ -72,21 +82,14 @@ public class Player_manager_multi : Generale_Attaque_multi
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("Player") && (distance))
                 {
                     GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
-                    Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();
-                    Debug.Log(is_turn);
-                    Debug.Log(ennemi.is_turn);                    
+                    Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();               
                     if (ennemi.is_turn!=is_turn)
                     {
-                        Debug.Log("cacasdfsjfosdjklfjkld;jsdfklsdfj");
-                        Perso_Generique_multi cara_cible = npc.GetComponent<Perso_Generique_multi>();                    //cara_cible.SetClasse(cara_cible.classe);
-                        Debug.Log(cara_cible);
-                        Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
-                        Debug.Log(cara_cible.Hp);
-                        cara_cible.NewPV(atk);
-                        Debug.Log(cara_cible.Hp);                    //return cara_cible;
+                        Perso_Generique_multi cara_cible = npc.GetComponent<Perso_Generique_multi>();
+                        cara_cible.NewPV(atk);              //return cara_cible;
                         has_attack = true;
                         Want_to_fight = false;
                     }

@@ -23,8 +23,6 @@ public class Generale_Attaque : TacticsMove
     {
         Init();
         joueur = GameObject.FindGameObjectWithTag("Player");
-        current = GetTargetTile(joueur);
-        distance = current.checkporté();
         boolquichamboule = false;
         
 
