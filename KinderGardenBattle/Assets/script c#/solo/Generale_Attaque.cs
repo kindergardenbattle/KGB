@@ -5,39 +5,51 @@ using Photon.Realtime;
 using UnityEditor;
 using UnityEngine;
 
-public class Generale_Attaque : MonoBehaviour
+public class Generale_Attaque : TacticsMove
 {
     //public GameManagerSolo manager_cible;    
     //public GameManagerSolo manager_joueur;
     //public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
-    public bool distance = false;
+    public bool distance;
     public bool bascule = false;
     public bool bascule2 = true;
-    
-    
-    
-   
-    
-    
+    public Tile current;
+    public GameObject joueur;
+    public bool boolquichamboule;
+
+
+
+    void Start()
+    {
+        Init();
+        joueur = GameObject.FindGameObjectWithTag("Player");
+        current = GetTargetTile(joueur);
+        distance = current.checkporté();
+        boolquichamboule = false;
+        
+
+    }
+
+
     public void GetTarget(int atk)
     {
-        
-        if (Input.GetMouseButtonUp(0) )
+
+        if (Input.GetMouseButtonUp(0))
         {
             Debug.Log("debut get target");
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && hit.transform.GetComponent<NPCMove>().ChrisBool )
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (distance))
                 {
-                   
+
                     GameObject npc = hit.transform.gameObject;
                     //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
                     //cara_cible.SetClasse(cara_cible.classe);
                     Debug.Log(cara_cible.ClasseToString());
-                    Debug.Log("cible acquise :" +cara_cible.ClasseToString());
+                    Debug.Log("cible acquise :" + cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
@@ -55,7 +67,7 @@ public class Generale_Attaque : MonoBehaviour
     public Perso_Generique SelectionPerso(bool boolen)
     {
 
-        if (Input.GetMouseButtonUp(0) && boolen )
+        if (Input.GetMouseButtonUp(0) && boolen)
         {
             int penis = 1;
             Debug.Log("bruh");
@@ -69,12 +81,12 @@ public class Generale_Attaque : MonoBehaviour
                 {
                     Debug.Log("bite de cheval ");
                     GameObject joueur = hit.transform.gameObject;
-                    if (joueur.GetComponent<Perso_Generique>()==null)
+                    if (joueur.GetComponent<Perso_Generique>() == null)
                     {
                         return joueur.GetComponent<Perso_Generique>();
                     }
                     Perso_Generique cara_joueur = joueur.GetComponent<Perso_Generique>();
-                    if (cara_joueur!=null && cara_joueur.vivant)
+                    if (cara_joueur != null && cara_joueur.vivant)
                     {
                         penis += 1;
                         Debug.Log(penis);
@@ -89,12 +101,27 @@ public class Generale_Attaque : MonoBehaviour
         }
 
         return null;
-    }    
+    }
+
+    public void Button()
+    {
+        boolquichamboule = !boolquichamboule;
+    }
     public bool boolene = true;
     private void Update()
     {
-        
-        
+        //if (!boolquichamboule)
+        // {
+        //     return;
+        //  }
+        if (moving)
+        {
+            return;
+        }
+        GetCurrentTile();
+        current = GetTargetTile(joueur);
+        distance = current.checkporté();
+
         GetTarget(10);
 
     }

@@ -25,6 +25,7 @@ public class Tile : MonoBehaviour
 
 	public bool checkporté()
 	{
+        dans_la_porte = false;
 		foreach (Tile VARIABLE in adjacencyList)
 		{
 			if (VARIABLE.current)
@@ -41,7 +42,7 @@ public class Tile : MonoBehaviour
 
 	}
 
-	public void used()
+    public void used()
 	{
 	
 	}

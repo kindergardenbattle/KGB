@@ -9,47 +9,55 @@ using Photon.Pun;
 
 public class PlayerMove : TacticsMove
 {
+    private bool la_seboul;
 
+    public bool cible;
 
-	public bool cible;
-
-	
 
     void Start()
     {
         Init();
+        la_seboul = false;
+    }
+
+    public void button()
+    {
+        la_seboul = !la_seboul;
     }
     void Update()
-	{
+    {
+
+        //if (!la_seboul)
+        //{
+        //	return;	
+        //}
+        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
+        {
+
+            Debug.DrawRay(transform.position, transform.forward);
 
 
-		if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
-		{
 
-			Debug.DrawRay(transform.position, transform.forward);
+            anim.SetBool("Déplacement", moving);
+            if (!moving)
+            {
+                FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+                CheckMouse();
+            }
 
+            else
+            {
+                Move();
+                DebutTour = false;
 
+            }
 
-			anim.SetBool("Déplacement", moving);
-			if (!moving)
-			{
-				FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-				CheckMouse();
-			}
-
-			else
-			{
-				Move();
-				DebutTour = false;
-
-			}
-
-			if (!moving && DebutTour == false)
-			{
-				GameManagerSolo.FinDeTours();
-			}
-		}
-	}
+            if (!moving && DebutTour == false)
+            {
+                return;
+            }
+        }
+    }
 
     void CheckMouse()
     {
@@ -73,5 +81,4 @@ public class PlayerMove : TacticsMove
         }
     }
 }
-
 
