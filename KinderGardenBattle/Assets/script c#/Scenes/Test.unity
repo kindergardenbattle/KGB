@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   classe_precedente: 2
+  PlayerMove: {fileID: 0}
   Hp: 12
   Max_hp: 0
   Atk: 0
@@ -645,7 +646,7 @@ PrefabInstance:
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.53
+      value: 1.34
       objectReference: {fileID: 0}
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}

@@ -49,6 +49,11 @@ public class Generale_Attaque : TacticsMove
                     Debug.Log("cible acquise :" + cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
                     cara_cible.NewPV(atk);
+                    if (cara_cible.Hp <= 0)
+                    {
+                      Destroy(npc); 
+                    }
+                    
                     Debug.Log(cara_cible.Hp);
                     //return cara_cible;
                 }
@@ -92,6 +97,8 @@ public class Generale_Attaque : TacticsMove
                         cara_joueur.selection = true;
                         return cara_joueur;
                     }
+
+                    
                 }
                 Debug.Log("vagin");
             }
