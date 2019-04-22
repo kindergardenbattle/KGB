@@ -18,7 +18,7 @@ namespace Multi
         private static bool ancien_turn = turn;
         public static bool is_in_menu = false;
         public GameObject Stat;
-        public Perso_Generique_multi vis;
+        private Perso_Generique_multi vis;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -69,7 +69,7 @@ namespace Multi
             {
                 show_stat();
             }
-            if(Stat.active)
+            if(Stat.activeInHierarchy)
             {
                 Player_Stats_multi s = Stat.GetComponent<Player_Stats_multi>();
                 s.set_player_stats(vis);

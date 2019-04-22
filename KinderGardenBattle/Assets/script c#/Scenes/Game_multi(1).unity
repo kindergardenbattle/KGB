@@ -162,6 +162,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -170,6 +171,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &3798514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -278,6 +280,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -286,6 +289,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &4740994
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -517,6 +521,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -525,6 +530,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &34476896
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -633,6 +639,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -641,6 +648,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &53093892
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -749,6 +757,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -757,6 +766,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &58824098
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -865,6 +875,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -873,6 +884,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &69567880
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -981,6 +993,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -989,6 +1002,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &78487177
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1097,6 +1111,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1105,6 +1120,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &86821508
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1213,6 +1229,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1221,6 +1238,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &111705671
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1329,6 +1347,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1337,6 +1356,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &112013938
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1445,6 +1465,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1453,6 +1474,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &148166196
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1603,7 +1625,7 @@ PrefabInstance:
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
@@ -1827,6 +1849,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1835,6 +1858,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &186474187
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1943,6 +1967,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -1951,6 +1976,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &207337327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2059,6 +2085,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2067,6 +2094,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &215767569
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2175,6 +2203,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2183,6 +2212,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &224651695
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2360,6 +2390,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2368,6 +2399,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &256325674
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2476,6 +2508,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2484,6 +2517,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &297771120
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2592,6 +2626,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2600,6 +2635,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &311238102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2708,6 +2744,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2716,6 +2753,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &347390438
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2824,6 +2862,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2832,6 +2871,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &354964664
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2940,6 +2980,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -2948,6 +2989,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &364118977
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3056,6 +3098,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3064,6 +3107,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &382856227
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3172,6 +3216,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3180,6 +3225,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &426835601
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3288,6 +3334,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3296,6 +3343,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &431488823
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3404,6 +3452,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3412,6 +3461,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &488558071
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3520,6 +3570,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3528,6 +3579,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &493973961
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3636,6 +3688,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3644,6 +3697,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &501933897
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3752,6 +3806,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3760,6 +3815,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &510605875
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3868,6 +3924,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3876,6 +3933,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &524213166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3984,6 +4042,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -3992,6 +4051,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &530790471
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4100,6 +4160,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4108,6 +4169,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &574345570
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4216,6 +4278,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4224,6 +4287,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &585003643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4332,6 +4396,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4340,6 +4405,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &589254235
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4448,6 +4514,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4456,6 +4523,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &598585643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4606,6 +4674,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4614,6 +4683,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &634374444
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4722,6 +4792,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4730,6 +4801,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &637749321
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4838,6 +4910,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4846,6 +4919,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &646303224
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4954,6 +5028,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -4962,6 +5037,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &675191572
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5070,6 +5146,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5078,6 +5155,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &684776677
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5186,6 +5264,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5194,6 +5273,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &686679898
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5344,6 +5424,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5352,6 +5433,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &711616412
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5460,6 +5542,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5468,6 +5551,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &719082666
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5618,6 +5702,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5626,6 +5711,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &733529414
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5734,6 +5820,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5742,6 +5829,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &752739384
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5892,6 +5980,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -5900,6 +5989,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &813346453
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6008,6 +6098,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6016,6 +6107,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &813748810
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6124,6 +6216,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6132,6 +6225,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &817356877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6240,6 +6334,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6248,6 +6343,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &833347143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6356,6 +6452,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6364,6 +6461,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &834226248
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6514,6 +6612,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6522,6 +6621,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &880372913
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6630,6 +6730,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6638,6 +6739,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &918732765
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6746,6 +6848,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6754,6 +6857,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &924141951
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6862,6 +6966,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -6870,6 +6975,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &930804201
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6937,7 +7043,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931629233}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: menu pause
   m_TagString: Menupause
   m_Icon: {fileID: 0}
@@ -6955,12 +7061,11 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 2005938638}
   - {fileID: 1680453992}
   - {fileID: 1965978136}
   - {fileID: 1288930628}
   m_Father: {fileID: 1291946567}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960704242
 GameObject:
@@ -7012,6 +7117,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7020,6 +7126,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &960704245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7128,6 +7235,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7136,6 +7244,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &984159655
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7244,6 +7353,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7252,6 +7362,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1002749518
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7360,6 +7471,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7368,6 +7480,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1010573501
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7476,6 +7589,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7484,6 +7598,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1018972706
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7592,6 +7707,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7600,6 +7716,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1028375299
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7708,6 +7825,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7716,6 +7834,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1037679974
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7824,6 +7943,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7832,6 +7952,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1040489479
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7940,6 +8061,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -7948,6 +8070,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1041648029
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8056,6 +8179,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8064,6 +8188,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1049030331
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8172,6 +8297,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8180,6 +8306,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1051847230
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8342,6 +8469,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8350,6 +8478,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1064248711
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8408,6 +8537,83 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1064248708}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1087001860
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1087001861}
+  - component: {fileID: 1087001863}
+  - component: {fileID: 1087001862}
+  m_Layer: 5
+  m_Name: HUD
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1087001861
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087001860}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1408914564}
+  - {fileID: 2428630845113774216}
+  - {fileID: 1502626514}
+  m_Father: {fileID: 1291946567}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 0, y: 320.5}
+  m_SizeDelta: {x: 900, y: 641}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1087001862
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087001860}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1087001863
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1087001860}
+  m_CullTransparentMesh: 0
 --- !u!1 &1102441393
 GameObject:
   m_ObjectHideFlags: 0
@@ -8458,6 +8664,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8466,6 +8673,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1102441396
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8574,6 +8782,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8582,6 +8791,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1103479877
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8690,6 +8900,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8698,6 +8909,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1121270574
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8806,6 +9018,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8814,6 +9027,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1123693739
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8922,6 +9136,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -8930,6 +9145,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1128301956
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9038,6 +9254,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9046,6 +9263,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1131821455
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9154,6 +9372,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9162,6 +9381,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1153559245
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9270,6 +9490,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9278,6 +9499,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1156759760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9386,6 +9608,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9394,6 +9617,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1163672722
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9502,6 +9726,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9510,6 +9735,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1177047786
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9618,6 +9844,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9626,6 +9853,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1177273895
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9734,6 +9962,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9742,6 +9971,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1185348623
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9850,6 +10080,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -9858,6 +10089,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1188297950
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10008,6 +10240,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10016,6 +10249,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1218431932
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10124,6 +10358,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10132,6 +10367,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1220740689
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10190,12 +10426,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1220740686}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!4 &1227259877 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
-    type: 3}
-  m_PrefabInstance: {fileID: 1340763004}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1278005071
 GameObject:
   m_ObjectHideFlags: 0
@@ -10246,6 +10476,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10254,6 +10485,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1278005074
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10362,7 +10594,7 @@ PrefabInstance:
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
@@ -10562,6 +10794,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10570,6 +10803,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1290651630
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10718,9 +10952,10 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 1687649278}
   - {fileID: 931629233}
-  - {fileID: 1936494573}
-  - {fileID: 1227259877}
+  - {fileID: 1087001861}
+  - {fileID: 1340763006}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10779,6 +11014,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10787,6 +11023,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1293945442
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10895,6 +11132,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -10903,6 +11141,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1301390651
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11011,6 +11250,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11019,6 +11259,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1324932669
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11127,7 +11368,7 @@ PrefabInstance:
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8895807403753088983, guid: 39d4b0ae68cf32c47ad347af27242c63,
         type: 3}
@@ -11346,6 +11587,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11354,6 +11596,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1338899597
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11424,126 +11667,122 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Stats
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541945, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541945, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalRotation.x
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalRotation.y
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalRotation.z
       value: -0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908600519541944, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908601822825860, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
-      propertyPath: m_havePropertiesChanged
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
+        type: 3}
+      propertyPath: m_AnchorMax.x
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908601822825860, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
-      propertyPath: m_isInputParsingRequired
+      propertyPath: m_AnchorMax.y
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908601234553761, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
+      propertyPath: m_Pivot.x
+      value: 0.5
       objectReference: {fileID: 0}
-    - target: {fileID: 5761908601234553761, guid: e111d82888cf74a4daedac022f6ea4d4,
+    - target: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
         type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908601682124201, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908601682124201, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908601956933668, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908601956933668, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908602076414161, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_havePropertiesChanged
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5761908602076414161, guid: e111d82888cf74a4daedac022f6ea4d4,
-        type: 3}
-      propertyPath: m_isInputParsingRequired
-      value: 1
+      propertyPath: m_Pivot.y
+      value: 0.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e111d82888cf74a4daedac022f6ea4d4, type: 3}
 --- !u!1 &1340763005 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5761908600519541945, guid: e111d82888cf74a4daedac022f6ea4d4,
+    type: 3}
+  m_PrefabInstance: {fileID: 1340763004}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1340763006 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 6604540134199965683, guid: e111d82888cf74a4daedac022f6ea4d4,
     type: 3}
   m_PrefabInstance: {fileID: 1340763004}
   m_PrefabAsset: {fileID: 0}
@@ -11597,6 +11836,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11605,6 +11845,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1349565135
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11713,6 +11954,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11721,6 +11963,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1354240017
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11829,6 +12072,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11837,6 +12081,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1360963713
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11945,6 +12190,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -11953,6 +12199,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1363773767
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12061,6 +12308,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12069,6 +12317,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1379319962
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12177,6 +12426,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12185,6 +12435,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1381689661
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12293,6 +12544,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12301,6 +12553,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1390251643
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12409,6 +12662,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12417,6 +12671,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1396371732
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12531,6 +12786,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12539,6 +12795,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1419554332
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12647,6 +12904,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12655,6 +12913,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1425333507
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12763,6 +13022,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12771,6 +13031,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1443094700
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12879,6 +13140,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -12887,6 +13149,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1446992804
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12995,6 +13258,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13003,6 +13267,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1458028148
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13111,6 +13376,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13119,6 +13385,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1464802172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13182,7 +13449,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1936494573}
+    m_TransformParent: {fileID: 1087001861}
     m_Modifications:
     - target: {fileID: 1393464040, guid: 4c693b8b68cfa464f9c5074855f2a77d, type: 3}
       propertyPath: m_Name
@@ -13295,7 +13562,7 @@ PrefabInstance:
     - target: {fileID: 3198450862527347835, guid: 4c693b8b68cfa464f9c5074855f2a77d,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -170
+      value: 280
       objectReference: {fileID: 0}
     - target: {fileID: 3198450862527347835, guid: 4c693b8b68cfa464f9c5074855f2a77d,
         type: 3}
@@ -13305,7 +13572,7 @@ PrefabInstance:
     - target: {fileID: 3198450862527347835, guid: 4c693b8b68cfa464f9c5074855f2a77d,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -470.5
       objectReference: {fileID: 0}
     - target: {fileID: 7038902817626953991, guid: 4c693b8b68cfa464f9c5074855f2a77d,
         type: 3}
@@ -13400,6 +13667,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13408,6 +13676,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1505143364
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13516,6 +13785,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13524,6 +13794,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1518802209
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13632,6 +13903,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13640,6 +13912,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1520130613
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13748,6 +14021,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13756,6 +14030,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1532902907
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13864,6 +14139,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13872,6 +14148,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1548218456
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -13980,6 +14257,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -13988,6 +14266,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1562245038
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14096,6 +14375,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14104,6 +14384,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1571655588
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14254,6 +14535,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14262,6 +14544,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1583481733
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14454,6 +14737,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14462,6 +14746,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1672150584
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14576,6 +14861,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14584,6 +14870,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1681216226
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14642,6 +14929,80 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1681216223}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1687649277
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1687649278}
+  - component: {fileID: 1687649280}
+  - component: {fileID: 1687649279}
+  m_Layer: 5
+  m_Name: Background/menu
+  m_TagString: Menupause
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1687649278
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687649277}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1291946567}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1687649279
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687649277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1687649280
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1687649277}
+  m_CullTransparentMesh: 0
 --- !u!1 &1689386849
 GameObject:
   m_ObjectHideFlags: 0
@@ -14692,6 +15053,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14700,6 +15062,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1689386852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14808,6 +15171,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14816,6 +15180,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1702411012
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -14924,6 +15289,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -14932,6 +15298,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1705622635
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15124,6 +15491,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15132,6 +15500,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1754513222
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15240,6 +15609,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15248,6 +15618,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1755864951
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15356,6 +15727,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15364,6 +15736,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1778700088
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15472,6 +15845,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15480,6 +15854,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1785913869
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15588,6 +15963,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15596,6 +15972,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1808744852
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15704,6 +16081,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15712,6 +16090,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1809898416
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15820,6 +16199,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15828,6 +16208,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1822907651
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15936,6 +16317,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -15944,6 +16326,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1828137298
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16052,6 +16435,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16060,6 +16444,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1833274143
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16168,6 +16553,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16176,6 +16562,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1835729109
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16284,6 +16671,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16292,6 +16680,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1840259257
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16400,6 +16789,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16408,6 +16798,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1848971919
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16516,6 +16907,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16524,6 +16916,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1853146514
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16632,6 +17025,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16640,6 +17034,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1872696911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16748,6 +17143,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16756,6 +17152,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1875327295
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16864,6 +17261,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16872,6 +17270,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1886956483
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -16980,6 +17379,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -16988,6 +17388,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1896846015
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17096,6 +17497,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17104,6 +17506,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1905881796
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17212,6 +17615,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17220,6 +17624,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1925449853
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17328,6 +17733,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17336,6 +17742,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1929265967
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17444,6 +17851,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17452,6 +17860,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1930461558
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17560,6 +17969,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17568,6 +17978,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1932904271
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17626,39 +18037,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1932904268}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1 &1936494572
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1936494573}
-  m_Layer: 0
-  m_Name: HUD
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1936494573
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1936494572}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1408914564}
-  - {fileID: 2428630845113774216}
-  - {fileID: 1502626514}
-  m_Father: {fileID: 1291946567}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1958495843
 GameObject:
   m_ObjectHideFlags: 0
@@ -17709,6 +18087,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17717,6 +18096,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &1958495846
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -17796,17 +18176,17 @@ PrefabInstance:
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -20
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 50
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -20
+      value: -5
       objectReference: {fileID: 0}
     - target: {fileID: 4037788958972078562, guid: 4b64a8136a1183b4a8aeb116d9cd45f1,
         type: 3}
@@ -17865,80 +18245,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b64a8136a1183b4a8aeb116d9cd45f1, type: 3}
---- !u!1 &2005938637
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2005938638}
-  - component: {fileID: 2005938640}
-  - component: {fileID: 2005938639}
-  m_Layer: 5
-  m_Name: background/options
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &2005938638
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005938637}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 931629233}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 959, y: 548}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2005938639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005938637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &2005938640
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2005938637}
-  m_CullTransparentMesh: 0
 --- !u!1 &2010838064
 GameObject:
   m_ObjectHideFlags: 0
@@ -17989,6 +18295,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -17997,6 +18304,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2010838067
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18105,6 +18413,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18113,6 +18422,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2023804391
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18221,6 +18531,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18229,6 +18540,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2026319286
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18403,6 +18715,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18411,6 +18724,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2036180760
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18519,6 +18833,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18527,6 +18842,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2082729172
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18635,6 +18951,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18643,6 +18960,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2107799516
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18751,6 +19069,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18759,6 +19078,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2116079925
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18867,6 +19187,7 @@ MonoBehaviour:
   current: 0
   target: 0
   selectable: 0
+  triplepute: 0
   adjacencyList: []
   visited: 0
   parent: {fileID: 0}
@@ -18875,6 +19196,7 @@ MonoBehaviour:
   g: 0
   h: 0
   utilise: 1
+  dans_la_porte: 0
 --- !u!23 &2123493102
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -18944,7 +19266,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1936494573}
+    m_TransformParent: {fileID: 1087001861}
     m_Modifications:
     - target: {fileID: 8702344711360519262, guid: d1def9a2dd26e32468e7066c965867c1,
         type: 3}
@@ -19009,12 +19331,12 @@ PrefabInstance:
     - target: {fileID: 5956375243605222987, guid: d1def9a2dd26e32468e7066c965867c1,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 90
+      value: 540
       objectReference: {fileID: 0}
     - target: {fileID: 5956375243605222987, guid: d1def9a2dd26e32468e7066c965867c1,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -470.5
       objectReference: {fileID: 0}
     - target: {fileID: 5956375243605222987, guid: d1def9a2dd26e32468e7066c965867c1,
         type: 3}
@@ -19235,7 +19557,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1936494573}
+    m_TransformParent: {fileID: 1087001861}
     m_Modifications:
     - target: {fileID: 8706235897684244179, guid: 8eb5080a2db482044afd94a684353165,
         type: 3}
@@ -19300,12 +19622,12 @@ PrefabInstance:
     - target: {fileID: 5567319895312980342, guid: 8eb5080a2db482044afd94a684353165,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -40
+      value: 410
       objectReference: {fileID: 0}
     - target: {fileID: 5567319895312980342, guid: 8eb5080a2db482044afd94a684353165,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150
+      value: -470.5
       objectReference: {fileID: 0}
     - target: {fileID: 5567319895312980342, guid: 8eb5080a2db482044afd94a684353165,
         type: 3}

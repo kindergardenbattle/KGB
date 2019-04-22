@@ -13,10 +13,10 @@ public class Player_Stats_multi : MonoBehaviour
 
     public void set_player_stats(Perso_Generique_multi p)
     {
-        Classe.text = "Classe : " + p.ClasseToString();
-        Hp.text = "Hp : " + p.Hp;
-        Mp.text = "Mp : " + p.Pm;
-        Def.text = "Def : " + p.Def;
+        Classe.text = "Classe :\n" + p.ClasseToString();
+        Hp.text = "Hp :\n" + p.Hp+"/"+p.Max_hp;
+        Mp.text = "Mp :\n" + p.Pm;
+        Def.text = "Def :\n" + p.Def;
 
 
     }
