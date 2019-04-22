@@ -31,14 +31,13 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
     Vector3 jumpTarget;
 
     public Tile actualTargetTile;
-    public Animator anim;
 
     protected void Init()
     {
         move = max_move;
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
-        anim = GetComponent<Animator>();
+        // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
     }
     public void GetCurrentTile() 
     {
