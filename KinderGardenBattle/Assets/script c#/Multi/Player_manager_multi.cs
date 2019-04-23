@@ -99,7 +99,7 @@ public class Player_manager_multi : Generale_Attaque_multi
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("Player")&& (atkable))
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))//&& (atkable))
                 {
                     GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();

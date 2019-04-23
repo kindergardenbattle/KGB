@@ -10,7 +10,6 @@ using Photon.Pun;
 public class PlayerMove : TacticsMove
 {
     private bool la_seboul;
-
     public bool cible;
 
 
@@ -56,10 +55,6 @@ public class PlayerMove : TacticsMove
                 }
                 
             }
-
-            
-            
-
             if (!moving && DebutTour == false)
             {
                 return;

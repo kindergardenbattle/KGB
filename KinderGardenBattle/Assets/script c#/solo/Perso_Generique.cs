@@ -84,7 +84,7 @@ public class Perso_Generique : MonoBehaviour
             break;
             case Classe.FRONDEUR:
             Distance = 3;
-            Atk = 10;
+            Atk = 30;
             ATK_distance = 30;
             Def = 0.80;
             Max_hp = 180;

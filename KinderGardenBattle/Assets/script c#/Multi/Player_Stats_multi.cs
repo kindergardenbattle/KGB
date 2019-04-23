@@ -10,6 +10,8 @@ public class Player_Stats_multi : MonoBehaviour
     public TextMeshProUGUI Hp;
     public TextMeshProUGUI Mp;
     public TextMeshProUGUI Def;
+    public TextMeshProUGUI Atk;
+    public TextMeshProUGUI Dis;
 
     public void set_player_stats(Perso_Generique_multi p)
     {
@@ -17,6 +19,9 @@ public class Player_Stats_multi : MonoBehaviour
         Hp.text = "Hp :\n" + p.Hp+"/"+p.Max_hp;
         Mp.text = "Mp :\n" + p.Pm;
         Def.text = "Def :\n" + p.Def;
+        Atk.text = "Atack :\n" + p.Atk;
+        Dis.text = "Range :\n" + p.Distance;
+
 
 
     }

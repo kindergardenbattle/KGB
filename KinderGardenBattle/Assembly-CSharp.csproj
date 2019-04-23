@@ -191,6 +191,7 @@
     <Compile Include="Assets\script c#\solo\NPC.cs" />
     <Compile Include="Assets\script c#\solo\NPCMove.cs" />
     <Compile Include="Assets\script c#\solo\Perso_Generique.cs" />
+    <Compile Include="Assets\script c#\solo\Player_Stats.cs" />
     <Compile Include="Assets\script c#\solo\PlayerCaracteristique.cs" />
     <Compile Include="Assets\script c#\solo\PlayerMove.cs" />
     <Compile Include="Assets\script c#\solo\raycast.cs" />
