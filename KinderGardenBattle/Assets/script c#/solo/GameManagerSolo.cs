@@ -17,7 +17,6 @@ public class GameManagerSolo : MonoBehaviour
     public enum Team
     {
         Blue,Red
-        
     }
     public static string TeamtoString(Team team)
     {

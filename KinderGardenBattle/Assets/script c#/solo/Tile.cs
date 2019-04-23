@@ -43,8 +43,9 @@ public class Tile : MonoBehaviour
 		}
 
 		return repoonse;
-
 	}
+
+	
 
 
 
@@ -130,7 +131,7 @@ void Start ()
         foreach (Collider item in colliders)
         {
             Tile tile = item.GetComponent<Tile>();
-            if (tile != null && tile.walkable)
+            if (tile != null && walkable)
             {
                 RaycastHit hit;
 
