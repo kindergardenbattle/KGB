@@ -16,7 +16,7 @@ public class NPCMove : TacticsMove
     void Start()
     {
         Init();
-        
+        anim = GetComponent<Animator>();
         npc = GameObject.FindGameObjectWithTag("NPC");
 
     }

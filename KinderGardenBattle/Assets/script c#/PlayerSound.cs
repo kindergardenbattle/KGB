@@ -9,6 +9,7 @@ namespace a
         public AudioClip magie;
         public AudioClip piou;
         public AudioClip mort;
+        public AudioClip lancepierre;
 
         public AudioSource AudioS;
 
@@ -45,6 +46,11 @@ namespace a
         void Mort()
         {
             AudioS.PlayOneShot(mort);
+        }
+
+        void LancePierre()
+        {
+            AudioS.PlayOneShot(lancepierre);
         }
     }
 }

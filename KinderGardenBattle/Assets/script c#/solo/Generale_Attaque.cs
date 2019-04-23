@@ -42,6 +42,10 @@ public class Generale_Attaque : TacticsMove
                 {
 
                     GameObject npc = hit.transform.gameObject;
+                    if (classe.Distance == 1)
+                        anim.SetTrigger("epee 2 main");
+                    else
+                        anim.SetTrigger("lance pierre");
                     //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
                     //cara_cible.SetClasse(cara_cible.classe);

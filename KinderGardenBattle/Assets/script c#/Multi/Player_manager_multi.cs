@@ -43,13 +43,15 @@ public class Player_manager_multi : Generale_Attaque_multi
         }
         if (is_turn && !moving)
         {
-            FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+             //appelle les fonction si ça bouge pas 
             if (Want_to_move)
-            {                
+            {
+                FindSelectableTiles();
                 CheckMouse();
             }
             if (Want_to_fight)
             {
+                FindSelectableTiles();
                 //Debug.Log(is_turn);
                 Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
                 Tile current = GetTargetTile(gameObject);

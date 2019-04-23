@@ -129,11 +129,14 @@ public class Perso_Generique : MonoBehaviour
     public  double NewPV (int atk )
     {
 
+
         int penis = Convert.ToInt32(this.Hp - this.Def * atk);
       
             Debug.Log("HP avant :"+ Hp);
             Hp =  penis;
             Debug.Log("HP aprés :"+Hp);
+        Animator anim = gameObject.GetComponent<TacticsMove>().anim;
+        anim.SetTrigger("Degat");
             return Hp; 
       
     
