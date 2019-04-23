@@ -66,14 +66,20 @@ void Start ()
 	        {
 	            GetComponent<Renderer>().material.color = Color.magenta;
 	        }
-	        else if (target)
-	        {
-	            GetComponent<Renderer>().material.color = Color.green;
-	        }
+	        
+            else if(GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
+            {
+	            GetComponent<Renderer>().material.color = Color.white;
+            }
+            else if (target)
+            {
+	            GetComponent<Renderer>().material.color = Color.green; 
+            }
 	        else if (selectable )
 	        {
                 GetComponent<Renderer>().material.color = Color.red;
 	        }
+           
 	        
 	        else if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
             {

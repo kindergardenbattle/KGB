@@ -10,7 +10,7 @@ public class EnemiMoove : MonoBehaviour
     public static void TurnNpc()
     {
        
-            GameManagerSolo.FinDeTours();
+           return;
              
             
         

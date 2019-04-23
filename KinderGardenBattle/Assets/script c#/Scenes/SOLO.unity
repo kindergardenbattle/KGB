@@ -845,7 +845,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1750848347}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 922175344}
+        m_MethodName: FinDeTour
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1750848347
@@ -1371,7 +1382,7 @@ PrefabInstance:
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.32
+      value: 2.43
       objectReference: {fileID: 0}
     - target: {fileID: 2434029776473410745, guid: ac1faeaf72d807647bf0fdf4f263bca3,
         type: 3}
