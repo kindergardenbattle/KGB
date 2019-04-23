@@ -43,9 +43,9 @@ public class Player_manager_multi : Generale_Attaque_multi
         }
         if (is_turn && !moving)
         {
+            FindSelectableTiles(); //appelle les fonction si ça bouge pas 
             if (Want_to_move)
-            {
-                FindSelectableTiles(); //appelle les fonction si ça bouge pas 
+            {                
                 CheckMouse();
             }
             if (Want_to_fight)
