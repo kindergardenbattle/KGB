@@ -182,6 +182,7 @@
     <Compile Include="Assets\script c#\Multi\PlayerAnimatorManager.cs" />
     <Compile Include="Assets\script c#\Multi\PlayerNameInputField.cs" />
     <Compile Include="Assets\script c#\Multi\TacticsMove_multi.cs" />
+    <Compile Include="Assets\script c#\PlayerSound.cs" />
     <Compile Include="Assets\script c#\solo\Atk_distance.cs" />
     <Compile Include="Assets\script c#\solo\EnemieCaracteristique.cs" />
     <Compile Include="Assets\script c#\solo\EnemiMoove.cs" />

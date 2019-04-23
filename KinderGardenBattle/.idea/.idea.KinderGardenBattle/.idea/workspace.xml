@@ -145,6 +145,19 @@
                 <marker date="1555936302057" expanded="true" signature="4556:4595" ph="{...}" />
                 <marker date="1555936302057" expanded="true" signature="4622:4715" ph="{...}" />
                 <marker date="1555936302057" expanded="true" signature="4667:4709" ph="{...}" />
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerAnimatorManager.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+              <folding>
+                <marker date="1555864631257" expanded="false" signature="6:62" ph="..." />
+                <marker date="1555864631257" expanded="true" signature="81:823" ph="{...}" />
+                <marker date="1555864631257" expanded="true" signature="150:821" ph="{...}" />
+                <marker date="1555864631257" expanded="false" signature="193:815" ph="MonoBehaviour Callbacks" />
+                <marker date="1555864631257" expanded="true" signature="294:314" ph="{...}" />
+                <marker date="1555864631257" expanded="true" signature="389:794" ph="{...}" />
+                <marker date="1555864631257" expanded="true" signature="480:532" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -201,6 +214,25 @@
                 <marker date="1555936302059" expanded="true" signature="1387:1720" ph="{...}" />
                 <marker date="1555936302059" expanded="true" signature="1484:1706" ph="{...}" />
                 <marker date="1555936302059" expanded="true" signature="1605:1688" ph="{...}" />
+        <entry file="file://$PROJECT_DIR$/Assets/script c#/camera.meta">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/script c#/PlayerSound.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="45">
+              <caret line="4" column="44" selection-start-line="4" selection-start-column="44" selection-end-line="4" selection-end-column="44" />
+              <folding>
+                <marker date="1555956264021" expanded="true" signature="31:802" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="78:800" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="301:334" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="356:389" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="412:472" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="495:555" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="577:636" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="657:715" ph="{...}" />
+                <marker date="1555956264021" expanded="true" signature="736:794" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -276,6 +308,24 @@
                 <marker date="1555941299773" expanded="true" signature="9652:10012" ph="{...}" />
                 <marker date="1555941299773" expanded="true" signature="10181:10239" ph="{...}" />
                 <marker date="1555941299773" expanded="true" signature="10266:10300" ph="{...}" />
+        <entry file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <marker date="1555864631258" expanded="false" signature="6:58" ph="..." />
+                <marker date="1555864631258" expanded="true" signature="60:188" ph="/// Player name input field. Let the user input his name, will appear above the player in the game. ... " />
+                <marker date="1555864631258" expanded="true" signature="277:1616" ph="{...}" />
+                <marker date="1555864631258" expanded="false" signature="284:434" ph="Private Constants" />
+                <marker date="1555864631258" expanded="false" signature="441:1064" ph="MonoBehaviour CallBacks" />
+                <marker date="1555864631258" expanded="true" signature="479:599" ph="/// MonoBehaviour method called on GameObject by Unity during initialization phase. ... " />
+                <marker date="1555864631258" expanded="true" signature="626:1047" ph="{...}" />
+                <marker date="1555864631258" expanded="true" signature="769:992" ph="{...}" />
+                <marker date="1555864631258" expanded="true" signature="834:982" ph="{...}" />
+                <marker date="1555864631258" expanded="false" signature="1071:1614" ph="Public Methods" />
+                <marker date="1555864631258" expanded="true" signature="1100:1280" ph="/// Sets the name of the player, and save it in the PlayerPrefs for future sessions. ... " />
+                <marker date="1555864631258" expanded="true" signature="1324:1597" ph="{...}" />
+                <marker date="1555864631258" expanded="true" signature="1393:1493" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -310,6 +360,12 @@
     <setting file="file://$PROJECT_DIR$/Assets/script c#/solo/PlayerMove.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Photon/PhotonRealtime/Code/LoadbalancingPeer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/PlayerSound.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerAnimatorManager.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/camera/Test_camera.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerNameInputField.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/script c#/camera.meta" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -333,6 +389,7 @@
         <option value="$PROJECT_DIR$/Assets/script c#/solo/NPCMove.cs" />
         <option value="$PROJECT_DIR$/Assets/script c#/solo/Tile.cs" />
         <option value="$PROJECT_DIR$/Assets/script c#/solo/Generale_Attaque.cs" />
+        <option value="$PROJECT_DIR$/Assets/script c#/PlayerSound.cs" />
       </list>
     </option>
   </component>
@@ -352,6 +409,10 @@
     <option name="y" value="88" />
     <option name="width" value="1198" />
     <option name="height" value="604" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-11" />
+    <option name="width" value="980" />
+    <option name="height" value="1031" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -359,6 +420,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <option name="show-all-files" value="false" />
       </pane>
@@ -473,11 +536,12 @@
       <workItem from="1555874848085" duration="19000" />
       <workItem from="1555937833486" duration="6949000" />
       <workItem from="1555945151675" duration="32000" />
+      <workItem from="1555955666278" duration="1189000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="72728000" />
+    <option name="totallyTimeSpent" value="66724000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -515,8 +579,6 @@
       <window_info anchor="bottom" id="Event Log" order="15" side_tool="true" weight="0.32839838" />
       <window_info anchor="bottom" id="Android Profiler" order="16" show_stripe_button="false" />
       <window_info anchor="bottom" id="Logcat" order="17" />
-      <window_info anchor="bottom" id="Inspection Results" order="18" weight="0.32952183" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -596,6 +658,9 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/script c#/PlayerMove.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/script c#/Multi/PlayerManager.cs" />
+    <entry file="file://$PROJECT_DIR$/Assets/script c#/EnemieCaracteristique.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/TacticsMove_multi.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/Generale_Attaque.cs" />
     <entry file="file://$PROJECT_DIR$/Assets/script c#/NPC.cs" />

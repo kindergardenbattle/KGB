@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\msi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\msi\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_KinderGardenBattle.944321002.00" t="ExcludeRecursive" />
-    <e p="C:\Users\msi\Documents\KGB\KinderGardenBattle" t="IncludeRecursive">
+    <e p="C:\Users\Axel\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\Axel\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_KinderGardenBattle.-178941360.00" t="ExcludeRecursive" />
+    <e p="C:\Users\Axel\Documents\GitHub\KGB\KinderGardenBattle" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -358,6 +358,7 @@
             <e p="PlayerNameInputField.cs" t="Include" />
             <e p="TacticsMove_multi.cs" t="Include" />
           </e>
+          <e p="PlayerSound.cs" t="Include" />
           <e p="solo" t="Include">
             <e p="Atk_distance.cs" t="Include" />
             <e p="EnemieCaracteristique.cs" t="Include" />
