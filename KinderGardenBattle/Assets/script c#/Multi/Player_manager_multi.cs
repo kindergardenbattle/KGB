@@ -53,22 +53,10 @@ public class Player_manager_multi : Generale_Attaque_multi
             {
                 FindSelectableTiles(gameObject.GetComponent<Perso_Generique_multi>().Distance);
                 //Debug.Log(is_turn);
-                Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
-                Tile current = GetTargetTile(gameObject);
-                //Debug.Log(current);
-                current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current
-                GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-                foreach (GameObject p in players)
-                {
-                    p.GetComponent<Player_manager_multi>().GetCurrentTile();
-                }
-                atkable = current.checkporté(current, classe.Distance, false);
-                GetTarget((int)classe.Atk);
-                current.triplepute = false;
             }
         }
         
-        if (move == 0 && !has_move)
+        if (!Want_to_move && move == 0 && !has_move)
         {
             Want_to_move = false;
             Resetalltiles();
@@ -83,6 +71,16 @@ public class Player_manager_multi : Generale_Attaque_multi
             Resetalltiles();
             Move();
         }
+        if (Want_to_fight)
+        {
+            Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
+            Tile current = GetTargetTile(gameObject);
+            current.triplepute = true;
+            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
+            atkable = current.checkporté(current, classe.Distance, false);
+            GetTarget((int)classe.Atk);
+            current.triplepute = false;
+        }
     }
 
     public void GetTarget(int atk)
@@ -91,6 +89,7 @@ public class Player_manager_multi : Generale_Attaque_multi
         if (Input.GetMouseButtonUp(0))
         {
             Debug.Log("debut get target");
+            Debug.Log(atkable);
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))

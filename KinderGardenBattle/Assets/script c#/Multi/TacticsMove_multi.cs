@@ -56,6 +56,12 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
         {
             tile = hit.collider.GetComponent<Tile>();
         }
+        if (!target.GetComponent<Player_manager_multi>().is_turn)
+        {
+            tile.walkable = false;
+            tile.current = true;
+        }
+
 
         return tile;
     }

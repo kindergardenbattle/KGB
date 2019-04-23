@@ -63,6 +63,7 @@ namespace Multi
             {
                 EndTurn();
                 ancien_turn = turn;
+
             }
             Player_manager_multi p = GameObject.FindGameObjectWithTag("Player").GetComponent<Player_manager_multi>();
             if (!p.is_turn || (!p.Want_to_fight && !p.Want_to_move))
@@ -157,6 +158,8 @@ namespace Multi
             {
                 p.is_turn = !p.is_turn;
                 p.Resetalltiles();
+                p.Want_to_fight = false;
+                p.Want_to_move = false;
             }
             Debug.Log("fin de tours"+turn);
         }
