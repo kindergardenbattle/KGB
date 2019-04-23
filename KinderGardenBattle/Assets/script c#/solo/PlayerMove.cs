@@ -69,8 +69,9 @@ public class PlayerMove : TacticsMove
 
     private void LateUpdate()
     {
-        if (GameManagerSolo.TeamTurn== GameManagerSolo.Team.Red)
+        if (!GameManagerSolo.Move_Button||GameManagerSolo.TeamTurn== GameManagerSolo.Team.Red)
         {
+            moving = false;
             return;
         }
         if (moving)

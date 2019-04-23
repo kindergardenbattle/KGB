@@ -56,27 +56,32 @@ public class Player_manager_multi : Generale_Attaque_multi
             }
         }
         
-        if (!Want_to_move && move == 0 && !has_move)
+        /*if (!Want_to_move && move == 0 && !has_move)
         {
             Want_to_move = false;
             Resetalltiles();
             has_move = true;
-        }
+        }*/
               
     }
     private void LateUpdate()
     {
         if (moving)
         {
-            Resetalltiles();
+            //Resetalltiles();
             Move();
         }
+        if (!is_turn || moving || photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+
         if (Want_to_fight)
         {
             Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
             Tile current = GetTargetTile(gameObject);
+            GetCurrentTile();
             current.triplepute = true;
-            GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
             atkable = current.checkporté(current, classe.Distance, false);
             GetTarget((int)classe.Atk);
             current.triplepute = false;
