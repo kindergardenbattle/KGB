@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -167,6 +167,7 @@ MonoBehaviour:
   selection: 0
   ATK_distance: 0
   classe: 2
+  PlayerMove: {fileID: 0}
 --- !u!1 &227608143
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +465,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b64a8136a1183b4a8aeb116d9cd45f1, type: 3}
+--- !u!1 &853622178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1675537451, guid: 4e304e7c8c70f494d94a6800c690cba3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1675537450}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &853622179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 853622178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680154ec06f44032b7b5e689d4d9fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  course: {fileID: 0}
+  ouille: {fileID: 0}
+  magie: {fileID: 0}
+  piou: {fileID: 0}
+  mort: {fileID: 0}
+  lancepierre: {fileID: 0}
+  AudioS: {fileID: 0}
 --- !u!114 &922175344 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3455806589383391221, guid: edc0ce6d27ac7ff4f9062f4a8daddd36,
