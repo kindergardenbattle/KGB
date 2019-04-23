@@ -37,12 +37,9 @@ public class Tile : MonoBehaviour
         //Debug.Log(tile.adjacencyList.Count);
         foreach (Tile VARIABLE in tile.adjacencyList)
 		{
-			repoonse= repoonse || checkporté(VARIABLE, porte-1, repoonse);
-			
+			repoonse= repoonse || checkporté(VARIABLE, porte-1, repoonse);			
 		}
-
 		return repoonse;
-
 	}
 
 
