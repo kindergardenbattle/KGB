@@ -61,24 +61,30 @@ public class GameManagerSolo : MonoBehaviour
         }
         if (!Move_Button && !ATK_Button)
         {
-            if (Input.GetMouseButtonUp(0))
+            show_stat();
+        }        
+    }
+
+    public void show_stat()
+    {
+        if (Input.GetMouseButtonUp(0))
+        {
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                RaycastHit hit;
-                Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit, 25.0f))
+                if (hit.transform != null && (hit.transform.gameObject.CompareTag("Player") || hit.transform.gameObject.CompareTag("NPC")))
                 {
-                    if (hit.transform != null && (hit.transform.gameObject.CompareTag("Player")|| hit.transform.gameObject.CompareTag("NPC")))
-                    {
-                        GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
-                        vis = npc.GetComponent<Perso_Generique>();
-                        Stat.SetActive(true);
-                        Player_Stats s = Stat.GetComponent<Player_Stats>();
-                        s.set_player_stats(vis);                        
-                    }
+                    GameObject npc = hit.transform.gameObject;                    //manager_cible= npc.GetComponent<GameManagerSolo>();
+                    vis = npc.GetComponent<Perso_Generique>();
+                    Stat.SetActive(true);
+                    Player_Stats s = Stat.GetComponent<Player_Stats>();
+                    s.set_player_stats(vis);
                 }
             }
         }
     }
+
     public void menu()
     {
         foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
