@@ -567,6 +567,7 @@ MonoBehaviour:
   ancient_turn: 0
   has_attack: 0
   atkable: 0
+  has_move: 0
 --- !u!114 &2087480450140337915
 MonoBehaviour:
   m_ObjectHideFlags: 0

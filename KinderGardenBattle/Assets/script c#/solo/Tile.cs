@@ -31,10 +31,9 @@ public class Tile : MonoBehaviour
 		}
         if (tile.current && tile.triplepute ==false)
 		{
-
-            
             repoonse = true;
 		}
+        Debug.Log(tile.adjacencyList.Count);
         //Debug.Log(tile.adjacencyList.Count);
         foreach (Tile VARIABLE in tile.adjacencyList)
 		{
