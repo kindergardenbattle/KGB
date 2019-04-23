@@ -1,4 +1,2 @@
 sceneSetups:
 - path: Assets/script c#/Scenes/Main_menu.unity
-  isLoaded: 1
-  isActive: 1

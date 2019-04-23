@@ -10,6 +10,7 @@ public class TacticsMove : MonoBehaviour
     public bool turn;
     List<Tile> selectableTiles = new List<Tile>();
     GameObject[] tiles;
+     bool ataquable = true;
 
     Stack<Tile> path = new Stack<Tile>();
     Tile currentTile;
@@ -48,6 +49,46 @@ public class TacticsMove : MonoBehaviour
         // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
     }
 
+    public bool checkporté(double bite) // bite = porté
+    {
+        bool res = false;
+        ComputeAdjacencyLists(jumpHeight, null);
+        GetCurrentTile();
+
+        Queue<Tile> process = new Queue<Tile>();
+
+        process.Enqueue(currentTile);
+        currentTile.visited = true;
+
+
+        while (process.Count > 0)
+        {
+            Tile t = process.Dequeue();
+
+            selectableTiles.Add(t);
+            t.selectable = true;
+
+            if (t.distance < bite)
+            {
+                foreach (Tile tile in t.adjacencyList)
+                {
+                    if (!tile.visited)
+                    {
+                        tile.parent = t;
+                        tile.visited = true;
+                        tile.distance = 1 + t.distance;
+                        process.Enqueue(tile);
+                    }
+                }
+
+                    
+            }
+        }
+            
+        return res;
+    }
+    
+
     public void GetCurrentTile() 
     {
         currentTile = GetTargetTile(gameObject);
@@ -75,9 +116,10 @@ public class TacticsMove : MonoBehaviour
 
         return tile; 
     }
-
+    
     public Tile GetTargetTile(GameObject target)
     {
+        
         
         RaycastHit hit; // pointeur du clic 
         Tile tile = null;
@@ -85,6 +127,14 @@ public class TacticsMove : MonoBehaviour
         if (Physics.Raycast(target.transform.position, -Vector3.up, out hit, 1))
         {
             tile = hit.collider.GetComponent<Tile>();
+        }
+
+        if (target.tag=="NPC")
+        {
+            tile.walkable = false;
+            tile.current = true;
+            ataquable = true;
+
         }
 
         return tile;

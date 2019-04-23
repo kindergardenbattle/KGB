@@ -26,7 +26,10 @@ public class PlayerMove : TacticsMove
     }
     void Update()
     {
-
+        if (GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
+        {
+            return;
+        }
         //if (!la_seboul)
         //{
         //	return;	
@@ -66,6 +69,10 @@ public class PlayerMove : TacticsMove
 
     private void LateUpdate()
     {
+        if (GameManagerSolo.TeamTurn== GameManagerSolo.Team.Red)
+        {
+            return;
+        }
         if (moving)
         {
             Move();

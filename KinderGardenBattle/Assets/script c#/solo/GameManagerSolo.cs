@@ -6,17 +6,30 @@ public class GameManagerSolo : MonoBehaviour
 {
     public static bool Move_Button;
     public static bool ATK_Button;
-
+    
     private void Start()
     {
         Move_Button = false;
         ATK_Button = false;
+        TeamTurn = Team.Blue;
     }
 
     public enum Team
     {
         Blue,Red
-        
+    }
+    public static string TeamtoString(Team team)
+    {
+        switch (team)
+        {
+                case Team.Blue:
+                    return "BLEU";
+                case Team.Red:
+                    return "RED";
+                default:
+                    return "ERROR";
+            
+        }
     }
     
     public static Team TeamTurn;
@@ -24,6 +37,7 @@ public class GameManagerSolo : MonoBehaviour
 
     public void Button_Moove()
     {
+       
         Move_Button = !Move_Button;
         Debug.Log("MOVE " +Move_Button);
     }
@@ -33,15 +47,19 @@ public class GameManagerSolo : MonoBehaviour
         Debug.Log("ATK"+ATK_Button);
     }
 
+    
+    
     public static void SetTeamTurn (Team Color)
     {
         TeamTurn = Color;       
     }
 
-    public  static void FinDeTours()
-    {        
+    public void FinDeTour()
+    {
         TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
+        Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));     
     }
+    
 
 
 }

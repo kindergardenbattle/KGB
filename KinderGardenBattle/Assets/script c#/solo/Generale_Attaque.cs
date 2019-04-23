@@ -112,7 +112,10 @@ public class Generale_Attaque : TacticsMove
     public bool boolene = true;
     private void LateUpdate()
     {
-        
+        if (GameManagerSolo.TeamTurn== GameManagerSolo.Team.Red)
+        {
+            return;
+        }
         //if (!boolquichamboule)
         // {
         //     return;
