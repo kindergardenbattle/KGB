@@ -58,10 +58,6 @@ void Start ()
 	void Update () 
 	{
 			
-		    if (triplepute)
-		    {
-			    GetComponent<Renderer>().material.color = Color.yellow;
-		    }
             if (current)
 	        {
 	            GetComponent<Renderer>().material.color = Color.magenta;
@@ -70,12 +66,16 @@ void Start ()
 	        {
 	            GetComponent<Renderer>().material.color = Color.green;
 	        }
-	        else if (selectable)
+	        else if (selectable )
 	        {
                 GetComponent<Renderer>().material.color = Color.red;
 	        }
 	        
-	        else
+	        else if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
+            {
+	            GetComponent<Renderer>().material.color = Color.white;
+            }
+			else
 	        {
 	            GetComponent<Renderer>().material.color = Color.white;
 	        }

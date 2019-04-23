@@ -105,7 +105,7 @@ public class TacticsMove : MonoBehaviour
             t.Reset();
     }
 
-    public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
+    public void FindSelectableTiles( double bite) // parcours largeur de la list queue faite plutot 
     {
 
         if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
@@ -126,7 +126,7 @@ public class TacticsMove : MonoBehaviour
                 selectableTiles.Add(t);
                 t.selectable = true;
 
-                if (t.distance < move)
+                if (t.distance < bite)
                 {
                     foreach (Tile tile in t.adjacencyList)
                     {
@@ -138,6 +138,8 @@ public class TacticsMove : MonoBehaviour
                             process.Enqueue(tile);
                         }
                     }
+
+                    
                 }
             }
         }

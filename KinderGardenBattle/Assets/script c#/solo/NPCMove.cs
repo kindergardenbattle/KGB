@@ -39,7 +39,7 @@ public class NPCMove : TacticsMove
         {
             FindNearestTarget();
             CalculatePath();
-            FindSelectableTiles();
+            FindSelectableTiles(npc.GetComponent<Perso_Generique>().Pm);
             Debug.Log("tours ia");
 
 

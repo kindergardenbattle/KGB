@@ -23,7 +23,7 @@ public class Generale_Attaque : TacticsMove
     void Start()
     {
         Init();
-        
+        atkable = false;
 
     }
 
@@ -37,7 +37,8 @@ public class Generale_Attaque : TacticsMove
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
-            {
+            {    Debug.Log("hit");
+                Debug.Log(atkable);
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (atkable))
                 {
 
@@ -109,20 +110,24 @@ public class Generale_Attaque : TacticsMove
         boolquichamboule = !boolquichamboule;
     }
     public bool boolene = true;
-    private void Update()
+    private void LateUpdate()
     {
         
         //if (!boolquichamboule)
         // {
         //     return;
         //  }
-        if (moving)
+        if (moving){
+            return;
+        }
+        else if (!GameManagerSolo.ATK_Button)
         {
             return;
         }
+        
         joueur = GameObject.FindGameObjectWithTag("Player");
         classe = joueur.GetComponent<Perso_Generique>();
-       
+        
         boolquichamboule = false;
         GetCurrentTile();
         current = GetTargetTile(joueur);

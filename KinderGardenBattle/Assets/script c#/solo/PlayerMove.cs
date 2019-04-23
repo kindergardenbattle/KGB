@@ -41,22 +41,38 @@ public class PlayerMove : TacticsMove
             anim.SetBool("Déplacement", moving);
             if (!moving)
             {
-                FindSelectableTiles(); //appelle les fonction si ça bouge pas 
-                CheckMouse();
+                if (GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
+                {
+                    FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Pm); //appelle les fonction si ça bouge pas 
+                   CheckMouse();   
+                }
+
+                if (!GameManagerSolo.Move_Button && GameManagerSolo.ATK_Button)
+                {
+                    FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Distance);
+                }
+                
             }
 
-            else
-            {
-                Move();
-                DebutTour = false;
-
-            }
+            
+            
 
             if (!moving && DebutTour == false)
             {
                 return;
             }
         }
+    }
+
+    private void LateUpdate()
+    {
+        if (moving)
+        {
+            Move();
+            DebutTour = false; 
+        }
+            
+
     }
 
     void CheckMouse()
