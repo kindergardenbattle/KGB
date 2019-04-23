@@ -75,39 +75,44 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
             t.Reset();
     }
 
-    public void FindSelectableTiles() // parcours largeur de la list queue faite plutot 
-    {        
-        ComputeAdjacencyLists(jumpHeight, null);
-        GetCurrentTile();
+    public void FindSelectableTiles(double bite) // parcours largeur de la list queue faite plutot 
+    {
 
-
-        Queue<Tile> process = new Queue<Tile>();
-
-        process.Enqueue(currentTile);
-        currentTile.visited = true;
-
-
-        while (process.Count > 0)
+        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
         {
-            Tile t = process.Dequeue();
+            ComputeAdjacencyLists(jumpHeight, null);
+            GetCurrentTile();
 
-            selectableTiles.Add(t);
-            t.selectable = true;
+            Queue<Tile> process = new Queue<Tile>();
 
-            if (t.distance < move)
+            process.Enqueue(currentTile);
+            currentTile.visited = true;
+
+
+            while (process.Count > 0)
             {
-                foreach (Tile tile in t.adjacencyList)
+                Tile t = process.Dequeue();
+
+                selectableTiles.Add(t);
+                t.selectable = true;
+
+                if (t.distance < bite)
                 {
-                    if (!tile.visited)
+                    foreach (Tile tile in t.adjacencyList)
                     {
-                        tile.parent = t;
-                        tile.visited = true;
-                        tile.distance = 1 + t.distance;
-                        process.Enqueue(tile);
+                        if (!tile.visited)
+                        {
+                            tile.parent = t;
+                            tile.visited = true;
+                            tile.distance = 1 + t.distance;
+                            process.Enqueue(tile);
+                        }
                     }
+
+
                 }
             }
-        }        
+        }
     }
 
     public void MoveToTile(Tile tile)

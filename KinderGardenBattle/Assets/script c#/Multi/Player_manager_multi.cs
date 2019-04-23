@@ -46,12 +46,12 @@ public class Player_manager_multi : Generale_Attaque_multi
              //appelle les fonction si ça bouge pas 
             if (Want_to_move)
             {
-                FindSelectableTiles();
+                FindSelectableTiles(move);
                 CheckMouse();
             }
             if (Want_to_fight)
             {
-                FindSelectableTiles();
+                FindSelectableTiles(gameObject.GetComponent<Perso_Generique_multi>().Distance);
                 //Debug.Log(is_turn);
                 Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
                 Tile current = GetTargetTile(gameObject);
@@ -67,20 +67,22 @@ public class Player_manager_multi : Generale_Attaque_multi
                 current.triplepute = false;
             }
         }
+        
+        if (move == 0 && !has_move)
+        {
+            Want_to_move = false;
+            Resetalltiles();
+            has_move = true;
+        }
+              
+    }
+    private void LateUpdate()
+    {
         if (moving)
         {
             Resetalltiles();
             Move();
         }
-        else
-        {
-            if (move == 0 && !has_move)
-            {
-                Want_to_move = false;
-                Resetalltiles();
-                has_move = true;
-            }
-        }        
     }
 
     public void GetTarget(int atk)
