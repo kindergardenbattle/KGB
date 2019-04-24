@@ -406,6 +406,8 @@ GameObject:
   - component: {fileID: 3261106349436428982}
   - component: {fileID: 7991173488308540787}
   - component: {fileID: 2087480450140337915}
+  - component: {fileID: 7518766288784220960}
+  - component: {fileID: 2659529547320417940}
   m_Layer: 0
   m_Name: Playermulti
   m_TagString: Player
@@ -539,6 +541,7 @@ MonoBehaviour:
   OwnershipTransfer: 0
   ObservedComponents:
   - {fileID: 6471483198931827728}
+  - {fileID: 2659529547320417940}
   viewIdField: 0
   InstantiationId: 1
   isRuntimeInstantiated: 0
@@ -561,6 +564,7 @@ MonoBehaviour:
   moveSpeed: 2
   jumpVelocity: 4.5
   actualTargetTile: {fileID: 0}
+  anim: {fileID: 0}
   Want_to_fight: 0
   Want_to_move: 0
   is_turn: 0
@@ -593,6 +597,81 @@ MonoBehaviour:
   ATK_distance: 0
   classe: 0
   PlayerMove: {fileID: 0}
+--- !u!114 &7518766288784220960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465666355052271903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680154ec06f44032b7b5e689d4d9fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  course: {fileID: 8300000, guid: b5d50b90d90ea46479914495adf023d4, type: 3}
+  ouille: {fileID: 8300000, guid: bceded12802cbe14b9077191466772a6, type: 3}
+  magie: {fileID: 8300000, guid: b9b2f25214621854997d52b60eab5677, type: 3}
+  piou: {fileID: 8300000, guid: 9e07a30b0e2c1e44b976f5d026c803d4, type: 3}
+  mort: {fileID: 8300000, guid: 5f00aa69751207d40a399d833ca50b26, type: 3}
+  lancepierre: {fileID: 8300000, guid: 98b1e4ea7dd0e8c4790f9da8b4ac3ac0, type: 3}
+  AudioS: {fileID: 0}
+--- !u!114 &2659529547320417940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4465666355052271903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b8c4a61274f60b4ea5fb4299cfdbf14, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShowLayerWeightsInspector: 1
+  ShowParameterInspector: 1
+  m_SynchronizeParameters:
+  - Type: 4
+    SynchronizeType: 1
+    Name: "D\xE9placement"
+  - Type: 4
+    SynchronizeType: 1
+    Name: Baton_Magique
+  - Type: 4
+    SynchronizeType: 1
+    Name: "\xE9p\xE9e 1 main"
+  - Type: 4
+    SynchronizeType: 1
+    Name: Lance Pierre
+  - Type: 4
+    SynchronizeType: 1
+    Name: "D\xE9gat"
+  - Type: 4
+    SynchronizeType: 1
+    Name: Caisse
+  - Type: 4
+    SynchronizeType: 1
+    Name: Flingue
+  - Type: 4
+    SynchronizeType: 1
+    Name: Mort
+  - Type: 4
+    SynchronizeType: 1
+    Name: "\xE9p\xE9e 2 main"
+  - Type: 9
+    SynchronizeType: 1
+    Name: epee 2 main
+  - Type: 9
+    SynchronizeType: 1
+    Name: Degat
+  - Type: 9
+    SynchronizeType: 1
+    Name: lance pierre
+  m_SynchronizeLayers:
+  - SynchronizeType: 1
+    LayerIndex: 0
+  - SynchronizeType: 1
+    LayerIndex: 1
 --- !u!1 &4674123637496557536
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,7 +39,7 @@ public class Generale_Attaque : TacticsMove
             if (Physics.Raycast(ray, out hit, 25.0f))
             {    Debug.Log("hit");
                 Debug.Log(atkable);
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (atkable))
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")) //&& (!atkable))
                 {
 
                     GameObject npc = hit.transform.gameObject;

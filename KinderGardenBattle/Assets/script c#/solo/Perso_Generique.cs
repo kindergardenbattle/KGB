@@ -201,10 +201,12 @@ public class Perso_Generique : MonoBehaviour
     private void Start()
     {
         SetClasse(classe);
+        Hp = Max_hp;
         if (gameObject.tag=="Player")
         {
             PlayerMove = gameObject.GetComponent<PlayerMove>();
             PlayerMove.move = (int)Pm;
+            PlayerMove.max_move = (int)Pm;
         }
     }
 

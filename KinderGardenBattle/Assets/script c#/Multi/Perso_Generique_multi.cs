@@ -137,6 +137,8 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     {
         int penis = Convert.ToInt32(this.Hp - this.Def * atk);
         Debug.Log("HP avant :" + Hp);
+        Animator anim = gameObject.GetComponent<TacticsMove_multi>().anim;
+        anim.SetTrigger("Degat");
         Hp = penis;
         Debug.Log("HP aprés :" + Hp);
     }

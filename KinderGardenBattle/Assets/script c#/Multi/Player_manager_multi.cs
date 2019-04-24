@@ -66,6 +66,7 @@ public class Player_manager_multi : Generale_Attaque_multi
     }
     private void LateUpdate()
     {
+        anim.SetBool("Déplacement", moving);
         if (moving)
         {
             //Resetalltiles();
@@ -83,6 +84,7 @@ public class Player_manager_multi : Generale_Attaque_multi
             GetCurrentTile();
             current.triplepute = true;
             atkable = current.checkporté(current, classe.Distance, false);
+            anim.SetTrigger("epee 2 main");
             GetTarget((int)classe.Atk);
             current.triplepute = false;
         }

@@ -22,8 +22,11 @@ public class NPCMove : TacticsMove
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
+        
+
+        
         GetCurrentTile();
         current = GetTargetTile(npc);
        
@@ -46,10 +49,11 @@ public class NPCMove : TacticsMove
         }
         else
         {
-            //Move();
+            Move();
 
         }
     }
+    
 
     void CalculatePath()
     {
