@@ -119,11 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 14d73c2be166b594d95ba00839ccdcd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   is_turn: 1
-=======
-  turn: 1
->>>>>>> CHIBREDESINGE
   moving: 0
   move: 3
   jumpHeight: 2
@@ -142,11 +138,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2aad065545539f1468f84cbd030120dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   is_turn: 1
-=======
-  turn: 1
->>>>>>> CHIBREDESINGE
   moving: 0
   move: 5
   jumpHeight: 2
@@ -224,7 +216,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3f1f21a749e047438534ae28bd37c45, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-<<<<<<< HEAD
   speed: 2
 --- !u!114 &4359297298570332028
 MonoBehaviour:
@@ -239,19 +230,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &124717412751603890
-=======
-  ObservedComponentsFoldoutOpen: 1
-  Group: 0
-  prefixField: -1
-  Synchronization: 3
-  OwnershipTransfer: 0
-  ObservedComponents:
-  - {fileID: 1832482872307859502}
-  viewIdField: 0
-  InstantiationId: 2
-  isRuntimeInstantiated: 0
---- !u!114 &1612319635
->>>>>>> CHIBREDESINGE
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
