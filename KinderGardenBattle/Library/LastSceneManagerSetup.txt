@@ -1,4 +1,0 @@
-sceneSetups:
-- path: Assets/script c#/Scenes/Game_multi(1).unity
-  isLoaded: 1
-  isActive: 1
