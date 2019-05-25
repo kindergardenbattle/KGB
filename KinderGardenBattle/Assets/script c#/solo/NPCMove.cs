@@ -22,8 +22,11 @@ public class NPCMove : TacticsMove
     }
 
     // Update is called once per frame
-    void Update()
+   void Update()
     {
+        
+
+        
         GetCurrentTile();
         current = GetTargetTile(npc);
        
@@ -46,21 +49,22 @@ public class NPCMove : TacticsMove
         }
         else
         {
-            //Move();
+            Move();
 
         }
     }
+    
 
     void CalculatePath()
     {
         targetTile = GetTargetTile(target);
         FindPath(targetTile);
     }
-
+    
     void FindNearestTarget()
     {
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
-
+        Debug.Log(targets.Length);
         GameObject nearest = null;
         float distance = Mathf.Infinity;
 

@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 1675537454}
   - component: {fileID: 1675537453}
   - component: {fileID: 7379414336036751042}
+  - component: {fileID: 1675537452}
   m_Layer: 0
   m_Name: Playersolo
   m_TagString: Player
@@ -51,7 +52,7 @@ Animator:
   m_GameObject: {fileID: 1675537451}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 5a4a1c610d2856a409bea7c900dd4eb5, type: 3}
-  m_Controller: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e142ea3d1ab331342b0c8aa1cf92b911, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -124,6 +125,7 @@ MonoBehaviour:
   jumpVelocity: 4.5
   actualTargetTile: {fileID: 0}
   anim: {fileID: 0}
+  cible: 0
 --- !u!114 &1675537453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -136,9 +138,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2c64c0a384651f243b9047cec30468cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  distance: 0
+  DebutTour: 0
+  turn: 0
+  moving: 0
+  max_move: 3
+  move: 0
+  jumpHeight: 2
+  moveSpeed: 2
+  jumpVelocity: 4.5
+  actualTargetTile: {fileID: 0}
+  anim: {fileID: 0}
+  atkable: 0
   bascule: 0
   bascule2: 1
+  current: {fileID: 0}
+  joueur: {fileID: 0}
+  boolquichamboule: 0
+  classe: {fileID: 0}
   boolene: 1
 --- !u!114 &7379414336036751042
 MonoBehaviour:
@@ -163,7 +179,27 @@ MonoBehaviour:
   vivant: 1
   selection: 0
   ATK_distance: 0
-  classe: 7
+  classe: 2
+  PlayerMove: {fileID: 0}
+--- !u!114 &1675537452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1675537451}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 680154ec06f44032b7b5e689d4d9fe5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  course: {fileID: 8300000, guid: b5d50b90d90ea46479914495adf023d4, type: 3}
+  ouille: {fileID: 8300000, guid: bceded12802cbe14b9077191466772a6, type: 3}
+  magie: {fileID: 8300000, guid: b9b2f25214621854997d52b60eab5677, type: 3}
+  piou: {fileID: 8300000, guid: 9e07a30b0e2c1e44b976f5d026c803d4, type: 3}
+  mort: {fileID: 8300000, guid: 5f00aa69751207d40a399d833ca50b26, type: 3}
+  lancepierre: {fileID: 8300000, guid: 98b1e4ea7dd0e8c4790f9da8b4ac3ac0, type: 3}
+  AudioS: {fileID: 0}
 --- !u!1 &23707723160871987
 GameObject:
   m_ObjectHideFlags: 0

@@ -62,29 +62,24 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
         switch (Klasse)
         {
             case Classe.GUERRIER:
-                Distance = 1;
-                Atk = 100;
-                ATK_distance = 0;
+                Atk = 30;
                 Def = 0.7;
-                Max_hp = 50;
+                Max_hp = 200;
                 Pm = 5;
                 Mana = 0;
+                Distance = 1;
                 break;
             case Classe.GOD:
-                Distance = 1;
                 Atk = 1000;
-                ATK_distance = 0;
                 Def = 0.01;
                 Max_hp = 1000;
                 Pm = 100;
-                Mana = 1000;                
+                Mana = 1000;
                 break;
             case Classe.TANK:
-                Distance = 1;
                 Atk = 15;
-                ATK_distance = 0;
                 Def = 0.5;
-                Max_hp = 100;
+                Max_hp = 300;
                 Pm = 2;
                 Mana = 0;
                 break;
@@ -93,46 +88,43 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
                 Atk = 10;
                 ATK_distance = 30;
                 Def = 0.80;
-                Max_hp = 75;
+                Max_hp = 180;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.HEALER:
-                Distance = 3;
                 Atk = 10;
-                ATK_distance = 10;
                 Def = 0.80;
-                Max_hp = 75;
+                Max_hp = 160;
                 Pm = 7;
                 Mana = 0;
                 break;
             case Classe.PIRATE:
                 Distance = 2;
-                Atk = 20;
                 ATK_distance = 20;
+                Atk = 20;
                 Def = 0.90;
-                Max_hp = 75;
+                Max_hp = 160;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.NINJA:
-                Distance = 1;
                 Atk = 50;
-                ATK_distance = 0;
-                Max_hp = 60;
+                Max_hp = 100;
                 Def = 1;
                 Pm = 5;
                 Mana = 0;
                 break;
             case Classe.MAGE:
-                Distance = 5;
                 Atk = 10;
-                ATK_distance = 30; // + alteration de la cible ( genre psn ou brulé 
+                ATK_distance = 20; // + alteration de la cible ( genre psn ou brulé 
                 Def = 1;
-                Max_hp = 60;
+                Distance = 4;
+                Max_hp = 80;
                 Pm = 5;
                 Mana = 100;
                 break;
+
         }
         Hp = Max_hp < Hp ? Max_hp : Hp;
 
@@ -145,6 +137,8 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     {
         int penis = Convert.ToInt32(this.Hp - this.Def * atk);
         Debug.Log("HP avant :" + Hp);
+        Animator anim = gameObject.GetComponent<TacticsMove_multi>().anim;
+        anim.SetTrigger("Degat");
         Hp = penis;
         Debug.Log("HP aprés :" + Hp);
     }

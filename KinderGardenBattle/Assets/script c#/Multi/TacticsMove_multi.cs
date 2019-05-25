@@ -32,12 +32,15 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
     public Tile actualTargetTile;
 
+    public Animator anim;
+
     protected void Init()
     {
         move = max_move;
         tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
         // TurnManager.AddUnit(this);// pour le prochain tours ( comme y'a pas d ia osef )
+        anim = GetComponent<Animator>();
     }
     public void GetCurrentTile() 
     {
@@ -78,7 +81,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
     public void Resetalltiles()
     {
         foreach (Tile t in selectableTiles)
-            t.Reset();
+            t.Reset(t.current);
     }
 
     public void FindSelectableTiles(double bite) // parcours largeur de la list queue faite plutot 
@@ -190,7 +193,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
         foreach (Tile tile in selectableTiles)
         {
-            tile.Reset();
+            tile.Reset(false);
         }
 
         selectableTiles.Clear();

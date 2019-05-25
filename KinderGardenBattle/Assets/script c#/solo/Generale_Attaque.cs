@@ -39,10 +39,18 @@ public class Generale_Attaque : TacticsMove
             if (Physics.Raycast(ray, out hit, 25.0f))
             {    Debug.Log("hit");
                 Debug.Log(atkable);
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC") && (atkable))
+<<<<<<< HEAD
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")&& (atkable))
+=======
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")) //&& (!atkable))
+>>>>>>> c5795544b84ff66fa40d3c438fab030f00db778c
                 {
+                    
 
                     GameObject npc = hit.transform.gameObject;
+                   
+
+                    
                     if (classe.Distance == 1)
                         anim.SetTrigger("epee 2 main");
                     else

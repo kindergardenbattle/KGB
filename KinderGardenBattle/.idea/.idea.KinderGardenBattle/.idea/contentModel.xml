@@ -368,6 +368,7 @@
             <e p="NPC.cs" t="Include" />
             <e p="NPCMove.cs" t="Include" />
             <e p="Perso_Generique.cs" t="Include" />
+            <e p="Player_Stats.cs" t="Include" />
             <e p="PlayerCaracteristique.cs" t="Include" />
             <e p="PlayerMove.cs" t="Include" />
             <e p="raycast.cs" t="Include" />

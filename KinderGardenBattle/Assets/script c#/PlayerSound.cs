@@ -17,10 +17,17 @@ namespace a
         {
             
         }
+        private void Update()
+        {
+            if(AudioS == null)
+            {
+                GameObject camera = GameObject.FindGameObjectWithTag("MainCamera");
+                AudioS = camera.GetComponent<AudioSource>();
+            }
+        }
 
         void start()
         {
-            
         }
 
         void Course()

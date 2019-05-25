@@ -17,6 +17,18 @@ public class Perso_Generique : MonoBehaviour
         GOD
     }
 
+    public int ID;
+
+    public void Assignate_ID(GameManagerSolo manager)
+    {
+        if (manager.J1)
+        {
+            ID = 1;
+            manager.J1 = !manager.J1;
+            
+        }
+    }
+
     public string ClasseToString()
     {
         switch (classe)
@@ -84,7 +96,7 @@ public class Perso_Generique : MonoBehaviour
             break;
             case Classe.FRONDEUR:
             Distance = 3;
-            Atk = 10;
+            Atk = 30;
             ATK_distance = 30;
             Def = 0.80;
             Max_hp = 180;
@@ -201,10 +213,12 @@ public class Perso_Generique : MonoBehaviour
     private void Start()
     {
         SetClasse(classe);
+        Hp = Max_hp;
         if (gameObject.tag=="Player")
         {
             PlayerMove = gameObject.GetComponent<PlayerMove>();
             PlayerMove.move = (int)Pm;
+            PlayerMove.max_move = (int)Pm;
         }
     }
 

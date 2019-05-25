@@ -94,11 +94,13 @@ void Start ()
 	    }*/
 	}
 
-    public void Reset()
+    public void Reset(bool curent)
     {
         adjacencyList.Clear();
 	    triplepute = false;
-        current = false;
+	    
+	    current = curent;
+	    
         target = false;
         selectable = false;
 
@@ -111,7 +113,7 @@ void Start ()
 
     public void FindNeighbors(float jumpHeight, Tile target)
     {
-        Reset();
+        Reset(false);
 
         CheckTile(Vector3.forward, jumpHeight, target); // up
         CheckTile(-Vector3.forward, jumpHeight, target);// down
