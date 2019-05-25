@@ -84,7 +84,6 @@ public class Player_manager_multi : Generale_Attaque_multi
             GetCurrentTile();
             current.triplepute = true;
             atkable = current.checkporté(current, classe.Distance, false);
-            anim.SetTrigger("epee 2 main");
             GetTarget((int)classe.Atk);
             current.triplepute = false;
         }
@@ -113,6 +112,7 @@ public class Player_manager_multi : Generale_Attaque_multi
                         Debug.Log(cara_cible);
                         Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                         Debug.Log(cara_cible.Hp);
+                        anim.SetTrigger("epee 2 main");
                         cara_cible.NewPV(atk);
                         Debug.Log(cara_cible.Hp);                    //return cara_cible;
                         has_attack = true;
