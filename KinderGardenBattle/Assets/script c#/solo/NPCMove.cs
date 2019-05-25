@@ -10,6 +10,7 @@ public class NPCMove : TacticsMove
     public Tile current;
     public bool ChrisBool = false;
     private GameObject npc;
+    private GameManagerSolo GM;
 
 
     // Use this for initialization
@@ -18,6 +19,7 @@ public class NPCMove : TacticsMove
         Init();
         anim = GetComponent<Animator>();
         npc = GameObject.FindGameObjectWithTag("NPC");
+        GM=FindObjectOfType<GameManagerSolo>();
 
     }
 
@@ -37,34 +39,37 @@ public class NPCMove : TacticsMove
         {
             return;
         }
+        
+        anim.SetBool("Déplacement",moving);
 
-        if (!moving)
+        if (moving==false)
         {
             FindNearestTarget();
             CalculatePath();
             FindSelectableTiles(npc.GetComponent<Perso_Generique>().Pm);
             Debug.Log("tours ia");
 
-
         }
         else
         {
             Move();
-
         }
+        if (!moving)
+            GM.FinDeTour();
     }
     
 
     void CalculatePath()
     {
         targetTile = GetTargetTile(target);
+        Debug.Log(targetTile.name);
         FindPath(targetTile);
     }
     
     void FindNearestTarget()
     {
         GameObject[] targets = GameObject.FindGameObjectsWithTag("Player");
-        Debug.Log(targets.Length);
+        
         GameObject nearest = null;
         float distance = Mathf.Infinity;
 
@@ -78,7 +83,8 @@ public class NPCMove : TacticsMove
                 nearest = obj;
             }
         }
-
+        
         target = nearest;
+        Debug.Log(target.tag);
     }
 }

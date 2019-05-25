@@ -33,13 +33,10 @@ public class PlayerMove : TacticsMove
         //{
         //	return;	
         //}
-<<<<<<< HEAD
-        //if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
-            //Resetalltiles();
-=======
+
         if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
             Resetalltiles();
->>>>>>> c5795544b84ff66fa40d3c438fab030f00db778c
+
         if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
         {
 

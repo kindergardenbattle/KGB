@@ -39,11 +39,10 @@ public class Generale_Attaque : TacticsMove
             if (Physics.Raycast(ray, out hit, 25.0f))
             {    Debug.Log("hit");
                 Debug.Log(atkable);
-<<<<<<< HEAD
+
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")&& (atkable))
-=======
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")) //&& (!atkable))
->>>>>>> c5795544b84ff66fa40d3c438fab030f00db778c
+
+
                 {
                     
 
@@ -143,8 +142,10 @@ public class Generale_Attaque : TacticsMove
         GetCurrentTile();
         current = GetTargetTile(joueur);
         current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
-        
-        atkable = current.checkporté(current,classe.Distance,false);
+        Debug.Log(atkable);
+        Debug.Log("Bite");
+        atkable = true;//current.checkporté(current,classe.Distance,false);
+        Debug.Log(atkable);
         GetTarget(10);
         current.triplepute = false;
 

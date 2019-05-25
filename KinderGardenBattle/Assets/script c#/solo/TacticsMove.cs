@@ -223,21 +223,16 @@ public class TacticsMove : MonoBehaviour
             //Calculate the unit's position on top of the target tile
             target.y += halfHeight + t.GetComponent<Collider>().bounds.extents.y;
 
-            if (Vector3.Distance(transform.position, target) >= 0.05f)
+            if (Vector3.Distance(transform.position, target) >= 0.005f)
             {
-                bool jump = transform.position.y != target.y;
-
-                if (jump)
-                {
-                    Jump(target);
-                }
-                else
-                {
+               
+               
                     CalculateHeading(target);
                     SetHorizotalVelocity();
-                }
+                
 
                 //Locomotion
+                
                 transform.forward = heading;
                 transform.position += velocity * Time.deltaTime;
             }
@@ -253,8 +248,8 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
             move = 0;
-
-            //TurnManager.EndTurn();
+            
+            Debug.Log("nop");
         }
     }
 
@@ -434,6 +429,7 @@ public class TacticsMove : MonoBehaviour
         
         currentTile.h = Vector3.Distance(currentTile.transform.position, target.transform.position);
         currentTile.f = currentTile.h;
+        Debug.Log(openList.Count);
 
         while (openList.Count > 0)
         {

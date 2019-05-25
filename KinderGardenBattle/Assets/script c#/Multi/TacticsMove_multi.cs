@@ -358,7 +358,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
         
         currentTile.h = Vector3.Distance(currentTile.transform.position, target.transform.position);
         currentTile.f = currentTile.h;
-
+        Debug.Log(openList.Count);
         while (openList.Count > 0)
         {
             Tile t = FindLowestF(openList);
