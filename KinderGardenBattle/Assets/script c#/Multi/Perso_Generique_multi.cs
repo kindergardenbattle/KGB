@@ -133,8 +133,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     public void NewPV(int atk)
     {
         photonView.RPC("Lel", RpcTarget.All, atk);
-        Animator anim = gameObject.GetComponent<TacticsMove_multi>().anim;
-        anim.SetTrigger("Degat");
+        
     }
 
     [PunRPC]
@@ -144,6 +143,8 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
         Debug.Log("HP avant :" + Hp);
         Hp = penis;
         Debug.Log("HP aprés :" + Hp);
+        Animator anim = gameObject.GetComponent<TacticsMove_multi>().anim;
+        anim.SetTrigger("Degat");
     }
 
     public void FindTarget()

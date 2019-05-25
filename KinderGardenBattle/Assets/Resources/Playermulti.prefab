@@ -662,7 +662,7 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: epee 2 main
   - Type: 9
-    SynchronizeType: 1
+    SynchronizeType: 0
     Name: Degat
   - Type: 9
     SynchronizeType: 1
