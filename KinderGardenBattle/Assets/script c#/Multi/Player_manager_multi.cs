@@ -66,7 +66,8 @@ public class Player_manager_multi : Generale_Attaque_multi
     }
     private void LateUpdate()
     {
-        anim.SetBool("Déplacement", moving);
+        if(is_turn)
+            anim.SetBool("Déplacement", moving);
         if (moving)
         {
             //Resetalltiles();
