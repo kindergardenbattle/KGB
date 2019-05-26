@@ -81,7 +81,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
     public void Resetalltiles()
     {
         foreach (Tile t in selectableTiles)
-            t.Reset();
+            t.Reset(t.current);
     }
 
     public void FindSelectableTiles(double bite) // parcours largeur de la list queue faite plutot 
@@ -193,7 +193,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
 
         foreach (Tile tile in selectableTiles)
         {
-            tile.Reset();
+            tile.Reset(false);
         }
 
         selectableTiles.Clear();
@@ -358,7 +358,7 @@ public class TacticsMove_multi : MonoBehaviourPunCallbacks
         
         currentTile.h = Vector3.Distance(currentTile.transform.position, target.transform.position);
         currentTile.f = currentTile.h;
-
+        Debug.Log(openList.Count);
         while (openList.Count > 0)
         {
             Tile t = FindLowestF(openList);

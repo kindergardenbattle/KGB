@@ -17,6 +17,9 @@ public class Perso_Generique : MonoBehaviour
         GOD
     }
 
+    
+    
+
     public string ClasseToString()
     {
         switch (classe)

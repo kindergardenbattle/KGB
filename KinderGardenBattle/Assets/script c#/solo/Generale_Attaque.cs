@@ -37,12 +37,18 @@ public class Generale_Attaque : TacticsMove
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
-            {    Debug.Log("hit");
-                Debug.Log(atkable);
-                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")) //&& (!atkable))
+            {    
+
+                if (hit.transform != null && hit.transform.gameObject.CompareTag("NPC")&& (atkable))
+
+
                 {
+                    
 
                     GameObject npc = hit.transform.gameObject;
+                   
+
+                    
                     if (classe.Distance == 1)
                         anim.SetTrigger("epee 2 main");
                     else
@@ -120,7 +126,8 @@ public class Generale_Attaque : TacticsMove
         // {
         //     return;
         //  }
-        if (moving){
+        if (moving)
+        {
             return;
         }
         else if (!GameManagerSolo.ATK_Button)
@@ -136,7 +143,8 @@ public class Generale_Attaque : TacticsMove
         current = GetTargetTile(joueur);
         current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
         
-        atkable = current.checkporté(current,classe.Distance,false);
+        atkable = true;//current.checkporté(current,classe.Distance,false);
+        
         GetTarget(10);
         current.triplepute = false;
 

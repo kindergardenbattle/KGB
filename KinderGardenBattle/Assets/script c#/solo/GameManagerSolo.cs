@@ -9,18 +9,75 @@ public class GameManagerSolo : MonoBehaviour
     public static bool ATK_Button;
     public static bool is_in_menu = false;
     public Perso_Generique vis;
-    public GameObject Stat;
+    public    GameObject Stat;
 
     private void Start()
     {
         Move_Button = false;
         ATK_Button = false;
         TeamTurn = Team.Blue;
+        J1 = true;
+        J2 = J3 = J4 = false;
     }
 
     public enum Team
     {
         Blue,Red
+    }
+    
+    public   static bool J1;
+    public  static bool J2;
+    public  static bool J3;
+    public  static bool J4;
+
+    public   void QuelJoueur()
+    {
+        if (J1)
+        {
+            J1 = J2;
+            J2 = true;
+        }
+
+        else
+        {
+            if (J2)
+            {
+                J2 = !J2;
+                J3 = true;
+            }
+            else
+            {
+                if (J3)
+                {
+                    J3 = !J3;
+                    J4 = true;
+                }
+                else
+                {
+                    J4 = false;
+                    J1 = true;
+                }
+            }
+        }
+        
+    }
+
+    public  static bool   NomDuJoeurVersUneBool(string name)
+    {
+        switch (name)
+        {
+                case "1":
+                    return J1;
+                case "2":
+                    return J2;
+                case "3":
+                    return J3;
+                case"4":
+                    return J4;
+                default:
+                    return false;
+                
+        }
     }
     public static string TeamtoString(Team team)
     {
@@ -110,13 +167,26 @@ public class GameManagerSolo : MonoBehaviour
         TeamTurn = Color;       
     }
 
-    public void FinDeTour()
+    public void  FinDeTour()
     {
-        TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
-        Move_Button = false;
-        ATK_Button = false;
-        Stat.SetActive(false);
-        Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));     
+        
+       
+            TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
+            Move_Button = false;
+            ATK_Button = false;
+            Stat.SetActive(false);
+            Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));
+
+        GameObject[] liste = GameObject.FindGameObjectsWithTag("Player");
+        Debug.Log(liste.Length);
+        foreach (GameObject VARIABLE in liste)
+        {
+            PlayerMove script = VARIABLE.GetComponent<PlayerMove>();
+            script.hasmooved = false;
+        }
+
+
+
     }
     
 
