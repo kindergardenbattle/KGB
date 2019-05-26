@@ -11,12 +11,15 @@ public class PlayerMove : TacticsMove
 {
     private bool la_seboul;
     public bool cible;
+    public bool hasmooved;
+   
 
 
     void Start()
     {
         Init();
         la_seboul = false;
+        hasmooved = false;
     }
 
     public void button()
@@ -33,34 +36,52 @@ public class PlayerMove : TacticsMove
         //{
         //	return;	
         //}
-        if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
-            Resetalltiles();
-        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
+        if (GameManagerSolo.NomDuJoeurVersUneBool(gameObject.name))
         {
 
-            Debug.DrawRay(transform.position, transform.forward);
 
-
-
-            anim.SetBool("Déplacement", moving);
-            if (!moving)
+            if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
             {
-                if (GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
-                {
-                    FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Pm); //appelle les fonction si ça bouge pas 
-                   CheckMouse();   
-                }
-
-                if (!GameManagerSolo.Move_Button && GameManagerSolo.ATK_Button)
-                {
-                    FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Distance);
-                }
                 
+                Resetalltiles();
             }
-            if (!moving && DebutTour == false)
+            
+
+            if (hasmooved==false)
             {
-                return;
+                
+
+                Debug.DrawRay(transform.position, transform.forward);
+
+
+
+                anim.SetBool("Déplacement", moving);
+                if (!moving)
+                {
+                    
+                    if (GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
+                    {
+                        FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Pm); //appelle les fonction si ça bouge pas 
+                        CheckMouse();
+                    }
+                }
+            
+                if (!moving && DebutTour == false)
+                {
+                    hasmooved = true;
+                    Resetalltiles();
+                }
             }
+            
+            if (!GameManagerSolo.Move_Button && GameManagerSolo.ATK_Button)
+            {
+                FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Distance);
+            }
+            
+        }
+        else
+        {
+            return;
         }
     }
 

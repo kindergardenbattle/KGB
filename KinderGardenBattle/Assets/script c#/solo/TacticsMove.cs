@@ -42,7 +42,7 @@ public class TacticsMove : MonoBehaviour
     {
         move = max_move;
         DebutTour = true;
-        tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
+            tiles = GameObject.FindGameObjectsWithTag("Tile"); //cases
         halfHeight = GetComponent<Collider>().bounds.extents.y; //y de la cases
         anim = GetComponent<Animator>();
 
@@ -80,8 +80,6 @@ public class TacticsMove : MonoBehaviour
                         process.Enqueue(tile);
                     }
                 }
-
-                    
             }
         }
             
@@ -93,7 +91,6 @@ public class TacticsMove : MonoBehaviour
     {
         currentTile = GetTargetTile(gameObject);
         currentTile.current = true;
-
     }
 
     public void GetNPCtile()
@@ -101,9 +98,6 @@ public class TacticsMove : MonoBehaviour
         npc = Getnpc(gameObject);
         npc.triplepute = true;
     }
-
-    
-
     public Tile Getnpc(GameObject target)
     {
         RaycastHit hit; // pointeur du clic 
@@ -120,7 +114,6 @@ public class TacticsMove : MonoBehaviour
     public Tile GetTargetTile(GameObject target)
     {
         
-        
         RaycastHit hit; // pointeur du clic 
         Tile tile = null;
 
@@ -129,13 +122,15 @@ public class TacticsMove : MonoBehaviour
             tile = hit.collider.GetComponent<Tile>();
         }
 
-        if (target.tag=="NPC")
+        if (target.tag=="NPC"&&target.tag=="Player")
         {
             tile.walkable = false;
             tile.current = true;
             ataquable = true;
 
         }
+
+        
 
         return tile;
     }
@@ -152,14 +147,18 @@ public class TacticsMove : MonoBehaviour
     public void Resetalltiles()
     {
         foreach (Tile t in selectableTiles)
-            t.Reset();
+        {
+            t.Reset(t.current); 
+        }
+            
     }
 
     public void FindSelectableTiles( double bite) // parcours largeur de la list queue faite plutot 
     {
 
-        if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
-        {
+        //if (GameManagerSolo.TeamTurn == PlayerCaracteristique.TeamJoueur)
+       // {
+           
             ComputeAdjacencyLists(jumpHeight, null);
             GetCurrentTile();
 
@@ -192,7 +191,7 @@ public class TacticsMove : MonoBehaviour
                     
                 }
             }
-        }
+        //}
     }
 
     public void MoveToTile(Tile tile)
@@ -219,21 +218,16 @@ public class TacticsMove : MonoBehaviour
             //Calculate the unit's position on top of the target tile
             target.y += halfHeight + t.GetComponent<Collider>().bounds.extents.y;
 
-            if (Vector3.Distance(transform.position, target) >= 0.05f)
+            if (Vector3.Distance(transform.position, target) >= 0.01f)
             {
-                bool jump = transform.position.y != target.y;
-
-                if (jump)
-                {
-                    Jump(target);
-                }
-                else
-                {
+               
+               
                     CalculateHeading(target);
                     SetHorizotalVelocity();
-                }
+                
 
                 //Locomotion
+                
                 transform.forward = heading;
                 transform.position += velocity * Time.deltaTime;
             }
@@ -249,8 +243,8 @@ public class TacticsMove : MonoBehaviour
             RemoveSelectableTiles();
             moving = false;
             move = 0;
-
-            //TurnManager.EndTurn();
+            
+            
         }
     }
 
@@ -264,7 +258,7 @@ public class TacticsMove : MonoBehaviour
 
         foreach (Tile tile in selectableTiles)
         {
-            tile.Reset();
+            tile.Reset(false);
         }
 
         selectableTiles.Clear();
@@ -420,6 +414,7 @@ public class TacticsMove : MonoBehaviour
     protected void FindPath(Tile target)
     {
         ComputeAdjacencyLists(jumpHeight, target);
+        
         GetCurrentTile();
 
         List<Tile> openList = new List<Tile>();
@@ -429,6 +424,7 @@ public class TacticsMove : MonoBehaviour
         
         currentTile.h = Vector3.Distance(currentTile.transform.position, target.transform.position);
         currentTile.f = currentTile.h;
+        
 
         while (openList.Count > 0)
         {

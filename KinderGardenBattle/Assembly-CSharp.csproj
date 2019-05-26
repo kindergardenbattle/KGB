@@ -475,19 +475,19 @@
       <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Photon3Unity3D">
-      <HintPath>C:/Users/Axel/Documents/GitHub/KGB/KinderGardenBattle/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
+      <HintPath>C:/Users/msi/Desktop/office/KGB-53d1d76ec7f9d547b173034d45d7a88dd7d9261a/KinderGardenBattle/Assets/Photon/PhotonLibs/Photon3Unity3D.dll</HintPath>
     </Reference>
     <Reference Include="websocket-sharp">
-      <HintPath>C:/Users/Axel/Documents/GitHub/KGB/KinderGardenBattle/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
+      <HintPath>C:/Users/msi/Desktop/office/KGB-53d1d76ec7f9d547b173034d45d7a88dd7d9261a/KinderGardenBattle/Assets/Photon/PhotonLibs/WebSocket/websocket-sharp.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Editor">
-      <HintPath>C:/Users/Axel/Documents/GitHub/KGB/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
+      <HintPath>C:/Users/msi/Desktop/office/KGB-53d1d76ec7f9d547b173034d45d7a88dd7d9261a/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.StandardEvents">
-      <HintPath>C:/Users/Axel/Documents/GitHub/KGB/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
+      <HintPath>C:/Users/msi/Desktop/office/KGB-53d1d76ec7f9d547b173034d45d7a88dd7d9261a/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.StandardEvents.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Analytics.Tracker">
-      <HintPath>C:/Users/Axel/Documents/GitHub/KGB/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
+      <HintPath>C:/Users/msi/Desktop/office/KGB-53d1d76ec7f9d547b173034d45d7a88dd7d9261a/KinderGardenBattle/Library/PackageCache/com.unity.analytics@3.2.2/Unity.Analytics.Tracker.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Editor/Data/MonoBleedingEdge/lib/mono/unity/mscorlib.dll</HintPath>
