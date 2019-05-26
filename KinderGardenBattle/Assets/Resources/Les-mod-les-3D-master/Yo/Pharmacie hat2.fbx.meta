@@ -1,36 +1,41 @@
 fileFormatVersion: 2
-guid: 1e0c90f962cf3e741a2d5655b348234e
+guid: 17440f69a57abd34a917a9f2e0e1d539
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: Cube
-    100004: Cube_001
-    100006: Cube_002
-    100008: Cube_003
-    400000: //RootNode
-    400002: Cube
-    400004: Cube_001
-    400006: Cube_002
-    400008: Cube_003
-    2100000: Material_002__800px_COLOURBOX4709566_jpg
-    2100002: Material_003__800px_COLOURBOX4709566_jpg
-    2100004: Material_004__800px_COLOURBOX4709566_jpg
-    2100006: Material_001__800px_COLOURBOX4709566_jpg
-    2300000: Cube
-    2300002: Cube_001
-    2300004: Cube_002
-    2300006: Cube_003
-    3300000: Cube
-    3300002: Cube_001
-    3300004: Cube_002
-    3300006: Cube_003
-    4300000: Cube_003
-    4300002: Cube_002
-    4300004: Cube_001
-    4300006: Cube
-    7400000: Default Take
-    9500000: //RootNode
+    100000: Camera
+    100002: Lamp
+    100004: Lamp.001
+    100006: Lamp.002
+    100008: Lamp.003
+    100010: Lamp.004
+    100012: //RootNode
+    100014: Plane
+    100016: Plane.001
+    400000: Camera
+    400002: Lamp
+    400004: Lamp.001
+    400006: Lamp.002
+    400008: Lamp.003
+    400010: Lamp.004
+    400012: //RootNode
+    400014: Plane
+    400016: Plane.001
+    2000000: Camera
+    2100000: Material.002
+    2100002: Material.001
+    2300000: Plane
+    2300002: Plane.001
+    3300000: Plane
+    3300002: Plane.001
+    4300000: Plane.001
+    4300002: Plane
+    10800000: Lamp
+    10800002: Lamp.001
+    10800004: Lamp.002
+    10800006: Lamp.003
+    10800008: Lamp.004
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -84,7 +89,7 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
     previousCalculatedGlobalScale: 1
-    hasPreviousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -111,7 +116,7 @@ ModelImporter:
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 2
+  animationType: 0
   humanoidOversampling: 1
   additionalBone: 0
   userData: 

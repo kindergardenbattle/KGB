@@ -30,7 +30,7 @@ public class Generale_Attaque : TacticsMove
 
     public void GetTarget(int atk)
     {
-
+        string attaque = "flingue";
         if (Input.GetMouseButtonUp(0))
         {
             Debug.Log("debut get target");
@@ -44,9 +44,43 @@ public class Generale_Attaque : TacticsMove
 
                     GameObject npc = hit.transform.gameObject;
                     if (classe.Distance == 1)
-                        anim.SetTrigger("epee 2 main");
+                    {
+                        switch (classe.classe)
+                        {
+                            case Perso_Generique.Classe.NINJA :
+                                attaque = "Ninja";
+                                break;
+                            case Perso_Generique.Classe.TANK :
+                                attaque = "brute";
+                                break;
+                            case Perso_Generique.Classe.PIRATE :
+                                attaque = "épée 1 main";
+                                break;
+                            case Perso_Generique.Classe.HEALER :
+                                attaque = "malette";
+                                break;
+                            default :
+                                attaque = "epee 2 main";
+                                break;
+                        }
+                        anim.SetTrigger(attaque);
+                    }
                     else
-                        anim.SetTrigger("lance pierre");
+                    {
+                        switch (classe.classe)
+                        {
+                            case Perso_Generique.Classe.PIRATE :
+                                attaque = "flingue";
+                                break;
+                            case Perso_Generique.Classe.MAGE :
+                                attaque = "Baton_Magique";
+                                break;
+                            default :
+                                attaque = "lance pierre";
+                                break;
+                        }
+                        anim.SetTrigger(attaque);
+                    }
                     //manager_cible= npc.GetComponent<GameManagerSolo>();
                     Perso_Generique cara_cible = npc.GetComponent<Perso_Generique>();
                     //cara_cible.SetClasse(cara_cible.classe);
