@@ -23,12 +23,12 @@ public class PlayerMove : TacticsMove
                 (this.transform.position.x - VARIABLE.transform.position.x > -1.5 &&
                  transform.position.z - VARIABLE.transform.position.z > -1.5))
             {
-                Debug.Log("oui");
+                //Debug.Log("oui");
                 CibleRotate = VARIABLE;
                 transform.LookAt(CibleRotate.transform);
             }
         }
-        Debug.Log("le joueur: "+this.name+" a rotate");
+        //Debug.Log("le joueur: "+this.name+" a rotate");
        
     }
 

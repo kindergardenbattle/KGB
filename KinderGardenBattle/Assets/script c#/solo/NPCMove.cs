@@ -81,8 +81,9 @@ public class NPCMove : TacticsMove
        
        if (GameManagerSolo.NomDuNPCVersUneBool(this.name) && findetour==false  && EnemieCaracteristique.TeamEnemie == GameManagerSolo.TeamTurn )
        {
+           Debug.Log("entre dans la boucle 1");
            
-           findetour = false;
+           findetour = true;
            
 
            GetCurrentTile();
@@ -90,7 +91,7 @@ public class NPCMove : TacticsMove
 
 
 
-           Debug.DrawRay(transform.position, transform.forward);
+           
 
            
            
@@ -99,6 +100,7 @@ public class NPCMove : TacticsMove
 
            if (moving == false && DeBuT)
            {
+               Debug.Log("entre ddans la boucle 2");
 
                FindNearestTarget();
                CalculatePath();
@@ -132,8 +134,20 @@ public class NPCMove : TacticsMove
            }
        }
 
+       if (GameManagerSolo.TeamTurn== GameManagerSolo.Team.Blue)
+       {
+           Init();
+           DeBuT = true;
+           findetour = false;
+           DeBuT = true;
+           atk = true;
+           Rotate();
+       }
+
        else
        {
+           findetour = false;
+           
            Rotate();
            return;
        }
