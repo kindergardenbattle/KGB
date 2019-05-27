@@ -11,6 +11,7 @@ public class Generale_Attaque : TacticsMove
     //public GameManagerSolo manager_joueur;
     //public List<Perso_Generique> cara_joueur = new List<Perso_Generique>();
     public bool atkable;
+    public bool hasattacked;
     public bool bascule = false;
     public bool bascule2 = true;
     public Tile current;
@@ -24,6 +25,7 @@ public class Generale_Attaque : TacticsMove
     {
         Init();
         atkable = false;
+        hasattacked = false;
 
     }
 
@@ -164,7 +166,7 @@ public class Generale_Attaque : TacticsMove
         {
             return;
         }
-        else if (!GameManagerSolo.ATK_Button)
+         if (!GameManagerSolo.ATK_Button)
         {
             return;
         }
@@ -180,6 +182,7 @@ public class Generale_Attaque : TacticsMove
         atkable = true;//current.checkporté(current,classe.Distance,false);
         
         GetTarget(10);
+        hasattacked = false;
         current.triplepute = false;
 
     }

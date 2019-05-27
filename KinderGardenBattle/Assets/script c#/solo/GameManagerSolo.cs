@@ -19,6 +19,8 @@ public class GameManagerSolo : MonoBehaviour
         TeamTurn = Team.Blue;
         J1 = true;
         J2 = J3 = J4 = false;
+        npc1 = true;
+        npc2 = npc3 = npc4 = false;
     }
 
     public enum Team
@@ -30,7 +32,58 @@ public class GameManagerSolo : MonoBehaviour
     public  static bool J2;
     public  static bool J3;
     public  static bool J4;
+    public static bool npc1;
+    public static bool npc2;
+    public static bool npc3;
+    public static bool npc4;
 
+    public static void QuelNpc()
+    {
+        if (npc1)
+        {
+            npc1 = npc2;
+            npc2 = true;
+        }
+
+        else
+        {
+            if (npc2)
+            {
+                npc2 = !npc2;
+                npc3 = true;
+            }
+            else
+            {
+                if (npc3)
+                {
+                    npc3 = !J3;
+                    npc4 = true;
+                }
+                else
+                {
+                    npc4 = false;
+                    npc1 = true;
+                }
+            }
+        }
+    }
+
+    public static bool NomDuNPCVersUneBool(string name)
+    {
+        switch (name)
+        {
+                case "npc1":
+                    return npc1;
+                case "npc2":
+                    return npc2;
+                case"npc3":
+                    return npc3;
+                case"npc4":
+                    return npc4;
+                default:
+                    return false;
+        }
+    }
     public   void QuelJoueur()
     {
         if (J1)
@@ -193,15 +246,12 @@ public class GameManagerSolo : MonoBehaviour
         TeamTurn = Color;       
     }
 
-    public void  FinDeTour()
+    public static void NPCFinDeTour()
     {
-        
-       
-            TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
-            Move_Button = false;
-            ATK_Button = false;
-            Stat.SetActive(false);
-            Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));
+        TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
+        Move_Button = false;
+        ATK_Button = false;
+        Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));
 
         GameObject[] liste = GameObject.FindGameObjectsWithTag("Player");
         Debug.Log(liste.Length);
@@ -215,6 +265,35 @@ public class GameManagerSolo : MonoBehaviour
             }
             script.hasmooved = false;
             Debug.Log(script.hasmooved);
+        }
+    }
+
+    public static string printNPC()
+    {
+        return "npc1: " + npc1 + " npc2: " + npc2 + " npc3:" + npc3 + " npc4: " + npc4;
+    }
+    public void  FinDeTour()
+    {
+        
+       
+            TeamTurn = (TeamTurn == Team.Blue) ? Team.Red : Team.Blue;
+            Move_Button = false;
+            ATK_Button = false;
+            Stat.SetActive(false);
+            Debug.Log("Tours de l'equipe : "+ TeamtoString(TeamTurn));
+
+        GameObject[] liste = GameObject.FindGameObjectsWithTag("Player");
+        
+        foreach (GameObject VARIABLE in liste)
+        {
+            PlayerMove script = VARIABLE.GetComponent<PlayerMove>();
+            
+            if (script.hasmooved = true)
+            {
+                script.hasmooved = false;
+            }
+            script.hasmooved = false;
+            
         }
 
 

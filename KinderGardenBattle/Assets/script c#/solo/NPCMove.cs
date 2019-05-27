@@ -12,6 +12,7 @@ public class NPCMove : TacticsMove
     private GameObject npc;
     private GameManagerSolo GM;
     public bool findetour;
+    public bool DeBuT;
 
 
     // Use this for initialization
@@ -21,49 +22,69 @@ public class NPCMove : TacticsMove
         anim = GetComponent<Animator>();
         npc = GameObject.FindGameObjectWithTag("NPC");
         findetour = false;
+        DeBuT = true;
 
     }
 
     // Update is called once per frame
    void Update()
    {
-
-       findetour = false;
-       if (findetour)
+       Debug.Log(GameManagerSolo.printNPC());
+       
+       if (GameManagerSolo.NomDuNPCVersUneBool(this.name) && findetour==false  && EnemieCaracteristique.TeamEnemie == GameManagerSolo.TeamTurn )
        {
-           moving = false;
+           
+           findetour = false;
+           
+
+           GetCurrentTile();
+           current = GetTargetTile(npc);
+
+
+
+           Debug.DrawRay(transform.position, transform.forward);
+
+           
+           
+
+           anim.SetBool("Déplacement",moving);
+
+           if (moving == false && DeBuT)
+           {
+
+               FindNearestTarget();
+               CalculatePath();
+               FindSelectableTiles(npc.GetComponent<Perso_Generique>().Pm);
+               Move();
+               DeBuT = false;
+
+
+           }
+           else
+           {
+               
+               Move();
+               
+               
+              
+           }
+
+           if (!moving && !DeBuT)
+           {
+               anim.SetBool("Déplacement",moving);
+               GameManagerSolo.QuelNpc();
+           }
        }
-        GetCurrentTile();
-        current = GetTargetTile(npc);
-       
        
 
-        Debug.DrawRay(transform.position, transform.forward);
+       
+       else
+       {
+           return;
+       }
+       
 
-        if (EnemieCaracteristique.TeamEnemie != GameManagerSolo.TeamTurn)
-        {
-            return;
-        }
-        
-        anim.SetBool("Déplacement",moving);
-
-        if (moving==false)
-        {
-            
-            FindNearestTarget();
-            CalculatePath();
-            FindSelectableTiles(npc.GetComponent<Perso_Generique>().Pm);
-            Move();
-            
-
-        }
-        else
-        {
-            Move();
-            findetour = true;
-        }
-        
-    }
+   }
     
 
     void CalculatePath()
