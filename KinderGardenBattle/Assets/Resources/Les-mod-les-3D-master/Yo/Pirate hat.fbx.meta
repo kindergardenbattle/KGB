@@ -3,23 +3,12 @@ guid: 47399357746a08446be7533c37dda53b
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Icosphere
-    100002: //RootNode
-    100004: Point
-    100006: Point.001
-    100008: Point.002
-    400000: Icosphere
-    400002: //RootNode
-    400004: Point
-    400006: Point.001
-    400008: Point.002
+    100000: //RootNode
+    400000: //RootNode
     2100000: Material
-    2300000: Icosphere
-    3300000: Icosphere
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Icosphere
-    10800000: Point
-    10800002: Point.001
-    10800004: Point.002
   externalObjects: {}
   materials:
     importMaterials: 1

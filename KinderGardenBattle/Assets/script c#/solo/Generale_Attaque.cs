@@ -54,7 +54,7 @@ public class Generale_Attaque : TacticsMove
                         switch (classe.classe)
                         {
                             case Perso_Generique.Classe.NINJA :
-                                attaque = "Ninja";
+                                attaque = "épée 1 main";
                                 break;
                             case Perso_Generique.Classe.TANK :
                                 attaque = "brute";
