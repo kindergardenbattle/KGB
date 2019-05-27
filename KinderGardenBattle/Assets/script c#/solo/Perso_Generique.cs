@@ -7,7 +7,7 @@ public class Perso_Generique : MonoBehaviour
 {
     public enum Classe 
     {
-        GUERRIER,
+        GUERRIER =0,
         NINJA,
         FRONDEUR,
         TANK,
@@ -128,6 +128,12 @@ public class Perso_Generique : MonoBehaviour
             break;
         }
         Hp = Max_hp < Hp ? Max_hp : Hp;
+        if (gameObject.tag == "Player")
+        {
+            PlayerMove = gameObject.GetComponent<PlayerMove>();
+            PlayerMove.move = (int)Pm;
+            PlayerMove.max_move = (int)Pm;
+        }
     }
 
     public  double NewPV (int atk )
@@ -141,11 +147,11 @@ public class Perso_Generique : MonoBehaviour
             Debug.Log("HP aprés :"+Hp);
         Animator anim = gameObject.GetComponent<TacticsMove>().anim;
         anim.SetTrigger("Degat");
-            return Hp; 
-      
-    
-    
-
+            return Hp;
+    }
+    public void int_to_classe(int i)
+    {
+        classe = (Classe)i;
     }
 
     public  void  FindTarget()
@@ -163,6 +169,7 @@ public class Perso_Generique : MonoBehaviour
     public  void change(Classe Klasse)
     {
         classe = Klasse;
+        classe_precedente = Klasse;
         SetClasse(classe);
     }
 
@@ -204,13 +211,7 @@ public class Perso_Generique : MonoBehaviour
     private void Start()
     {
         SetClasse(classe);
-        Hp = Max_hp;
-        if (gameObject.tag=="Player")
-        {
-            PlayerMove = gameObject.GetComponent<PlayerMove>();
-            PlayerMove.move = (int)Pm;
-            PlayerMove.max_move = (int)Pm;
-        }
+        Hp = Max_hp;        
     }
 
     private void Update()

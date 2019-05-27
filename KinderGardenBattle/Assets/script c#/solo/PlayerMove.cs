@@ -38,7 +38,12 @@ public class PlayerMove : TacticsMove
         //}
         if (GameManagerSolo.NomDuJoeurVersUneBool(gameObject.name))
         {
-
+            if (GameManagerSolo.has_change_classe)
+            {
+                hasmooved = true;
+                gameObject.GetComponent<Perso_Generique>().int_to_classe(GameManagerSolo.futur_classe);
+                GameManagerSolo.has_change_classe = false;
+            }
 
             if (!GameManagerSolo.Move_Button && !GameManagerSolo.ATK_Button)
             {
