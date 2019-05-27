@@ -15,6 +15,7 @@ public class NPCMove : TacticsMove
     public bool DeBuT;
     public TacticsMove Tact;
     public bool atk;
+    public GameObject CibleRotate;
 
      
 
@@ -30,9 +31,27 @@ public class NPCMove : TacticsMove
         findetour = false;
         DeBuT = true;
         atk = true;
+        CibleRotate = null;
 
     }
 
+    void Rotate()
+    {
+        double X=this.transform.position.x;
+        double Y = this.transform.position.y;
+        double Z = this.transform.position.z;
+        GameObject[] listperso = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject VARIABLE in listperso)
+        {
+
+            if (atk&&(this.transform.position.x -VARIABLE.transform.position.x<1.5 && transform.position.z -VARIABLE.transform.position.z<1.5 )&&(this.transform.position.x -VARIABLE.transform.position.x>-1.5 && transform.position.z -VARIABLE.transform.position.z>-1.5 ))
+            {
+                CibleRotate = VARIABLE;
+                transform.LookAt(CibleRotate.transform);
+            }
+        }
+        
+    }
     void ATK()
     {
         bool atk = true;
@@ -45,7 +64,8 @@ public class NPCMove : TacticsMove
 
             if (atk&&(this.transform.position.x -VARIABLE.transform.position.x<1.5 && transform.position.z -VARIABLE.transform.position.z<1.5 )&&(this.transform.position.x -VARIABLE.transform.position.x>-1.5 && transform.position.z -VARIABLE.transform.position.z>-1.5 ))
             {
-                
+                CibleRotate = VARIABLE;
+                transform.LookAt(CibleRotate.transform);
                 VARIABLE.GetComponent<Perso_Generique>()
                     .NewPV((int) this.GetComponent<Perso_Generique>().Atk);
                
@@ -114,6 +134,7 @@ public class NPCMove : TacticsMove
 
        else
        {
+           Rotate();
            return;
        }
        

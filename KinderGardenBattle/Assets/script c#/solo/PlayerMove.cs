@@ -10,16 +10,34 @@ using Photon.Pun;
 public class PlayerMove : TacticsMove
 {
     private bool la_seboul;
+    public GameObject CibleRotate;
     public bool cible;
     public bool hasmooved;
-   
 
+    void Rotate()
+    {    GameObject[] listperso = GameObject.FindGameObjectsWithTag("NPC");
+        foreach (GameObject VARIABLE in listperso)
+        {    
+            if ((this.transform.position.x - VARIABLE.transform.position.x < 1.5 &&
+                 transform.position.z - VARIABLE.transform.position.z < 1.5) &&
+                (this.transform.position.x - VARIABLE.transform.position.x > -1.5 &&
+                 transform.position.z - VARIABLE.transform.position.z > -1.5))
+            {
+                Debug.Log("oui");
+                CibleRotate = VARIABLE;
+                transform.LookAt(CibleRotate.transform);
+            }
+        }
+        Debug.Log("le joueur: "+this.name+" a rotate");
+       
+    }
 
     void Start()
     {
         Init();
         la_seboul = false;
         hasmooved = false;
+        CibleRotate = null;
     }
 
     public void button()
@@ -32,6 +50,7 @@ public class PlayerMove : TacticsMove
     {
         if (GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
         {
+            Rotate();
             GetCurrentTile();
             
         }
@@ -54,7 +73,11 @@ public class PlayerMove : TacticsMove
                 Resetalltiles();
                 GetCurrentTile();
             }
-            
+
+            if (GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
+            {
+                Rotate();
+            }
 
             if (hasmooved==false)
             {
@@ -72,6 +95,7 @@ public class PlayerMove : TacticsMove
                     {
                         FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Pm); //appelle les fonction si ça bouge pas 
                         CheckMouse();
+                        Rotate();
                     }
                 }
             
@@ -85,13 +109,16 @@ public class PlayerMove : TacticsMove
             
             if (!GameManagerSolo.Move_Button && GameManagerSolo.ATK_Button)
             {
+                Rotate();
                 FindSelectableTiles(gameObject.GetComponent<Perso_Generique>().Distance);
             }
             
         }
+        
         else
         {
             GetCurrentTile();
+            Rotate();
             return;
         }
     }
