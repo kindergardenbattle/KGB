@@ -11,6 +11,8 @@ public class GameManagerSolo : MonoBehaviour
     public static bool want_to_change_classe = false;
     public Perso_Generique vis;
     public    GameObject Stat;
+    public static bool has_change_classe = false;
+    public static int futur_classe;
 
     private void Start()
     {
@@ -115,7 +117,15 @@ public class GameManagerSolo : MonoBehaviour
         }
         
     }
+    public void  setfuturclasse(int i)
+    {
+        futur_classe = i;
+    }
 
+    public void confirmclasse()
+    {
+        has_change_classe = true;
+    }
     public  static bool   NomDuJoeurVersUneBool(string name)
     {
         switch (name)
