@@ -24,13 +24,16 @@ public class PlayerMove : TacticsMove
 
     public void button()
     {
+        
         la_seboul = !la_seboul;
     }
+    
     void Update()
     {
         if (GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
         {
-            return;
+            GetCurrentTile();
+            
         }
         //if (!la_seboul)
         //{
@@ -44,6 +47,7 @@ public class PlayerMove : TacticsMove
             {
                 
                 Resetalltiles();
+                GetCurrentTile();
             }
             
 
@@ -82,6 +86,7 @@ public class PlayerMove : TacticsMove
         }
         else
         {
+            GetCurrentTile();
             return;
         }
     }

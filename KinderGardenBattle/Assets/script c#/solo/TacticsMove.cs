@@ -13,7 +13,7 @@ public class TacticsMove : MonoBehaviour
      bool ataquable = true;
 
     Stack<Tile> path = new Stack<Tile>();
-    Tile currentTile;
+     public Tile currentTile;
      Tile npc;
 
     public bool moving = false;
