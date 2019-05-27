@@ -18,6 +18,7 @@ public class Generale_Attaque : TacticsMove
     public GameObject joueur;
     public bool boolquichamboule;
     public Perso_Generique classe;
+    
 
 
 
@@ -97,6 +98,7 @@ public class Generale_Attaque : TacticsMove
                     Debug.Log(cara_cible.Hp);
                     
                     cara_cible.NewPV(atk);
+                    hasattacked = true;
                     Debug.Log(cara_cible.Hp);
                     //return cara_cible;
                 }
@@ -157,6 +159,7 @@ public class Generale_Attaque : TacticsMove
     {
         if (GameManagerSolo.TeamTurn== GameManagerSolo.Team.Red)
         {
+            hasattacked = false;
             return;
         }
         //if (!boolquichamboule)
@@ -174,7 +177,7 @@ public class Generale_Attaque : TacticsMove
 
         if (this.tag=="Player")
         {
-            if (GameManagerSolo.NomDuJoeurVersUneBool(this.name))
+            if (GameManagerSolo.NomDuJoeurVersUneBool(this.name)&&hasattacked==false)
             {
                 joueur = GameObject.FindGameObjectWithTag("NPC");
                 classe = gameObject.GetComponent<Perso_Generique>();
@@ -190,12 +193,17 @@ public class Generale_Attaque : TacticsMove
                 Debug.Log("febhfbdsjbfdjhsbfdhjsfbdjhbfdqksfbdsqjfbdsqfbsqkbfdskj");
                 Debug.Log(classe.classe);
                 Debug.Log(classe.Atk);
-                hasattacked = false;
+               
                 current.triplepute = false;
             }
             else
             {
-                return;
+                Resetalltiles();
+                GetCurrentTile();
+                foreach (Tile VARIABLE in currentTile.adjacencyList)
+                {
+                    VARIABLE.selectable = false;
+                }
             }
         }
 
