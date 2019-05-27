@@ -566,6 +566,21 @@ MonoBehaviour:
   ATK_distance: 0
   classe: 2
   PlayerMove: {fileID: 0}
+  guerrier: {fileID: 0}
+  archer: {fileID: 0}
+  ninja: {fileID: 0}
+  pirate: {fileID: 0}
+  tank: {fileID: 0}
+  healer: {fileID: 0}
+  mage: {fileID: 0}
+  lancepierre: {fileID: 0}
+  batondemage: {fileID: 0}
+  sword: {fileID: 0}
+  nerf: {fileID: 0}
+  bouclier: {fileID: 0}
+  sabre: {fileID: 0}
+  katana: {fileID: 0}
+  grosbouclier: {fileID: 0}
 --- !u!1001 &194226547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1691,6 +1706,21 @@ MonoBehaviour:
   ATK_distance: 0
   classe: 2
   PlayerMove: {fileID: 0}
+  guerrier: {fileID: 0}
+  archer: {fileID: 0}
+  ninja: {fileID: 0}
+  pirate: {fileID: 0}
+  tank: {fileID: 0}
+  healer: {fileID: 0}
+  mage: {fileID: 0}
+  lancepierre: {fileID: 0}
+  batondemage: {fileID: 0}
+  sword: {fileID: 0}
+  nerf: {fileID: 0}
+  bouclier: {fileID: 0}
+  sabre: {fileID: 0}
+  katana: {fileID: 0}
+  grosbouclier: {fileID: 0}
 --- !u!114 &618735048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3215,12 +3245,17 @@ PrefabInstance:
     - target: {fileID: 4842241633885414704, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6229599401455123277, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223290848132957439, guid: 4e304e7c8c70f494d94a6800c690cba3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e304e7c8c70f494d94a6800c690cba3, type: 3}
@@ -3514,6 +3549,21 @@ MonoBehaviour:
   ATK_distance: 0
   classe: 2
   PlayerMove: {fileID: 0}
+  guerrier: {fileID: 0}
+  archer: {fileID: 0}
+  ninja: {fileID: 0}
+  pirate: {fileID: 0}
+  tank: {fileID: 0}
+  healer: {fileID: 0}
+  mage: {fileID: 0}
+  lancepierre: {fileID: 0}
+  batondemage: {fileID: 0}
+  sword: {fileID: 0}
+  nerf: {fileID: 0}
+  bouclier: {fileID: 0}
+  sabre: {fileID: 0}
+  katana: {fileID: 0}
+  grosbouclier: {fileID: 0}
 --- !u!114 &1108776256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4061,6 +4111,21 @@ MonoBehaviour:
   ATK_distance: 0
   classe: 2
   PlayerMove: {fileID: 0}
+  guerrier: {fileID: 0}
+  archer: {fileID: 0}
+  ninja: {fileID: 0}
+  pirate: {fileID: 0}
+  tank: {fileID: 0}
+  healer: {fileID: 0}
+  mage: {fileID: 0}
+  lancepierre: {fileID: 0}
+  batondemage: {fileID: 0}
+  sword: {fileID: 0}
+  nerf: {fileID: 0}
+  bouclier: {fileID: 0}
+  sabre: {fileID: 0}
+  katana: {fileID: 0}
+  grosbouclier: {fileID: 0}
 --- !u!1 &1203278403
 GameObject:
   m_ObjectHideFlags: 0
@@ -4239,7 +4304,7 @@ PrefabInstance:
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 9025596408622730938, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
@@ -5331,12 +5396,17 @@ PrefabInstance:
     - target: {fileID: 4842241633885414704, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6229599401455123277, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223290848132957439, guid: 4e304e7c8c70f494d94a6800c690cba3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 13
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e304e7c8c70f494d94a6800c690cba3, type: 3}
@@ -6164,12 +6234,17 @@ PrefabInstance:
     - target: {fileID: 4842241633885414704, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6229599401455123277, guid: 4e304e7c8c70f494d94a6800c690cba3,
         type: 3}
       propertyPath: m_RootOrder
       value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7223290848132957439, guid: 4e304e7c8c70f494d94a6800c690cba3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 11
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4e304e7c8c70f494d94a6800c690cba3, type: 3}
@@ -6548,7 +6623,7 @@ RectTransform:
   - {fileID: 894060829}
   - {fileID: 1850870690}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

@@ -60,15 +60,44 @@ public class Perso_Generique : MonoBehaviour
     public    Classe classe = Classe.GOD;
     public PlayerMove PlayerMove;
     [SerializeField] private GameObject guerrier;
-
+    [SerializeField] private GameObject archer;
+    [SerializeField] private GameObject ninja;
+    [SerializeField] private GameObject pirate;
+    [SerializeField] private GameObject tank;
+    [SerializeField] private GameObject healer;
+    [SerializeField] private GameObject mage;
+    [SerializeField] private GameObject lancepierre;
+    [SerializeField] private GameObject batondemage;
+    [SerializeField] private GameObject sword;
+    [SerializeField] private GameObject nerf;
+    [SerializeField] private GameObject bouclier;
+    [SerializeField] private GameObject sabre;
+    [SerializeField] private GameObject katana;
+    [SerializeField] private GameObject grosbouclier;
     public  void  SetClasse(Classe Klasse)
     {
         guerrier.SetActive(false);
+        archer.SetActive(false);
+        ninja.SetActive(false);
+        pirate.SetActive(false);
+        tank.SetActive(false);
+        healer.SetActive(false);
+        mage.SetActive(false);
+        lancepierre.SetActive(false);
+        batondemage.SetActive(false);
+        sword.SetActive(false);
+        nerf.SetActive(false);
+        bouclier.SetActive(false);
+        sabre.SetActive(false);
+        katana.SetActive(false);
+        grosbouclier.SetActive(false);
         switch (Klasse)
         {
             case Classe.GUERRIER:
             guerrier.SetActive(true);
-            Atk = 30;
+                sword.SetActive(true);
+                bouclier.SetActive(true);
+                Atk = 30;
             Def = 0.7;
             Max_hp = 200;
             Pm = 5;
@@ -82,14 +111,18 @@ public class Perso_Generique : MonoBehaviour
             Mana = 1000;
             break;
             case Classe.TANK:
-            Atk = 15;
+                tank.SetActive(true);
+                grosbouclier.SetActive(true);
+                Atk = 15;
             Def = 0.5;
             Max_hp = 300;
             Pm = 2;
             Mana = 0;
             break;
             case Classe.FRONDEUR:
-            Distance = 3;
+            archer.SetActive(true);
+                lancepierre.SetActive(true);
+                Distance = 3;
             Atk = 30;
             ATK_distance = 30;
             Def = 0.80;
@@ -98,14 +131,19 @@ public class Perso_Generique : MonoBehaviour
             Mana = 0;
             break;
             case Classe.HEALER:
-            Atk = 10;
+                healer.SetActive(true);
+                ///////mettre la malette
+                Atk = 10;
             Def = 0.80;
             Max_hp = 160;
             Pm = 7;
             Mana = 0;
             break;
             case Classe.PIRATE:
-            Distance = 2;
+                pirate.SetActive(true);
+                sabre.SetActive(true);
+                nerf.SetActive(true);
+                Distance = 2;
             ATK_distance = 20;
             Atk = 20;
             Def = 0.90;
@@ -114,14 +152,18 @@ public class Perso_Generique : MonoBehaviour
             Mana = 0;
             break;
             case Classe.NINJA:
-            Atk = 50;
+                ninja.SetActive(true);
+                katana.SetActive(true);
+                Atk = 50;
             Max_hp = 100;
             Def = 1;
             Pm = 5;
             Mana = 0;
             break;
             case Classe.MAGE:
-            Atk = 20;
+                mage.SetActive(true);
+                batondemage.SetActive(true);
+                Atk = 20;
             ATK_distance = 20; // + alteration de la cible ( genre psn ou brulé 
             Def = 1;
             Distance = 4;
