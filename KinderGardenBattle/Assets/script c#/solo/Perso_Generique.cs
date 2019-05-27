@@ -118,7 +118,7 @@ public class Perso_Generique : MonoBehaviour
             Mana = 0;
             break;
             case Classe.MAGE:
-            Atk = 10;
+            Atk = 20;
             ATK_distance = 20; // + alteration de la cible ( genre psn ou brulé 
             Def = 1;
             Distance = 4;
@@ -142,9 +142,9 @@ public class Perso_Generique : MonoBehaviour
 
         int penis = Convert.ToInt32(this.Hp - this.Def * atk);
       
-            Debug.Log("HP avant :"+ Hp);
+            
             Hp =  penis;
-            Debug.Log("HP aprés :"+Hp);
+            
         Animator anim = gameObject.GetComponent<TacticsMove>().anim;
         anim.SetTrigger("Degat");
             return Hp;

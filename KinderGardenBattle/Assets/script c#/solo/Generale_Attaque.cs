@@ -95,6 +95,7 @@ public class Generale_Attaque : TacticsMove
                     Debug.Log(cara_cible.ClasseToString());
                     Debug.Log("cible acquise :" + cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
+                    
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
                     //return cara_cible;
@@ -170,20 +171,35 @@ public class Generale_Attaque : TacticsMove
         {
             return;
         }
+
+        if (this.tag=="Player")
+        {
+            if (GameManagerSolo.NomDuJoeurVersUneBool(this.name))
+            {
+                joueur = GameObject.FindGameObjectWithTag("NPC");
+                classe = gameObject.GetComponent<Perso_Generique>();
         
-        joueur = GameObject.FindGameObjectWithTag("Player");
-        classe = joueur.GetComponent<Perso_Generique>();
+                boolquichamboule = false;
+                GetCurrentTile();
+                current = GetTargetTile(joueur);
+                current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
         
-        boolquichamboule = false;
-        GetCurrentTile();
-        current = GetTargetTile(joueur);
-        current.triplepute = true; // permet de differencier la case où se situt le perso d'une case current 
+                atkable = true;//current.checkporté(current,classe.Distance,false);
         
-        atkable = true;//current.checkporté(current,classe.Distance,false);
+                GetTarget((int)classe.Atk);
+                Debug.Log("febhfbdsjbfdjhsbfdhjsfbdjhbfdqksfbdsqjfbdsqfbsqkbfdskj");
+                Debug.Log(classe.classe);
+                Debug.Log(classe.Atk);
+                hasattacked = false;
+                current.triplepute = false;
+            }
+            else
+            {
+                return;
+            }
+        }
+
         
-        GetTarget(10);
-        hasattacked = false;
-        current.triplepute = false;
 
     }
 

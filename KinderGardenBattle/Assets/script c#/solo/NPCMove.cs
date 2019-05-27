@@ -13,23 +13,51 @@ public class NPCMove : TacticsMove
     private GameManagerSolo GM;
     public bool findetour;
     public bool DeBuT;
+    public TacticsMove Tact;
+    public bool atk;
 
+     
 
     // Use this for initialization
     void Start()
     {
         Init();
         anim = GetComponent<Animator>();
-        npc = GameObject.FindGameObjectWithTag("NPC");
+        npc = GameObject.FindGameObjectWithTag("Player");
+        Tact = this.GetComponent<TacticsMove>();
+        Tact.GetCurrentTile();
+        ComputeAdjacencyLists(2,currentTile);
         findetour = false;
         DeBuT = true;
+        atk = true;
 
+    }
+
+    void ATK()
+    {
+        bool atk = true;
+        double X=this.transform.position.x;
+        double Y = this.transform.position.y;
+        double Z = this.transform.position.z;
+        GameObject[] listperso = GameObject.FindGameObjectsWithTag("Player");
+        foreach (GameObject VARIABLE in listperso)
+        {
+
+            if (atk&&(this.transform.position.x -VARIABLE.transform.position.x<1.5 && transform.position.z -VARIABLE.transform.position.z<1.5 )&&(this.transform.position.x -VARIABLE.transform.position.x>-1.5 && transform.position.z -VARIABLE.transform.position.z>-1.5 ))
+            {
+                
+                VARIABLE.GetComponent<Perso_Generique>()
+                    .NewPV((int) this.GetComponent<Perso_Generique>().Atk);
+               
+                atk = false;
+            }
+        }
     }
 
     // Update is called once per frame
    void Update()
    {
-       Debug.Log(GameManagerSolo.printNPC());
+       
        
        if (GameManagerSolo.NomDuNPCVersUneBool(this.name) && findetour==false  && EnemieCaracteristique.TeamEnemie == GameManagerSolo.TeamTurn )
        {
@@ -69,19 +97,29 @@ public class NPCMove : TacticsMove
               
            }
 
-           if (!moving && !DeBuT)
+           if (!moving && !DeBuT&& atk)
            {
                anim.SetBool("Déplacement",moving);
+                GetCurrentTile();
+               
+               if (atk)
+               {
+                   ATK();
+                   atk = false;
+               }
                GameManagerSolo.QuelNpc();
+               
            }
        }
-       
 
-       
        else
        {
            return;
        }
+       
+
+       
+      
        
 
    }
@@ -94,6 +132,7 @@ public class NPCMove : TacticsMove
         FindPath(targetTile);
         
     }
+
     
     void FindNearestTarget()
     {
