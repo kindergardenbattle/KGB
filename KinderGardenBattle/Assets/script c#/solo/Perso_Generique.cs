@@ -59,12 +59,15 @@ public class Perso_Generique : MonoBehaviour
     public   double ATK_distance = 0;
     public    Classe classe = Classe.GOD;
     public PlayerMove PlayerMove;
+    [SerializeField] private GameObject guerrier;
 
     public  void  SetClasse(Classe Klasse)
     {
+        guerrier.SetActive(false);
         switch (Klasse)
         {
             case Classe.GUERRIER:
+            guerrier.SetActive(true);
             Atk = 30;
             Def = 0.7;
             Max_hp = 200;
