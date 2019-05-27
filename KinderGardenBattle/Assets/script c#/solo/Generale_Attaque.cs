@@ -95,6 +95,7 @@ public class Generale_Attaque : TacticsMove
                     Debug.Log(cara_cible.ClasseToString());
                     Debug.Log("cible acquise :" + cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
+                    
                     cara_cible.NewPV(atk);
                     Debug.Log(cara_cible.Hp);
                     //return cara_cible;
@@ -176,7 +177,7 @@ public class Generale_Attaque : TacticsMove
             if (GameManagerSolo.NomDuJoeurVersUneBool(this.name))
             {
                 joueur = GameObject.FindGameObjectWithTag("NPC");
-                classe = joueur.GetComponent<Perso_Generique>();
+                classe = gameObject.GetComponent<Perso_Generique>();
         
                 boolquichamboule = false;
                 GetCurrentTile();
@@ -185,7 +186,10 @@ public class Generale_Attaque : TacticsMove
         
                 atkable = true;//current.checkporté(current,classe.Distance,false);
         
-                GetTarget((int)this.classe.Atk);
+                GetTarget((int)classe.Atk);
+                Debug.Log("febhfbdsjbfdjhsbfdhjsfbdjhbfdqksfbdsqjfbdsqfbsqkbfdskj");
+                Debug.Log(classe.classe);
+                Debug.Log(classe.Atk);
                 hasattacked = false;
                 current.triplepute = false;
             }
