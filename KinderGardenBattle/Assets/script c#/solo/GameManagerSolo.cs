@@ -208,7 +208,13 @@ public class GameManagerSolo : MonoBehaviour
         foreach (GameObject VARIABLE in liste)
         {
             PlayerMove script = VARIABLE.GetComponent<PlayerMove>();
+            Debug.Log(script.hasmooved);
+            if (script.hasmooved = true)
+            {
+                script.hasmooved = false;
+            }
             script.hasmooved = false;
+            Debug.Log(script.hasmooved);
         }
 
 

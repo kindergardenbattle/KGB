@@ -70,6 +70,7 @@ public class PlayerMove : TacticsMove
                 {
                     hasmooved = true;
                     Resetalltiles();
+                    DebutTour = true;
                 }
             }
             
