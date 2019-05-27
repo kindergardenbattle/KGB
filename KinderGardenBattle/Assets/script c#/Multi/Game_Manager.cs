@@ -14,9 +14,10 @@ namespace Multi
 {
     public class Game_Manager : MonoBehaviourPunCallbacks
     {
-        public  static bool turn =true;//synchronise the turn with the master client
-        private static bool ancien_turn = turn;
-        public static bool is_in_menu = false;
+        public static bool turn =true;//synchronise the turn with the master client
+        private bool ancien_turn = turn;
+        public bool is_in_menu = false;
+        public bool want_to_change_classe = false;
         public GameObject Stat;
         private Perso_Generique_multi vis;
 
@@ -84,6 +85,7 @@ namespace Multi
             {
                 RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+
                 if (Physics.Raycast(ray, out hit, 25.0f))
                 {
                     if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))
@@ -94,19 +96,43 @@ namespace Multi
                         s.set_player_stats(vis);
                         Stat.SetActive(true);
                     }
+                    else
+                    {
+                        if (hit.transform != null && hit.transform.gameObject.CompareTag("Box"))
+                        {
+                            menuselectionclasse();
+                        }
+                    }
                 }
             }
+        }
+
+        public void menuselectionclasse()
+        {
+            Debug.Log("entree");
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(want_to_change_classe);//go.activeSelf
+                if (go.CompareTag("ChangeClasse"))
+                    go.SetActive(!want_to_change_classe);
+            }
+            Stat.SetActive(false);
+            want_to_change_classe = !want_to_change_classe;
         }
         public void menu()
         {
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
             {
+                Debug.Log("change clase" + want_to_change_classe);
                 if (go.CompareTag("Button"))
-                    go.SetActive(is_in_menu && ((turn && PhotonNetwork.IsMasterClient) || (!turn && !PhotonNetwork.IsMasterClient)));//go.activeSelf
+                    go.SetActive(is_in_menu ? !want_to_change_classe : is_in_menu);//go.activeSelf
                 if (go.CompareTag("Menupause"))
                     go.SetActive(!is_in_menu);
-                Stat.SetActive(false);
+                if (go.CompareTag("ChangeClasse"))
+                    go.SetActive(is_in_menu ? want_to_change_classe : is_in_menu);
             }
+            Stat.SetActive(false);
             is_in_menu = !is_in_menu;
         }
         /// <summary>

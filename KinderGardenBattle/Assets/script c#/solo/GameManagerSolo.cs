@@ -144,7 +144,6 @@ public class GameManagerSolo : MonoBehaviour
                     if(hit.transform != null && hit.transform.gameObject.CompareTag("Box"))
                     {
                         menuselectionclasse();
-                        Debug.Log("sortie de fonction");
                     }
                 } 
             }
