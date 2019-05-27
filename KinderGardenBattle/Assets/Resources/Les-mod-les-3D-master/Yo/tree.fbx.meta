@@ -1,14 +1,39 @@
 fileFormatVersion: 2
-guid: 47399357746a08446be7533c37dda53b
+guid: d4dbd809f0a8a744faaf447069d2381a
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    400000: //RootNode
-    2100000: Material
-    2300000: //RootNode
-    3300000: //RootNode
+    100000: Camera
+    100002: Icosphere
+    100004: Lamp
+    100006: Lamp.001
+    100008: Lamp.002
+    100010: Lamp.003
+    100012: Lamp.004
+    100014: Lamp.005
+    100016: //RootNode
+    400000: Camera
+    400002: Icosphere
+    400004: Lamp
+    400006: Lamp.001
+    400008: Lamp.002
+    400010: Lamp.003
+    400012: Lamp.004
+    400014: Lamp.005
+    400016: //RootNode
+    2000000: Camera
+    2100000: Feuille
+    2100002: Tronc
+    2300000: Icosphere
+    3300000: Icosphere
     4300000: Icosphere
+    10800000: Lamp
+    10800002: Lamp.001
+    10800004: Lamp.002
+    10800006: Lamp.003
+    10800008: Lamp.004
+    10800010: Lamp.005
+    2186277476908879412: ImportLogs
   externalObjects: {}
   materials:
     importMaterials: 1
