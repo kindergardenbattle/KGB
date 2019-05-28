@@ -112,20 +112,16 @@ public class Player_manager_multi : Generale_Attaque_multi
         string attaque;
         if (Input.GetMouseButtonUp(0))
         {
-            Debug.Log("a");
             RaycastHit hit;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             if (Physics.Raycast(ray, out hit, 25.0f))
             {
-                Debug.Log("b");
                 if (hit.transform != null && hit.transform.gameObject.CompareTag("Player"))//&& (atkable))
                 {
-                    Debug.Log("c");
                     GameObject npc = hit.transform.gameObject;//manager_cible= npc.GetComponent<GameManagerSolo>();
                     Player_manager_multi ennemi = npc.GetComponent<Player_manager_multi>();
                     if (ennemi.is_turn!=is_turn)
                     {
-                        Debug.Log("d");
                         Perso_Generique_multi classe = gameObject.GetComponent<Perso_Generique_multi>();
                         if (classe.Distance == 1)
                         {
