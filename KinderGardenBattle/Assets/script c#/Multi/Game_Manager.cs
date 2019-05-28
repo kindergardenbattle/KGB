@@ -99,8 +99,10 @@ namespace Multi
                     }
                     else
                     {
+                        Debug.Log("caca");
                         if (hit.transform != null && hit.transform.gameObject.CompareTag("Box"))
                         {
+                            Debug.Log("prout");
                             menuselectionclasse();
                         }
                     }
