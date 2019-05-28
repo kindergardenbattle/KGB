@@ -17,6 +17,9 @@ namespace Multi
         public  static bool turn =true;//synchronise the turn with the master client
         private static bool ancien_turn = turn;
         public static bool is_in_menu = false;
+        public static bool want_to_change_classe = false;
+        public static bool has_change_classe = false;
+        public static int futur_classe;
         public GameObject Stat;
         private Perso_Generique_multi vis;
 
@@ -36,7 +39,7 @@ namespace Multi
                 Debug.LogFormat("We are Instantiating LocalPlayer from");
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
                 float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -5f;
-                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,1f,a), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,0.7f,a), Quaternion.identity, 0);
             }
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
             {
@@ -94,19 +97,55 @@ namespace Multi
                         s.set_player_stats(vis);
                         Stat.SetActive(true);
                     }
+                    else
+                    {
+                        if (hit.transform != null && hit.transform.gameObject.CompareTag("Box"))
+                        {
+                            menuselectionclasse();
+                        }
+                    }
                 }
             }
         }
+
+        public void menuselectionclasse()
+        {
+            Debug.Log("entree");
+            foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
+            {
+                if (go.CompareTag("Button"))
+                    go.SetActive(want_to_change_classe);//go.activeSelf
+                if (go.CompareTag("ChangeClasse"))
+                    go.SetActive(!want_to_change_classe);
+            }
+            Stat.SetActive(false);
+            want_to_change_classe = !want_to_change_classe;
+        }
+
+        public void setfuturclasse(int i)
+        {
+            futur_classe = i;
+        }
+
+        public void confirmclasse()
+        {
+            has_change_classe = true;
+        }
+
         public void menu()
         {
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
             {
+                Debug.Log("change clase" + want_to_change_classe);
                 if (go.CompareTag("Button"))
-                    go.SetActive(is_in_menu && ((turn && PhotonNetwork.IsMasterClient) || (!turn && !PhotonNetwork.IsMasterClient)));//go.activeSelf
+                    go.SetActive(is_in_menu ? !want_to_change_classe : is_in_menu);//go.activeSelf
                 if (go.CompareTag("Menupause"))
                     go.SetActive(!is_in_menu);
-                Stat.SetActive(false);
+                if (go.CompareTag("ChangeClasse"))
+                    go.SetActive(is_in_menu ? want_to_change_classe : is_in_menu);
+
             }
+            Stat.SetActive(false);
             is_in_menu = !is_in_menu;
         }
         /// <summary>

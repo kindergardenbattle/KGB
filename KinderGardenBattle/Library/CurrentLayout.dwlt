@@ -21,7 +21,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 3}
-  m_MinSize: {x: 950, y: 300}
+  m_MinSize: {x: 950, y: 524}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -42,8 +42,8 @@ MonoBehaviour:
     y: 0
     width: 403
     height: 987
-  m_MinSize: {x: 204, y: 224}
-  m_MaxSize: {x: 4004, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
@@ -138,10 +138,10 @@ MonoBehaviour:
     y: 30
     width: 1904
     height: 987
-  m_MinSize: {x: 713, y: 498}
-  m_MaxSize: {x: 18008, y: 14048}
+  m_MinSize: {x: 709, y: 474}
+  m_MaxSize: {x: 18004, y: 14024}
   vertical: 0
-  controlID: 12
+  controlID: 125
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,10 +163,10 @@ MonoBehaviour:
     y: 0
     width: 954
     height: 987
-  m_MinSize: {x: 232, y: 498}
-  m_MaxSize: {x: 10002, y: 14048}
+  m_MinSize: {x: 232, y: 474}
+  m_MaxSize: {x: 10002, y: 14024}
   vertical: 1
-  controlID: 13
+  controlID: 53
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -186,8 +186,8 @@ MonoBehaviour:
     y: 0
     width: 954
     height: 563
-  m_MinSize: {x: 202, y: 224}
-  m_MaxSize: {x: 4002, y: 4024}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
   m_Panes:
   - {fileID: 12}
@@ -394,9 +394,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0.09118936, y: 0.9002712, z: -0.22865029, w: 0.35904783}
   m_Size:
-    m_Target: 23.878899
+    m_Target: 26.076355
     speed: 2
-    m_Value: 23.878899
+    m_Value: 26.076355
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -536,31 +536,31 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/script c#/Scenes
+    - Assets/script c#/solo
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/script c#/Scenes
+  - Assets/script c#/solo
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\epita\Desktop\KGB\KinderGardenBattle
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 199}
-    m_SelectedIDs: a0950000
-    m_LastClickedID: 38304
-    m_ExpandedIDs: 00000000129400001c9500004095000094950000049600003696000084960000f2960000b8980000ba9800002c99000080990000d69900007c9a0000d29a0000cca8000000ca9a3b
+    scrollPos: {x: 0, y: 163}
+    m_SelectedIDs: 640f0000
+    m_LastClickedID: 3940
+    m_ExpandedIDs: 00000000120c0000720e0000ca0e0000640f000066100000d6100000cc110000f412000000170000041700002a180000fc180000d6190000301b0000e21b00009a3e000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: map
-      m_OriginalName: map
+      m_Name: solo
+      m_OriginalName: solo
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 39692
+      m_UserData: 3940
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
       m_OriginalEventType: 0
@@ -577,7 +577,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000129400001c9500004095000094950000049600003696000084960000f2960000ba9800002c99000080990000d69900007c9a0000d29a0000cca80000
+    m_ExpandedIDs: 00000000120c0000720e0000ca0e0000640f000066100000d6100000cc110000f412000000170000041700002a180000fc180000d6190000301b0000e21b00009a3e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -687,20 +687,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 5e9a0000
+      m_SelectedIDs: d8090000
       m_LastClickedID: 0
-      m_ExpandedIDs: feccfaff1cd9faff32e4faff8843fbffe690fbff2ca1fbff0eaffbffa0affbff42bbfbff00c8fbfff0e2fbff82e3fbff0ef1fbff78fefbff5a0afcff1c0bfcffdc12fcffac1dfcff0431fcffca3bfcff9a48fcffd062fcff907afcff283cfdffb442fdffce42fdffe842fdff0243fdff5043fdff6a43fdff8443fdff9e43fdff1627feffb6e6feffbae6feffeee6feff10f0feffe006ffff3eb0000042e7000094e7000002fe0000566701004c6801009cc801009ce90200a0e9020038ea02002e85030036850300a8870300ec87030084880300
+      m_ExpandedIDs: 9a55feffd66bfeff5008ffff8411ffff1612ffff7acfffffd4fbfffff220000082ca000034200100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 1
-        m_OriginalName: 1
+        m_Name: Main Camera
+        m_OriginalName: Main Camera
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -271530
+        m_UserData: -103756
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
