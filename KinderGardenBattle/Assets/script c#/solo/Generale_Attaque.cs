@@ -96,8 +96,16 @@ public class Generale_Attaque : TacticsMove
                     Debug.Log(cara_cible.ClasseToString());
                     Debug.Log("cible acquise :" + cara_cible.ClasseToString());
                     Debug.Log(cara_cible.Hp);
-                    
-                    cara_cible.NewPV(atk);
+                    cara_cible.transform.LookAt(transform);
+                    transform.LookAt(cara_cible.transform);
+                    if (classe.classe==Perso_Generique.Classe.HEALER)
+                    {
+                        cara_cible.NewPV(-1*atk);
+                    }
+                    else
+                    {
+                        cara_cible.NewPV(atk);
+                    }
                     hasattacked = true;
                     Debug.Log(cara_cible.Hp);
                     //return cara_cible;

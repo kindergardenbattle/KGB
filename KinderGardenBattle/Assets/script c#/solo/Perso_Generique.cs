@@ -57,7 +57,7 @@ public class Perso_Generique : MonoBehaviour
     public   double Pm;
     public   double Mana;
     public   double Distance = 1;
-    public bool vivant = true;
+    public  bool vivant = true;
     public bool selection = false;
     public   double ATK_distance = 0;
     public    Classe classe = Classe.GOD;
@@ -198,16 +198,25 @@ public class Perso_Generique : MonoBehaviour
 
     public  double NewPV (int atk )
     {
+        if (atk <0)
+        {
+            int penis = Convert.ToInt32(this.Hp - atk);
+            Hp = penis>Max_hp?Max_hp:penis;
+        }
+        else
+        {
 
 
-        int penis = Convert.ToInt32(this.Hp - this.Def * atk);
-      
-            
-            Hp =  penis;
-            
-        Animator anim = gameObject.GetComponent<TacticsMove>().anim;
-        anim.SetTrigger("Degat");
-            return Hp;
+            int penis = Convert.ToInt32(this.Hp - this.Def * atk);
+
+
+            Hp = penis;
+
+            Animator anim = gameObject.GetComponent<TacticsMove>().anim;
+            anim.SetTrigger("Degat");
+        }
+
+        return Hp;
     }
     public void int_to_classe(int i)
     {
@@ -266,6 +275,7 @@ public class Perso_Generique : MonoBehaviour
     public void Verification()
     {
         vivant = !(Hp < 0);
+        
     }
 
     private void Start()
@@ -276,6 +286,13 @@ public class Perso_Generique : MonoBehaviour
 
     private void Update()
     {
+        Verification();
+        if (!vivant)
+        {
+            Animator anim = gameObject.GetComponent<TacticsMove>().anim;
+            anim.SetTrigger("Mort");
+            gameObject.SetActive(false);
+        }
       if (classe_precedente != classe)
       {
          change( classe);
