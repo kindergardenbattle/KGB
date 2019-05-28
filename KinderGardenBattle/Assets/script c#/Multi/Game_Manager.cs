@@ -22,6 +22,10 @@ namespace Multi
         public static int futur_classe;
         public GameObject Stat;
         private Perso_Generique_multi vis;
+        public static bool J1=true;
+        public static bool J2;
+        public static bool J3;
+        public static bool J4;
 
         [Tooltip("The prefab to use for representing the player")]
         public GameObject playerPrefab;
@@ -38,8 +42,16 @@ namespace Multi
             {
                 Debug.LogFormat("We are Instantiating LocalPlayer from");
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -5f;
+                float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 1f : -5f;
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a,0.7f,a), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(2*a, 0.7f, a), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(3*a, 0.7f, a), Quaternion.identity, 0);
+                PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(4*a, 0.7f, a), Quaternion.identity, 0);
+                GameObject[] oui = GameObject.FindGameObjectsWithTag("Player");                
+                for (int i=0; i< oui.Length; i++)
+                {
+                    oui[i].name = (i+1)+"";
+                }                
             }
             foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
             {
@@ -79,6 +91,56 @@ namespace Multi
                 s.set_player_stats(vis);
             }
 
+        }
+
+        public void QuelJoueur()
+        {
+            if (J1)
+            {
+                J1 = J2;
+                J2 = true;
+            }
+
+            else
+            {
+                if (J2)
+                {
+                    J2 = !J2;
+                    J3 = true;
+                }
+                else
+                {
+                    if (J3)
+                    {
+                        J3 = !J3;
+                        J4 = true;
+                    }
+                    else
+                    {
+                        J4 = false;
+                        J1 = true;
+                    }
+                }
+            }
+
+        }
+
+        public static bool NomDuJoeurVersUneBool(string name)
+        {
+            switch (name)
+            {
+                case "1":
+                    return J1;
+                case "2":
+                    return J2;
+                case "3":
+                    return J3;
+                case "4":
+                    return J4;
+                default:
+                    return false;
+
+            }
         }
 
         public void show_stat()
@@ -160,10 +222,11 @@ namespace Multi
 
         public void Move()
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
-            foreach (Player_manager_multi p in oui)
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            Player_manager_multi p;
+            foreach (GameObject oui in player)
             {
+                p = oui.GetComponent<Player_manager_multi>();
                 if (p.move!=0)
                     p.Want_to_move = !p.Want_to_move;
                 p.Resetalltiles();
@@ -174,10 +237,11 @@ namespace Multi
 
         public void Attack()
         {
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
-            foreach (Player_manager_multi p in oui)
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            Player_manager_multi p;
+            foreach (GameObject oui in player)
             {
+                p = oui.GetComponent<Player_manager_multi>();
                 if (!p.has_attack)
                     p.Want_to_fight = !p.Want_to_fight;
                 p.Want_to_move = false;
@@ -193,10 +257,11 @@ namespace Multi
                 if (go.CompareTag("Button"))
                     go.SetActive(PhotonNetwork.IsMasterClient ? turn : !turn);//go.activeSelf
             }
-            GameObject player = GameObject.FindGameObjectWithTag("Player");
-            Player_manager_multi[] oui = player.GetComponents<Player_manager_multi>();
-            foreach (Player_manager_multi p in oui)
+            GameObject[] player = GameObject.FindGameObjectsWithTag("Player");
+            Player_manager_multi p;
+            foreach (GameObject oui in player)
             {
+                p = oui.GetComponent<Player_manager_multi>();
                 p.is_turn = !p.is_turn;
                 p.Resetalltiles();
                 p.Want_to_fight = false;
