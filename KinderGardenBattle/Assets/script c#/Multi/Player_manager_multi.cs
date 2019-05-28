@@ -77,7 +77,15 @@ public class Player_manager_multi : Generale_Attaque_multi
     }
     private void LateUpdate()
     {
-        if(is_turn)
+        if (photonView.IsMine == false && PhotonNetwork.IsConnected == true)
+        {
+            return;
+        }
+        if (!Multi.Game_Manager.NomDuJoeurVersUneBool(gameObject.name))
+        {
+            return;
+        }
+        if (is_turn)
             anim.SetBool("Déplacement", moving);
         if (moving)
         {
