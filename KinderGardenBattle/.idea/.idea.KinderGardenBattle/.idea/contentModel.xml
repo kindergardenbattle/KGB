@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
-    <e p="C:\Users\Axel\.Rider2018.3\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\Axel\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_KinderGardenBattle.-178941360.00" t="ExcludeRecursive" />
-    <e p="C:\Users\Axel\Documents\GitHub\KGB\KinderGardenBattle" t="IncludeRecursive">
+    <e p="C:\Users\msi\.Rider2018.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\msi\.Rider2018.2\system\resharper-host\local\Transient\ReSharperHost\v182\SolutionCaches\_KinderGardenBattle.944321002.00" t="ExcludeRecursive" />
+    <e p="C:\Users\msi\Documents\KGB\KinderGardenBattle" t="IncludeRecursive">
       <e p="Assembly-CSharp-Editor.csproj" t="IncludeRecursive" />
       <e p="Assembly-CSharp.csproj" t="IncludeRecursive" />
       <e p="Assets" t="Include">
@@ -340,6 +340,14 @@
           </e>
         </e>
         <e p="script c#" t="Include">
+          <e p="2.0lemulti" t="Include">
+            <e p="GameManagermulti.cs" t="Include" />
+            <e p="Generale_Attaquemulti.cs" t="Include" />
+            <e p="Perso_Generiquemulti.cs" t="Include" />
+            <e p="Player_Statsmulti.cs" t="Include" />
+            <e p="PlayerMovemulti.cs" t="Include" />
+            <e p="TacticsMovemulti.cs" t="Include" />
+          </e>
           <e p="camera" t="Include">
             <e p="Test_camera.cs" t="Include" />
           </e>

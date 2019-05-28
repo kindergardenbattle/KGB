@@ -30,7 +30,7 @@ public class GameManagerSolo : MonoBehaviour
         Blue,Red
     }
     
-    public   static bool J1;
+    public  static bool J1;
     public  static bool J2;
     public  static bool J3;
     public  static bool J4;

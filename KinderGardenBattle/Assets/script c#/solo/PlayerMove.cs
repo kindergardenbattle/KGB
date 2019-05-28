@@ -13,6 +13,7 @@ public class PlayerMove : TacticsMove
     public GameObject CibleRotate;
     public bool cible;
     public bool hasmooved;
+    
 
     void Rotate()
     {    GameObject[] listperso = GameObject.FindGameObjectsWithTag("NPC");
@@ -35,6 +36,7 @@ public class PlayerMove : TacticsMove
     void Start()
     {
         Init();
+        
         la_seboul = false;
         hasmooved = false;
         CibleRotate = null;
@@ -48,6 +50,7 @@ public class PlayerMove : TacticsMove
     
     void Update()
     {
+        
         if (GameManagerSolo.TeamTurn==GameManagerSolo.Team.Red)
         {
             Rotate();
