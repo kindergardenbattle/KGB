@@ -35,5 +35,7 @@ MonoBehaviour:
   - Set_turn
   - Lel
   - NewPV
+  - int_to_classe
+  - Lul
   DisableAutoOpenWizard: 1
   ShowSettings: 0

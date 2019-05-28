@@ -1,4 +1,8 @@
 sceneSetups:
-- path: Assets/script c#/Scenes/SOLO.unity
+<<<<<<< HEAD
+- path: Test.unity
+=======
+- path: Assets/script c#/Scenes/Main_menu.unity
+>>>>>>> 2e483b51931e294d46aa01553a38cee6cbfc5764
   isLoaded: 1
   isActive: 1

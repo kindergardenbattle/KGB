@@ -10,7 +10,7 @@ public class GameManagerSolo : MonoBehaviour
     public static bool is_in_menu = false;
     public static bool want_to_change_classe = false;
     public Perso_Generique vis;
-    public    GameObject Stat;
+    public GameObject Stat;
     public static bool has_change_classe = false;
     public static int futur_classe;
 
