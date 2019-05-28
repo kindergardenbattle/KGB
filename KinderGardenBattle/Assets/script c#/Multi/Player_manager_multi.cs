@@ -46,6 +46,7 @@ public class Player_manager_multi : Generale_Attaque_multi
             if (Multi.Game_Manager.has_change_classe)
             {
                 move = 0;
+                has_attack = true;
                 gameObject.GetComponent<Perso_Generique_multi>().int_to_classe(Multi.Game_Manager.futur_classe);
                 Multi.Game_Manager.has_change_classe = false;
             }

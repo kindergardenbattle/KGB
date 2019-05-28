@@ -196,7 +196,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     {
         photonView.RPC("Lul", RpcTarget.All, i);        
     }
-
+    [PunRPC]
     void Lul(int i)
     {
         classe = (Classe)i;
