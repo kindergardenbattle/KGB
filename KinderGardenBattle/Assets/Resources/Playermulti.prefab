@@ -5741,13 +5741,13 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: lance pierre
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: flingue
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: malette
   - Type: 9
-    SynchronizeType: 0
+    SynchronizeType: 1
     Name: brute
   m_SynchronizeLayers:
   - SynchronizeType: 0
