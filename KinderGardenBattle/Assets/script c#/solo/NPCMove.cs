@@ -142,6 +142,8 @@ public class NPCMove : TacticsMove
            DeBuT = true;
            atk = true;
            Rotate();
+           GameManagerSolo.npc1 = true;
+           GameManagerSolo.npc2 = GameManagerSolo.npc3 = GameManagerSolo.npc4 = false;
        }
 
        else
