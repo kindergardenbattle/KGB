@@ -31,7 +31,7 @@ public class GameManagermulti : MonoBehaviourPunCallbacks
         {
             Debug.LogFormat("We are Instantiating LocalPlayer from");
             // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-            float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -5f;
+            float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 0f : -3f;
             PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(a, 2f, a), Quaternion.identity, 0);
         }
         foreach (GameObject go in Resources.FindObjectsOfTypeAll(typeof(GameObject)) as GameObject[])
