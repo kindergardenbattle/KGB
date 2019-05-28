@@ -42,8 +42,15 @@ public class Player_manager_multi : Generale_Attaque_multi
             has_move = false;
         }
         if (is_turn && !moving)
-        {
-             //appelle les fonction si ça bouge pas 
+        {            
+            if (Multi.Game_Manager.has_change_classe)
+            {
+                move = 0;
+                has_attack = true;
+                gameObject.GetComponent<Perso_Generique_multi>().int_to_classe(Multi.Game_Manager.futur_classe);
+                Multi.Game_Manager.has_change_classe = false;
+            }
+            //appelle les fonction si ça bouge pas 
             if (Want_to_move)
             {
                 FindSelectableTiles(move);

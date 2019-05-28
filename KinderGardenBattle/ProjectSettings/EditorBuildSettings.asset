@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/script c#/Scenes/Test.unity
     guid: 05ab6b9a272b1aa4b8e65235b6cb785e
+  - enabled: 0
+    path: Assets/script c#/Scenes/Multi.unity
+    guid: a4de5ff96ac526a45bfe3c1629e36d0b
   m_configObjects: {}
