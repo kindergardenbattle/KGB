@@ -14,7 +14,8 @@ public class Perso_Generique : MonoBehaviour
         HEALER,
         PIRATE,
         MAGE,
-        GOD
+        GOD,
+        KID
     }
 
     
@@ -40,6 +41,8 @@ public class Perso_Generique : MonoBehaviour
                 return "PIRATE";
             case Classe.FRONDEUR:
                 return "Frondeur";
+            case Classe.KID :
+                return "Kid";
             default:
                 return "wtf";
         }
@@ -74,6 +77,8 @@ public class Perso_Generique : MonoBehaviour
     [SerializeField] private GameObject sabre;
     [SerializeField] private GameObject katana;
     [SerializeField] private GameObject grosbouclier;
+    [SerializeField] private GameObject malette;
+    [SerializeField] private GameObject Cheveux;
     public  void  SetClasse(Classe Klasse)
     {
         guerrier.SetActive(false);
@@ -91,6 +96,8 @@ public class Perso_Generique : MonoBehaviour
         sabre.SetActive(false);
         katana.SetActive(false);
         grosbouclier.SetActive(false);
+        Cheveux.SetActive(false);
+        malette.SetActive(false);
         switch (Klasse)
         {
             case Classe.GUERRIER:
@@ -132,7 +139,7 @@ public class Perso_Generique : MonoBehaviour
             break;
             case Classe.HEALER:
                 healer.SetActive(true);
-                ///////mettre la malette
+                malette.SetActive(true);
                 Atk = 10;
             Def = 0.80;
             Max_hp = 160;
@@ -164,13 +171,21 @@ public class Perso_Generique : MonoBehaviour
                 mage.SetActive(true);
                 batondemage.SetActive(true);
                 Atk = 20;
-            ATK_distance = 20; // + alteration de la cible ( genre psn ou brulé 
+            ATK_distance = 20;
             Def = 1;
             Distance = 4;
             Max_hp = 80;
             Pm = 5;
             Mana = 100;
             break;
+            case Classe.KID :
+                Cheveux.SetActive(true);
+                Atk = 0;
+                Max_hp = 500;
+                Def = 5;
+                Pm = 5;
+                Mana = 0;
+                break;
         }
         Hp = Max_hp < Hp ? Max_hp : Hp;
         if (gameObject.tag == "Player")

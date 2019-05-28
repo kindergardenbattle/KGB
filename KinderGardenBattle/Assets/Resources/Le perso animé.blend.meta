@@ -64,6 +64,7 @@ ModelImporter:
     7400020: Ouverture_de_caisse
     7400022: Je_suis_un_healer
     7400024: D_gat_2
+    7400026: Coup_de_Bouclier
     9500000: //RootNode
     13700000: Cube
     13700002: Cube_001
@@ -97,10 +98,10 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: Default Take
-      takeName: Default Take
+      name: Coup_de_Bouclier
+      takeName: Coup_de_Bouclier
       firstFrame: -1
-      lastFrame: 159
+      lastFrame: 29
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
