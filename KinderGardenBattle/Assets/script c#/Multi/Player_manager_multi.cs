@@ -169,7 +169,8 @@ public class Player_manager_multi : Generale_Attaque_multi
                         Debug.Log(cara_cible);
                         Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                         Debug.Log(cara_cible.Hp);
-                        
+                        npc.transform.LookAt(gameObject.transform);
+                        gameObject.transform.LookAt(npc.transform);
                         cara_cible.NewPV(atk);
                         Debug.Log(cara_cible.Hp);                    //return cara_cible;
                         has_attack = true;
