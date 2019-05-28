@@ -11,10 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/script c#/Scenes/SOLO.unity
     guid: d7319b9630a03444ca56174f67688af3
-  - enabled: 1
+  - enabled: 0
     path: Assets/script c#/Scenes/Game_multi(1).unity
     guid: 1469d18aa7c7dd946a8430ab4069060d
   - enabled: 0
     path: Assets/script c#/Scenes/Test.unity
     guid: 05ab6b9a272b1aa4b8e65235b6cb785e
+  - enabled: 1
+    path: Assets/script c#/Scenes/Multi.unity
+    guid: a4de5ff96ac526a45bfe3c1629e36d0b
   m_configObjects: {}
