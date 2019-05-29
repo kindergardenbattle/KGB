@@ -412,12 +412,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 680154ec06f44032b7b5e689d4d9fe5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  course: {fileID: 0}
+  course: {fileID: 8300000, guid: dc7662abc095a95459c0564ff25eb72e, type: 3}
   ouille: {fileID: 8300000, guid: bceded12802cbe14b9077191466772a6, type: 3}
-  magie: {fileID: 0}
-  piou: {fileID: 0}
-  mort: {fileID: 0}
-  lancepierre: {fileID: 0}
+  magie: {fileID: 8300000, guid: b9b2f25214621854997d52b60eab5677, type: 3}
+  piou: {fileID: 8300000, guid: 9e07a30b0e2c1e44b976f5d026c803d4, type: 3}
+  mort: {fileID: 8300000, guid: 5f00aa69751207d40a399d833ca50b26, type: 3}
+  lancepierre: {fileID: 8300000, guid: 98b1e4ea7dd0e8c4790f9da8b4ac3ac0, type: 3}
   AudioS: {fileID: 0}
 --- !u!114 &190729810
 MonoBehaviour:
