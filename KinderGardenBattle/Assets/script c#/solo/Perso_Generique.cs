@@ -291,7 +291,12 @@ public class Perso_Generique : MonoBehaviour
         {
             Animator anim = gameObject.GetComponent<TacticsMove>().anim;
             anim.SetTrigger("Mort");
-            gameObject.SetActive(false);
+            anim.SetBool("Muerte", true);
+            if (anim.GetBool("Destroy"))
+            {
+                Destroy(gameObject);
+            }
+            //gameObject.SetActive(false);
         }
       if (classe_precedente != classe)
       {

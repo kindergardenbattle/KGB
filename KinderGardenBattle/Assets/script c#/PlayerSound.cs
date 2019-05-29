@@ -55,6 +55,12 @@ namespace a
             AudioS.PlayOneShot(mort);
         }
 
+        void Mort2()
+        {
+            Animator anim = gameObject.GetComponent<TacticsMove>().anim;
+            anim.SetBool("Destroy", true);
+        }
+
         void LancePierre()
         {
             AudioS.PlayOneShot(lancepierre);
