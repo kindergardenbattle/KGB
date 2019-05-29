@@ -285,7 +285,7 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     [PunRPC]
     public void detruire()
     {
-        photonView.RPC("lel", RpcTarget.All,);
+        photonView.RPC("lel", RpcTarget.All);
     }
     [PunRPC]
     void lel()
