@@ -211,7 +211,8 @@ public class Perso_Generique : MonoBehaviour
 
 
             Hp = penis;
-
+            Debug.Log("CACACUL" +
+                "");
             Animator anim = gameObject.GetComponent<TacticsMove>().anim;
             anim.SetTrigger("Degat");
         }
@@ -294,7 +295,8 @@ public class Perso_Generique : MonoBehaviour
             anim.SetBool("Muerte", true);
             if (anim.GetBool("Destroy"))
             {
-                Destroy(gameObject);
+                //Destroy(gameObject);
+                gameObject.SetActive(false);
             }
             //gameObject.SetActive(false);
         }

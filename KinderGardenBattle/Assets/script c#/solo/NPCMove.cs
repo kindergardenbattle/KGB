@@ -80,12 +80,8 @@ public class NPCMove : TacticsMove
        
        
        if (GameManagerSolo.NomDuNPCVersUneBool(this.name) && findetour==false  && EnemieCaracteristique.TeamEnemie == GameManagerSolo.TeamTurn )
-       {
-           Debug.Log("entre dans la boucle 1");
-           
+       {           
            findetour = true;
-           
-
            GetCurrentTile();
            current = GetTargetTile(npc);
 
@@ -100,7 +96,6 @@ public class NPCMove : TacticsMove
 
            if (moving == false && DeBuT)
            {
-               Debug.Log("entre ddans la boucle 2");
 
                FindNearestTarget();
                CalculatePath();
