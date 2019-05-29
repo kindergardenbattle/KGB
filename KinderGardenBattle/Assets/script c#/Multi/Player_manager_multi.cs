@@ -165,7 +165,7 @@ public class Player_manager_multi : Generale_Attaque_multi
                         Debug.Log(cara_cible);
                         Debug.Log(cara_cible.ClasseToString());                    //Debug.Log("cible acquise :" +cara_cible.ClasseToString());
                         Debug.Log(cara_cible.Hp);
-
+                        look(gameObject, npc);
                         npc.transform.LookAt(gameObject.transform);
                         gameObject.transform.LookAt(npc.transform);
                         cara_cible.NewPV(atk);
@@ -177,6 +177,15 @@ public class Player_manager_multi : Generale_Attaque_multi
             }            //return null;
         }        //return null;
     }
-    //[PunRPC]
-   // public void 
+    [PunRPC]
+    public void look(GameObject oui, GameObject non)
+    {
+        photonView.RPC("oue", RpcTarget.All,oui,non);
+    }
+    [PunRPC]
+    void oue(GameObject oui, GameObject non)
+    {
+        oui.transform.LookAt(non.transform);
+        non.transform.LookAt(oui.transform);
+    }
 }

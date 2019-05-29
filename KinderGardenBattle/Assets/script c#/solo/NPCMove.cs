@@ -66,6 +66,7 @@ public class NPCMove : TacticsMove
             {
                 CibleRotate = VARIABLE;
                 transform.LookAt(CibleRotate.transform);
+                anim.SetTrigger("epee 2 main");
                 VARIABLE.GetComponent<Perso_Generique>()
                     .NewPV((int) this.GetComponent<Perso_Generique>().Atk);
                
