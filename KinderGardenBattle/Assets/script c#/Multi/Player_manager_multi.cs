@@ -34,16 +34,16 @@ public class Player_manager_multi : Generale_Attaque_multi
         {
             return;
         }
-        if (!Multi.Game_Manager.NomDuJoeurVersUneBool(gameObject.name))
-        {
-            return;
-        }
         if (is_turn != ancient_turn)
         {
             move = max_move;
             ancient_turn = is_turn;
             has_attack = false;
             has_move = false;
+        }
+        if (!Multi.Game_Manager.NomDuJoeurVersUneBool(gameObject.name))
+        {
+            return;
         }
         if (is_turn && !moving)
         {            
