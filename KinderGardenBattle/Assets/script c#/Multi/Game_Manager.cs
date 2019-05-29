@@ -42,7 +42,7 @@ namespace Multi
             {
                 Debug.LogFormat("We are Instantiating LocalPlayer from");
                 // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-                float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 1f : -5f;
+                float a = PhotonNetwork.CurrentRoom.PlayerCount == 1 ? 1f : 10f;
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(1,0.7f,a), Quaternion.identity, 0);
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(2, 0.7f, a), Quaternion.identity, 0);
                 PhotonNetwork.Instantiate(this.playerPrefab.name, new Vector3(3, 0.7f, a), Quaternion.identity, 0);

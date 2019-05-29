@@ -267,30 +267,9 @@ public class Perso_Generique_multi : MonoBehaviourPunCallbacks
     private void Update()
     {
         Verification();
-        if (!vivant)
-        {
-            Animator anim = gameObject.GetComponent<TacticsMove>().anim;
-            anim.SetTrigger("Mort");
-            anim.SetBool("Muerte", true);
-            if (anim.GetBool("Destroy"))
-            {
-                detruire();
-            }
-        }
         if (classe_precedente != classe)
         {
             change(classe);
         }
     }
-    [PunRPC]
-    public void detruire()
-    {
-        photonView.RPC("lel", RpcTarget.All);
-    }
-    [PunRPC]
-    void lel()
-    {
-        gameObject.SetActive(false);
-    }
-
 }
